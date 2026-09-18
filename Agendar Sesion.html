@@ -481,8 +481,8 @@
 
 <nav class="topnav">
   <div class="nav-inner">
-    <a href="index.html" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
-    <a href="index.html" class="back-link"><span class="arr">←</span> Volver al inicio</a>
+    <a href="Protocolo ACOS Landing.html" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
+    <a href="Protocolo ACOS Landing.html" class="back-link"><span class="arr">←</span> Volver al inicio</a>
   </div>
 </nav>
 
@@ -557,7 +557,7 @@
         <div class="title">Diagnóstico ACOS<em>// 30 min</em></div>
         <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
       </div>
-      <form class="lead-form" id="leadForm" action="Confirmacion Diagnostico.html">
+      <form class="lead-form" id="leadForm">
         <div class="field-row">
           <div class="field">
             <label for="fName">Nombre</label>
@@ -614,19 +614,18 @@
 </footer>
 
 <script>
-  document.getElementById('leadForm').addEventListener('submit', function (e) {
+(function () {
+  var form = document.getElementById('leadForm');
+  if (!form) return;
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwuOBsAGBPQJMDRhr25hUJ-avanmV4So2mJFnZn0Zav7oktMO-ls-3Q0xsnNKHnoFI6/exec';
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const data = new FormData(this);
-    const body = encodeURIComponent(
-      'Nombre: ' + data.get('nombre') + ' ' + data.get('apellido') + '\n' +
-      'WhatsApp: ' + data.get('whatsapp') + '\n' +
-      'Tienda: ' + data.get('tienda') + '\n' +
-      'Usa anuncios actualmente: ' + (data.get('usa_anuncios') ? 'Sí' : 'No')
-    );
-    const subject = encodeURIComponent('Nueva solicitud de diagnóstico ACOS');
-    window.location.href = 'mailto:10x.pablohernandez@gmail.com?subject=' + subject + '&body=' + body;
-    setTimeout(() => { window.location.href = this.action; }, 250);
+    var data = new FormData(form);
+    fetch(SCRIPT_URL, { method: 'POST', body: data, mode: 'no-cors' })
+      .then(function () { window.location.href = 'Confirmacion Diagnostico.html'; })
+      .catch(function () { window.location.href = 'Confirmacion Diagnostico.html'; });
   });
+})();
 </script>
 </body>
 </html>
