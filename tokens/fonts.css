@@ -1,0 +1,9 @@
+/* CSeekers — Webfonts
+   Las tres familias de la marca, servidas vía Google Fonts.
+   - DM Sans     → display / titulares
+   - Inter       → cuerpo / UI
+   - JetBrains Mono → eyebrows, etiquetas, datos, "code voice"
+   Si más adelante se suben binarios propios, reemplazar estos
+   @import por reglas @font-face apuntando a /assets/fonts. */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap");

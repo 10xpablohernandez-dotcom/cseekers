@@ -1,0 +1,45 @@
+/* CSeekers — Color system
+   Marca de alto contraste: verde neón sobre negro/blanco.
+   El verde es señal, no decoración: úsalo para acentos, CTAs,
+   datos clave y estados activos — nunca como relleno de fondo. */
+
+:root {
+  /* ---- Base palette ---- */
+  --green:        #39FF14;          /* verde neón — color de marca */
+  --green-deep:   #1ed600;          /* verde "tinta": texto verde sobre blanco */
+  --green-soft:   rgba(57,255,20,0.18); /* veladuras, halos, hovers */
+  --green-haze:   rgba(57,255,20,0.12); /* fondos de chip/badge muy sutiles */
+  --green-leaf:   #b6e9a4;          /* verde apagado del logo (dots inactivos) */
+
+  --black:        #0a0a0a;          /* negro de marca (fondos oscuros, tinta) */
+  --ink:          #111111;          /* tinta de texto principal */
+  --gray:         #555555;          /* texto secundario / leads */
+  --gray-2:       #888888;          /* texto terciario / etiquetas mono */
+  --gray-line:    #eaeaea;          /* bordes, divisores, hairlines */
+  --bg:           #ffffff;          /* lienzo */
+  --surface-2:    #fafafa;          /* superficie elevada sutil / paneles */
+
+  --danger:       #ff5a5a;          /* negativos: "×", restas, fugas */
+
+  /* ---- Semantic aliases ---- */
+  --accent:           var(--green);
+  --accent-ink:       var(--green-deep);
+  --accent-soft:      var(--green-soft);
+
+  --text-strong:      var(--black);
+  --text-body:        var(--gray);
+  --text-muted:       var(--gray-2);
+  --text-on-accent:   var(--black);   /* texto sobre verde → siempre negro */
+  --text-on-dark:     #f4f4f4;        /* texto sobre negro */
+
+  --surface:          var(--bg);
+  --surface-raised:   var(--surface-2);
+  --surface-invert:   var(--black);
+
+  --border:           var(--gray-line);
+  --border-strong:    var(--black);
+  --border-on-dark:   rgba(255,255,255,0.10);
+
+  --selection-bg:     var(--green);
+  --selection-fg:     var(--black);
+}

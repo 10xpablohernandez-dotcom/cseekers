@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agendar diagnóstico — CSeekers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Design System CSeekers: fuente única de tokens (color, tipo, espaciado) -->
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Tokens de marca heredados de styles.css */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--black);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  ::selection { background: var(--green); color: var(--black); }
+  h1, h2, h3 { font-family: "DM Sans", system-ui, sans-serif; letter-spacing: -0.025em; line-height: 1.05; }
+
+  /* BLOBS - fixed */
+  .blob {
+    position: fixed;
+    width: 720px;
+    height: 720px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(57,255,20,0.55) 0%, rgba(57,255,20,0.18) 35%, rgba(57,255,20,0) 70%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .blob.tl { top: -300px; left: -300px; }
+  .blob.br { bottom: -340px; right: -340px; }
+
+  /* NAV */
+  nav.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--gray-line);
+  }
+  .nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .logo {
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: baseline;
+  }
+  .logo .dots {
+    margin-left: 6px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+    align-self: center;
+    transform: translateY(2px);
+  }
+  .logo .dots i {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #b6e9a4;
+    display: block;
+  }
+  .logo .dots i:last-child {
+    background: var(--green);
+    box-shadow: 0 0 8px rgba(57,255,20,0.6);
+  }
+  .back-link {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.75;
+    transition: opacity 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .back-link:hover { opacity: 1; color: var(--green-deep); }
+  .back-link .arr { transition: transform 0.18s; }
+  .back-link:hover .arr { transform: translateX(-4px); }
+
+  /* MAIN GRID */
+  main {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px 32px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  @media (max-width: 980px) {
+    main { grid-template-columns: 1fr; gap: 48px; padding: 48px 22px 64px; }
+  }
+
+  /* LEFT COLUMN */
+  .left-col { animation: fadeUp 0.7s ease both; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    background: rgba(57,255,20,0.12);
+    border: 1px solid rgba(57,255,20,0.4);
+    padding: 7px 14px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    margin-bottom: 28px;
+  }
+  .badge .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(57,255,20,0.6); }
+    50%      { box-shadow: 0 0 0 8px rgba(57,255,20,0); }
+  }
+
+  h1.headline {
+    font-size: clamp(40px, 5.4vw, 64px);
+    font-weight: 800;
+    margin-bottom: 24px;
+    text-wrap: balance;
+    letter-spacing: -0.035em;
+  }
+  h1.headline .hl {
+    color: var(--green-deep);
+    text-shadow: 0 0 22px rgba(57,255,20,0.45);
+    position: relative;
+  }
+  .sub {
+    font-size: 18px;
+    color: var(--gray);
+    line-height: 1.55;
+    max-width: 540px;
+    margin-bottom: 40px;
+    text-wrap: pretty;
+  }
+
+  /* coverage list */
+  .coverage-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--gray-2);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .coverage {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .cov-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 22px;
+    border: 1px solid var(--gray-line);
+    border-radius: 8px;
+    background: #fff;
+    transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+    animation: fadeUp 0.7s ease both;
+  }
+  .cov-card:nth-child(1) { animation-delay: 0.08s; }
+  .cov-card:nth-child(2) { animation-delay: 0.16s; }
+  .cov-card:nth-child(3) { animation-delay: 0.24s; }
+  .cov-card:nth-child(4) { animation-delay: 0.32s; }
+  .cov-card:hover {
+    border-color: var(--black);
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px -22px rgba(0,0,0,0.18);
+  }
+  .cov-card .ic {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--green);
+    color: var(--black);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 18px rgba(57,255,20,0.35);
+  }
+  .cov-card h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 4px;
+    color: var(--black);
+  }
+  .cov-card p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.45;
+  }
+
+  /* meta chips */
+  .chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fafafa;
+    border: 1px solid var(--gray-line);
+    padding: 8px 14px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .chip svg { color: var(--green-deep); }
+
+  /* RIGHT COLUMN */
+  .right-col {
+    position: sticky;
+    top: 100px;
+    animation: fadeUp 0.7s ease 0.1s both;
+  }
+  @media (max-width: 980px) {
+    .right-col { position: static; }
+  }
+  .cal-wrap, .form-wrap {
+    border: 1px solid var(--gray-line);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 24px 60px -28px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.02);
+    position: relative;
+  }
+  .cal-head {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--gray-line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #fafafa;
+  }
+  .cal-head .title {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+  }
+  .cal-head .title em {
+    font-style: normal;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    color: var(--gray-2);
+    margin-left: 8px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  .cal-head .lights {
+    display: flex;
+    gap: 6px;
+  }
+  .cal-head .lights i {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: block;
+    background: #e0e0e0;
+  }
+  .cal-head .lights i:last-child { background: var(--green); }
+
+  /* LEAD FORM */
+  .lead-form { padding: 26px 26px 28px; display: flex; flex-direction: column; gap: 18px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 460px) { .field-row { grid-template-columns: 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-2);
+  }
+  .field input {
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: 15px;
+    color: var(--black);
+    padding: 13px 14px;
+    border: 1px solid var(--gray-line);
+    border-radius: 8px;
+    background: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .field input::placeholder { color: #b3b3b3; }
+  .field input:focus {
+    outline: none;
+    border-color: var(--green-deep);
+    box-shadow: 0 0 0 3px rgba(57,255,20,0.18);
+  }
+  .check-field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    color: var(--ink);
+    cursor: pointer;
+    padding: 4px 0;
+  }
+  .check-field input[type="checkbox"] {
+    width: 20px; height: 20px;
+    accent-color: var(--green);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .submit-btn {
+    margin-top: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--green);
+    color: var(--black);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 18px 38px -12px rgba(57,255,20,0.7);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .submit-btn:hover { transform: translateY(-2px); }
+  .submit-btn .arrow { transition: transform 0.18s ease; }
+  .submit-btn:hover .arrow { transform: translateX(4px); }
+
+  .cal-frame-wrap {
+    position: relative;
+    min-height: 660px;
+  }
+  .cal-frame-wrap iframe {
+    width: 100%;
+    height: 660px;
+    border: none;
+    display: block;
+    background: #fff;
+  }
+
+  /* loader */
+  .cal-loader {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 1;
+  }
+  .cal-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .spinner {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 3px solid var(--gray-line);
+    border-top-color: var(--green);
+    animation: spin 0.9s linear infinite;
+    margin-bottom: 18px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loader-txt {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--gray-2);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .loader-stack { text-align: center; }
+
+  .privacy {
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.5;
+    max-width: 520px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .privacy svg { flex-shrink: 0; margin-top: 2px; color: var(--green-deep); }
+  .privacy a { color: var(--ink); }
+
+  /* FOOTER BAR */
+  footer.metrics {
+    background: var(--black);
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    margin-top: 40px;
+  }
+  .metrics-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 36px 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .metrics-inner-4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 960px) { .metrics-inner-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px) { .metrics-inner { grid-template-columns: 1fr; gap: 20px; padding: 28px 22px; } }
+  .metric.guarantee { gap: 8px; }
+  .metric.guarantee .g-icon { color: var(--green); margin-bottom: 2px; }
+  .metric.guarantee .g-text { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; }
+  .metric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 2px solid var(--green);
+    padding-left: 18px;
+  }
+  .metric .big {
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(24px, 2.4vw, 32px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--green);
+    line-height: 1;
+  }
+  .metric .lab {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.55);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="blob tl"></div>
+<div class="blob br"></div>
+
+<nav class="topnav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
+    <a href="index.html" class="back-link"><span class="arr">←</span> Volver al inicio</a>
+  </div>
+</nav>
+
+<main>
+  <!-- LEFT -->
+  <div class="left-col">
+    <div class="badge"><span class="dot"></span>Evaluación sin costo</div>
+
+    <h1 class="headline">Agenda tu sesión de <span class="hl">diagnóstico</span>.</h1>
+    <p class="sub">30 minutos para saber si el Protocolo ACOS es lo que tu eCommerce necesita. Sin pitch genérico — solo números reales y una dirección clara.</p>
+
+    <div class="coverage-label">// Qué cubre la sesión</div>
+    <div class="coverage">
+      <div class="cov-card">
+        <div class="ic">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        </div>
+        <div>
+          <h3>Diagnóstico de rentabilidad</h3>
+          <p>Revisamos tu estructura de costos y márgenes reales por canal y categoría.</p>
+        </div>
+      </div>
+      <div class="cov-card">
+        <div class="ic">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </div>
+        <div>
+          <h3>Identificación de fugas de margen</h3>
+          <p>Detectamos dónde se pierde dinero hoy — pauta, fulfillment, devoluciones, mix.</p>
+        </div>
+      </div>
+      <div class="cov-card">
+        <div class="ic">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <h3>Dirección estratégica</h3>
+          <p>Sales con un camino claro — apliques el protocolo con nosotros o no.</p>
+        </div>
+      </div>
+      <div class="cov-card">
+        <div class="ic">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <div>
+          <h3>Evaluación de viabilidad</h3>
+          <p>Definimos si eres candidato al piloto de 16 semanas. Filtro honesto, sin humo.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chips">
+      <span class="chip">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        30 minutos
+      </span>
+      <span class="chip">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4V8Z"/></svg>
+        Google Meet
+      </span>
+      <span class="chip">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+        Sin costo
+      </span>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right-col">
+    <div class="form-wrap">
+      <div class="cal-head">
+        <div class="title">Diagnóstico ACOS<em>// 30 min</em></div>
+        <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+      <form class="lead-form" id="leadForm" action="Confirmacion Diagnostico.html">
+        <div class="field-row">
+          <div class="field">
+            <label for="fName">Nombre</label>
+            <input type="text" id="fName" name="nombre" required placeholder="Ej. Ana">
+          </div>
+          <div class="field">
+            <label for="fLast">Apellido</label>
+            <input type="text" id="fLast" name="apellido" required placeholder="Ej. Torres">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fWhats">Número de WhatsApp</label>
+          <input type="tel" id="fWhats" name="whatsapp" required placeholder="Ej. +52 55 1234 5678">
+        </div>
+        <div class="field">
+          <label for="fUrl">URL de tu tienda online</label>
+          <input type="url" id="fUrl" name="tienda" required placeholder="https://tutienda.com">
+        </div>
+        <label class="check-field">
+          <input type="checkbox" id="fAds" name="usa_anuncios">
+          <span>Actualmente uso anuncios para vender</span>
+        </label>
+        <button type="submit" class="submit-btn">Agendar mi sesión <span class="arrow">→</span></button>
+      </form>
+    </div>
+
+    <div class="privacy">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span>Al agendar, aceptas que revisemos tu caso de forma confidencial. No compartimos información con terceros.</span>
+    </div>
+  </div>
+</main>
+
+<footer class="metrics">
+  <div class="metrics-inner metrics-inner-4">
+    <div class="metric">
+      <div class="big">18+</div>
+      <div class="lab">Marcas escaladas</div>
+    </div>
+    <div class="metric">
+      <div class="big">$20M+</div>
+      <div class="lab">MRR en portafolio</div>
+    </div>
+    <div class="metric">
+      <div class="big">ROAS 10+</div>
+      <div class="lab">Promedio en piloto</div>
+    </div>
+    <div class="metric guarantee">
+      <div class="g-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></div>
+      <div class="lab">Garantía sin riesgo</div>
+      <p class="g-text">Si no obtenemos tu diagnóstico en 10 días, con accionables puntuales y puntos de fuga reales, te devolvemos tu dinero. Sin preguntas.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('leadForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(this);
+    const body = encodeURIComponent(
+      'Nombre: ' + data.get('nombre') + ' ' + data.get('apellido') + '\n' +
+      'WhatsApp: ' + data.get('whatsapp') + '\n' +
+      'Tienda: ' + data.get('tienda') + '\n' +
+      'Usa anuncios actualmente: ' + (data.get('usa_anuncios') ? 'Sí' : 'No')
+    );
+    const subject = encodeURIComponent('Nueva solicitud de diagnóstico ACOS');
+    window.location.href = 'mailto:10x.pablohernandez@gmail.com?subject=' + subject + '&body=' + body;
+    setTimeout(() => { window.location.href = this.action; }, 250);
+  });
+</script>
+</body>
+</html>

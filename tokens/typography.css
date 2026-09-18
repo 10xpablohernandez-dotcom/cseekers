@@ -1,0 +1,52 @@
+/* CSeekers — Typography
+   Tres voces tipográficas:
+   1. DISPLAY (DM Sans, 800–900, tracking muy negativo) → titulares grandes
+   2. BODY    (Inter, 400–700) → párrafos, UI, listas
+   3. MONO    (JetBrains Mono) → eyebrows, numeración de sección,
+      etiquetas, métricas, "voz de sistema". Casi siempre UPPERCASE
+      con letter-spacing positivo.
+   Regla de oro: títulos = tracking apretado; mono = tracking abierto. */
+
+:root {
+  --font-display: "DM Sans", "Inter", system-ui, -apple-system, sans-serif;
+  --font-body:    "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Weights */
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold: 600;
+  --fw-bold:    700;
+  --fw-heavy:   800;
+  --fw-black:   900;
+
+  /* Display scale (fluid) */
+  --fs-display:  clamp(48px, 8vw, 112px);   /* h1 / hero */
+  --fs-h2:       clamp(36px, 5.2vw, 64px);
+  --fs-h3:       clamp(22px, 2.4vw, 30px);
+  --fs-h4:       17px;
+
+  /* Body scale */
+  --fs-lead:     clamp(17px, 1.4vw, 20px);
+  --fs-body:     16px;
+  --fs-sm:       14px;
+  --fs-xs:       13px;
+
+  /* Mono scale (eyebrows / labels / data) */
+  --fs-mono:     12px;
+  --fs-mono-sm:  11px;
+
+  /* Tracking */
+  --tracking-display: -0.045em;   /* hero, lo más apretado */
+  --tracking-head:    -0.035em;   /* h2/h3 */
+  --tracking-tight:   -0.02em;    /* subtítulos, logo */
+  --tracking-mono:     0.08em;    /* eyebrows / labels (abierto) */
+  --tracking-mono-wide: 0.12em;   /* micro-labels uppercase */
+
+  /* Line height */
+  --lh-display: 0.95;
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-body:    1.5;
+  --lh-relaxed: 1.6;
+}

@@ -1,0 +1,59 @@
+/* CSeekers — Base element defaults
+   Aplica la "voz" de la marca a elementos crudos. Importado por
+   styles.css después de los tokens. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--surface);
+  color: var(--text-strong);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--selection-bg); color: var(--selection-fg); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-head);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-heavy);
+  color: var(--text-strong);
+}
+h1 {
+  font-size: var(--fs-display);
+  font-weight: var(--fw-black);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--lh-display);
+}
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: var(--fw-bold); }
+h4 { font-size: var(--fs-h4); font-weight: var(--fw-bold); letter-spacing: var(--tracking-tight); }
+
+p  { text-wrap: pretty; }
+
+a { color: inherit; }
+
+/* Eyebrow / kicker — el patrón mono más característico de la marca.
+   Úsalo como clase utilitaria en cualquier label de sección. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  font-weight: var(--fw-medium);
+  color: var(--text-body);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-mono);
+}
+.eyebrow::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}

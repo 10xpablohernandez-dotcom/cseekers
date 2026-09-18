@@ -1,0 +1,22 @@
+notepad .gitignore
+[18:53]# Exports y artefactos de diseño
+*.zip
+Primer Export de Design Claude.zip
+Segundo Export de Design Claude/
+scraps/
+
+# Versiones viejas y respaldos manuales
+OLD_*
+Respaldo y sustento.html
+Guardado - *.html
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Dependencias y entorno
+node_modules/
+.env
+.env.*

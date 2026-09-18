@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sesión confirmada — CSeekers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Design System CSeekers: fuente única de tokens -->
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="home-acos.css" />
+<link rel="stylesheet" href="confirmacion.css" />
+</head>
+<body>
+
+<!-- NAV mínima: solo logo, sin rutas de escape -->
+<nav class="topnav scrolled" id="topnav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
+  </div>
+</nav>
+
+<!-- M1 · CONFIRMACIÓN -->
+<header class="hero conf-hero" id="top" data-screen-label="Confirmación">
+  <div class="blob tl breathe"></div>
+  <div class="container">
+    <div class="check-badge" aria-hidden="true">
+      <svg viewBox="0 0 96 96">
+        <circle class="ring" cx="48" cy="48" r="46"></circle>
+        <path class="tick" d="M30 49 L43 62 L67 36"></path>
+      </svg>
+    </div>
+    <span class="kicker reveal">Sesión confirmada</span>
+    <h1 class="reveal d1" style="font-size: clamp(36px, 4.6vw, 64px);">Listo. <span class="soft">Tu sesión está agendada.</span></h1>
+    <p class="hero-sub reveal d2">Hemos registrado tus datos, nos pondremos en contacto en menos de 24 horas para acordar un horario para la sesión.</p>
+    <div class="instant-help reveal d3">
+      <span>¿No quieres esperar? Recibe atención inmediata.</span>
+      <a href="https://wa.me/525583939495" class="wa-btn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.43-4.4-1.17l-.31-.18-3.03.8.81-2.95-.2-.32A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.4-5.6c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3 0-.46 0-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.65 2.52 4 3.43 2 .77 2.4.62 2.83.58.43-.04 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.11-.22-.17-.46-.29z"></path></svg>
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- M3 · TRAE ESTO A LA SESIÓN -->
+<section class="prep" id="prep" data-screen-label="Prepara tu sesión">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Prepara tu sesión · 10 minutos</span>
+      <h2>La llamada vale el doble si traes estos 4 números.</h2>
+    </div>
+    <span class="prep-counter reveal">Preparación: <strong id="prepCount">0/4</strong> listo</span>
+    <div class="check-list">
+      <div class="check-item reveal d1" tabindex="0">
+        <span class="check-box" role="checkbox" aria-checked="false" aria-label="Marcar como listo"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 10 18.5 20 6"></path></svg></span>
+        <div class="txt">
+          <h3>1. Tu facturación mensual promedio</h3>
+          <p>De los últimos 3 meses (Shopify → Analytics → te toma 1 minuto).</p>
+        </div>
+      </div>
+      <div class="check-item reveal d2" tabindex="0">
+        <span class="check-box" role="checkbox" aria-checked="false" aria-label="Marcar como listo"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 10 18.5 20 6"></path></svg></span>
+        <div class="txt">
+          <h3>2. Tu inversión mensual en pauta</h3>
+          <p>Meta + Google, aproximada.</p>
+        </div>
+      </div>
+      <div class="check-item reveal d3" tabindex="0">
+        <span class="check-box" role="checkbox" aria-checked="false" aria-label="Marcar como listo"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 10 18.5 20 6"></path></svg></span>
+        <div class="txt">
+          <h3>3. Tu intento de respuesta a esta pregunta</h3>
+          <p>De una venta de $1,000, después de producto, envío, comisiones y pauta… ¿cuánto te queda? <em>No importa si no lo sabes exacto — el intento es el dato. El 90% no lo sabe. Por eso existe esta llamada.</em></p>
+        </div>
+      </div>
+      <div class="check-item reveal d4" tabindex="0">
+        <span class="check-box" role="checkbox" aria-checked="false" aria-label="Marcar como listo"><svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 10 18.5 20 6"></path></svg></span>
+        <div class="txt">
+          <h3>4. Tu mayor duda o frustración actual</h3>
+          <p>Con tu operación digital, en una frase. La llamada empieza por ahí.</p>
+        </div>
+      </div>
+    </div>
+    <div class="prep-done" id="prepDone">Estás más preparado que el 90% de las llamadas que tomamos.</div>
+    <p class="prep-note reveal">No necesitas preparar accesos, reportes ni presentaciones. <strong>Solo estos 4 números y 30 minutos sin distracciones.</strong></p>
+  </div>
+</section>
+
+<!-- M4 · QUÉ ESPERAR (Y QUÉ NO) -->
+<section class="expect" id="expect" data-screen-label="Qué esperar">
+  <div class="container">
+    <div class="section-head">
+      <h2>Para que llegues sin guardia alta.</h2>
+    </div>
+    <div class="expect-grid">
+      <div class="expect-col si">
+        <h3>La llamada <em>sí</em> es:</h3>
+        <ul>
+          <li>15 min entendiendo tu operación (te preguntamos, tú hablas)</li>
+          <li>10 min explicándote qué encontraría el diagnóstico en TU caso</li>
+          <li>5 min decidiendo, juntos, si tiene sentido</li>
+        </ul>
+      </div>
+      <div class="expect-col no">
+        <h3>La llamada <em>no</em> es:</h3>
+        <ul>
+          <li>Un pitch de 30 minutos con slides</li>
+          <li>Presión para cerrar "hoy mismo"</li>
+          <li>Un diagnóstico gratis disfrazado (la verdad completa toma 10 días, no 30 minutos)</li>
+        </ul>
+      </div>
+    </div>
+    <p class="expect-close">Si no eres fit para el diagnóstico, te lo decimos en la llamada y te llevas al menos una observación útil de tu operación. <strong>Nadie pierde el tiempo.</strong></p>
+  </div>
+</section>
+
+<!-- M5 · MIENTRAS TANTO -->
+<section class="nurture" id="nurture" data-screen-label="Mientras tanto">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Para llegar con contexto</span>
+      <h2>Tres piezas de 60 segundos.</h2>
+    </div>
+    <div class="nurture-grid">
+      <div class="info-card reveal d1">
+        <span class="nn">01 · Concepto</span>
+        <h3>¿Qué es el ROAS?</h3>
+        <p>Retorno sobre inversión publicitaria: cuánto vendes por cada peso invertido en pauta. No dice cuánto ganas: un ROAS alto puede convivir con ganancia cero, o con pérdidas.</p>
+      </div>
+      <div class="info-card reveal d2">
+        <span class="nn">02 · Síntomas</span>
+        <h3>¿Qué es una fuga en Shopify?</h3>
+        <p>Un punto donde tu negocio pierde margen sin que se note en el reporte de ventas: comisiones, devoluciones, envío mal calculado, descuentos excesivos, checkout lento. Facturas, pero ese dinero no te queda.</p>
+      </div>
+      <div class="info-card reveal d3">
+        <span class="nn">03 · Concepto</span>
+        <h3>¿Qué es CAC/LTV?</h3>
+        <p>CAC es lo que te cuesta conseguir un cliente. LTV es lo que ese cliente te deja en el tiempo. Si tu CAC se acerca o supera tu LTV, cada venta nueva te acerca más a la quiebra, no al crecimiento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER mínimo -->
+<footer class="conf-footer">
+  <div class="footer-inner">
+    <a href="index.html" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
+    <span class="see-you">CSeekers · Nos vemos en tu sesión</span>
+    <a href="https://wa.me/525583939495" class="wa" target="_blank" rel="noopener">WhatsApp de contacto</a>
+  </div>
+</footer>
+
+<script src="home-acos.js"></script>
+<script src="confirmacion.js"></script>
+</body>
+</html>

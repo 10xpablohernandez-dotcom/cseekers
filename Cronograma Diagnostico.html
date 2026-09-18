@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cronograma · Diagnóstico ACOS — CSeekers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Design System CSeekers: fuente única de tokens -->
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="home-acos.css" />
+<link rel="stylesheet" href="cronograma.css" />
+</head>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0a0a0a"/><circle cx="100" cy="100" r="60" fill="#39FF14"/><text x="100" y="112" font-family="monospace" font-size="40" fill="#0a0a0a" text-anchor="middle">10</text></svg></template>
+<body>
+
+<!-- NAV -->
+<nav class="topnav" id="topnav">
+  <div class="nav-inner">
+    <a href="#top" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
+    <ul class="nav-links">
+      <li><a href="#verdad">La verdad</a></li>
+      <li><a href="#proceso">El proceso</a></li>
+      <li><a href="#despues">Ads Engine</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Agendar Sesion.html" class="nav-cta desktop">Agendar sesión →</a>
+      <a href="index.html" class="nav-cta ghost desktop">Protocolo</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE SHEET -->
+<div class="sheet-backdrop" id="sheetBackdrop"></div>
+<aside class="mobile-sheet" id="mobileSheet" aria-hidden="true">
+  <div class="sheet-head">
+    <a href="#top" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-white.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
+    <button class="sheet-close" id="sheetClose" aria-label="Cerrar menú">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+  </div>
+  <div class="sheet-divider"></div>
+  <nav class="sheet-links" aria-label="Menú móvil">
+    <a href="#verdad">La verdad</a>
+    <a href="#proceso">El proceso</a>
+    <a href="#despues">Ads Engine</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="sheet-ctas">
+    <a href="Agendar Sesion.html" class="nav-cta">Agendar sesión →</a>
+    <a href="index.html" class="nav-cta ghost">Protocolo</a>
+  </div>
+</aside>
+
+<!-- M1 · HERO -->
+<header class="hero crono-hero" id="top" data-screen-label="Hero cronograma">
+  <video class="hero-video" src="https://videos.pexels.com/video-files/34350488/14552905_1920_1080_30fps.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+  <div class="hero-scrim"></div>
+  <div class="blob tl breathe"></div>
+  <div class="container">
+    <span class="hero-kicker" id="heroKicker" data-text="CRONOGRAMA · DIAGNÓSTICO ACOS"><span class="txt"></span><span class="caret" aria-hidden="true"></span></span>
+    <h1 class="reveal d1"><span class="num-10" data-target="10">0</span> días hábiles. <span class="soft">Cero adivinanzas.</span></h1>
+    <p class="hero-sub reveal d2">Esto es exactamente lo que pasa desde que pagas hasta que tienes tu veredicto en la mano. Día por día, entregable por entregable. Si algo no está aquí, no lo prometimos.</p>
+    <span class="micro reveal d3">Tu tiempo total requerido: <strong>&lt; 2 horas</strong></span>
+  </div>
+  <a href="#verdad" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16"></path><path d="m5 13 7 7 7-7"></path></svg>
+  </a>
+</header>
+
+<!-- M2 · LA VERDAD INCÓMODA -->
+<section class="truth" id="verdad" data-screen-label="La verdad incómoda">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">La verdad incómoda</span>
+      <h2>Diseñamos un protocolo de <span class="strike16">16 semanas</span>. <span class="soft">Lo matamos nosotros mismos.</span></h2>
+    </div>
+    <p class="body reveal d1">La primera versión de ACOS era un programa de 4 meses y 50 entregables. Impresionaba en la propuesta. Tenía un problema: obligaba al cliente a esperar semanas para recibir el valor que decide todo — <strong>saber si su negocio puede escalar y dónde está fugando dinero.</strong></p>
+    <p class="body reveal d2">Así que lo invertimos. La verdad financiera completa va primero, en 10 días, a una fracción del precio. Y la ejecución (pauta, creativos, optimización) solo se activa cuando los números dicen que tiene sentido — nunca antes.</p>
+    <p class="truth-close reveal d3">Nadie debería pagar 4 meses para saber si puede escalar. <strong class="glow10">Se sabe en 10 días.</strong></p>
+  </div>
+</section>
+
+<!-- M3 · TIMELINE DÍA POR DÍA -->
+<section class="proceso" id="proceso" data-screen-label="Día por día">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">El proceso</span>
+      <h2>Día por día. <span class="soft">Sin letras chicas.</span></h2>
+    </div>
+    <div class="tl-wrap">
+      <div class="tl-rail"><div class="tl-fill"></div></div>
+      <div class="tl-item">
+        <div class="tl-dot">DÍA<br>0</div>
+        <h3><span class="day">Día 0</span> · Pago confirmado</h3>
+        <p>Recibes la lista de accesos (todo de solo lectura: Shopify, Meta, Google, GA4, costos por SKU). El reloj de los 10 días arranca cuando entra el último acceso.</p>
+        <span class="tl-deliv">Entregable: checklist de accesos + calendario del proyecto</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">DÍAS<br>1–2</div>
+        <h3><span class="day">Días 1–2</span> · Kickoff + ingesta de datos</h3>
+        <p>Llamada de kickoff (45 min): contexto de negocio, metas, temporadas, inventario. Del otro lado, conectamos y validamos tus datos: órdenes, costos, campañas.</p>
+        <span class="tl-deliv">Entregable: baseline de datos validada</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">DÍAS<br>3–5</div>
+        <h3><span class="day">Días 3–5</span> · Unit Economics + auditorías</h3>
+        <p>Se construye tu Unit Economics maestro: margen real por SKU, categoría y canal. En paralelo: auditoría técnica de Shopify (velocidad, checkout, apps) y auditoría de cuentas Meta + Google (estructura, eventos, tracking).</p>
+        <span class="tl-deliv">Entregables: UE maestro (.xlsx) · 2 auditorías (checklist con severidad)</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">DÍAS<br>6–7</div>
+        <h3><span class="day">Días 6–7</span> · Mapa de fugas</h3>
+        <p>Cruzamos todo: dónde se escapa el dinero, cuánto por punto de fuga, en qué orden atacarlo. Jerarquizado por pesos recuperables, no por opinión.</p>
+        <span class="tl-deliv">Entregable: mapa de fugas jerarquizado</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">DÍAS<br>8–9</div>
+        <h3><span class="day">Días 8–9</span> · Quick-wins + veredicto</h3>
+        <p>Las acciones de impacto inmediato (&lt;7 días de implementación, impacto cuantificado) y la resolución go/no-go: si tu operación está lista para escalar, o qué arreglar primero y en qué orden.</p>
+        <span class="tl-deliv">Entregables: plan quick-wins · veredicto go/no-go</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">DÍA<br>10</div>
+        <h3><span class="day">Día 10</span> · Sesión de lectura de resultados</h3>
+        <p>60 minutos, tú y quien decida contigo. Recorremos los hallazgos, los números y el veredicto. Sales sabiendo exactamente qué hacer, con nosotros o sin nosotros.</p>
+        <span class="tl-deliv">Entregable: sesión ejecutiva + documento completo, tuyo para siempre</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- M4 · QUÉ PASA DESPUÉS DEL DÍA 10 -->
+<section class="despues" id="despues" data-screen-label="Después del día 10">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">El camino continúa</span>
+      <h2>El día 10 hay dos caminos. <span class="soft">Los dos son buenos.</span></h2>
+    </div>
+    <div class="paths-grid">
+      <div class="path-card reveal d1">
+        <span class="path-tag">Camino A</span>
+        <h3>Ejecutas por tu cuenta.</h3>
+        <p>El diagnóstico es 100% accionable sin nosotros: mapa, prioridades y quick-wins quedan en tus manos. Muchos clientes hacen exactamente eso.</p>
+        <p><strong style="color: var(--black);">Cero presión, cero suscripción disfrazada.</strong></p>
+      </div>
+      <div class="path-card engine reveal d2">
+        <span class="path-tag">Camino B · desde $18,000/mes</span>
+        <h3>Ejecutamos contigo: Ads Engine.</h3>
+        <p>Solo disponible con veredicto "go": el operador que ya vio tus números por dentro se queda a operarlos.</p>
+        <ul class="engine-list">
+          <li><strong>Trafficker senior asignado</strong>: gestión de Meta + Google con TU unit economics como brújula (no benchmarks genéricos)</li>
+          <li><strong>8 visuales de anuncios al mes</strong>: producidos sobre los ángulos que tu margen puede pagar</li>
+          <li><strong>Tracking verificado</strong>: Pixel + CAPI nativo funcionando de verdad</li>
+          <li><strong>Acceso a CSeekers Analytics</strong>: herramienta interna de reporte en tiempo real</li>
+          <li><strong>1 sesión quincenal de decisiones</strong>: 45 min, qué escalar, qué apagar, qué probar</li>
+        </ul>
+        <div class="conds">
+          <span class="cond-line" data-text="MÍNIMO 3 MESES"><span class="txt"></span><span class="caret" aria-hidden="true"></span></span>
+          <span class="cond-line" data-text="CUPO: ÚnICAMENTE 3 LUGARES DISPONIBLES"><span class="txt"></span><span class="caret" aria-hidden="true"></span></span>
+          <span class="cond-line" data-text="TU DIAGNÓSTICO DE $14,900 SE ACREDITA AL 100% SI ENTRAS DENTRO DE LOS PRÓXIMOS 15 DÍAS"><span class="txt"></span><span class="caret" aria-hidden="true"></span></span>
+        </div>
+      </div>
+    </div>
+    <div class="credit-bar-wrap reveal">
+      <div class="credit-bar-labels">
+        <span class="credit-bar-amt">$14,900 acreditados</span>
+        <span class="credit-bar-total">de $18,000 · primer mes Ads Engine</span>
+      </div>
+      <div class="credit-bar-track"><div class="credit-bar-fill" style="width:82.8%"></div></div>
+      <p class="credit-bar-legend">El pago de tu Protocolo ACOS se acredita 100% en tu primer mes de Ads Engine si lo contratas dentro de los próximos 15 días después de la entrega del protocolo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- M5 · TU INVERSIÓN DE TIEMPO -->
+<section class="tiempo" id="tiempo" data-screen-label="Tu inversión de tiempo">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Tu parte del trabajo: <span class="soft">menos de 2 horas.</span></h2>
+    </div>
+    <div class="time-grid">
+      <div class="time-card reveal d1">
+        <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
+          <circle class="ring-bg" cx="40" cy="40" r="26" fill="none" stroke-width="5"></circle>
+          <circle class="ring-fill" cx="40" cy="40" r="26" fill="none" stroke-width="5" data-mins="45" transform="rotate(-90 40 40)"></circle>
+          <text class="mins" x="40" y="45" text-anchor="middle">45'</text>
+        </svg>
+        <h3>Llamada de kickoff</h3>
+        <p>Días 1–2 · contexto de negocio, metas, temporadas.</p>
+      </div>
+      <div class="time-card reveal d2">
+        <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
+          <circle class="ring-bg" cx="40" cy="40" r="26" fill="none" stroke-width="5"></circle>
+          <circle class="ring-fill" cx="40" cy="40" r="26" fill="none" stroke-width="5" data-mins="20" transform="rotate(-90 40 40)"></circle>
+          <text class="mins" x="40" y="45" text-anchor="middle">20'</text>
+        </svg>
+        <h3>Reunir accesos y costos</h3>
+        <p>Día 0 · con nuestro checklist, de solo lectura.</p>
+      </div>
+      <div class="time-card reveal d3">
+        <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
+          <circle class="ring-bg" cx="40" cy="40" r="26" fill="none" stroke-width="5"></circle>
+          <circle class="ring-fill" cx="40" cy="40" r="26" fill="none" stroke-width="5" data-mins="60" transform="rotate(-90 40 40)"></circle>
+          <text class="mins" x="40" y="45" text-anchor="middle">60'</text>
+        </svg>
+        <h3>Lectura de resultados</h3>
+        <p>Día 10 · tú y quien decida contigo.</p>
+      </div>
+    </div>
+    <p class="time-close reveal">Todo lo demás lo hacemos nosotros. <strong>Tu negocio no se detiene mientras lo diagnosticamos.</strong></p>
+  </div>
+</section>
+
+<!-- RECAP · PRECIO + GARANTÍA -->
+<section class="recap" data-screen-label="Precio y garantía">
+  <div class="container">
+    <div class="recap-grid">
+      <div class="recap-price reveal">
+        <span class="badge">Diagnóstico ACOS</span>
+        <div class="amount">$14,900<span class="iva">MXN + IVA</span></div>
+        <div class="duration">10 días hábiles · cobramos 50% al arrancar y 50% restante 24h antes del veredicto</div>
+        <a href="Agendar Sesion.html" class="btn">Quiero mi diagnóstico <span class="arrow">→</span></a>
+      </div>
+      <div class="guarantee-card reveal d1">
+        <div class="guarantee-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+        </div>
+        <h4>Garantía sin riesgo</h4>
+        <p>Si no obtenemos tu diagnóstico en 10 días, con accionables puntuales y puntos de fuga reales, te devolvemos tu dinero. Sin preguntas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- M6 · FAQ DEL PROCESO -->
+<section class="faq" id="faq" data-screen-label="FAQ proceso">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>FAQ del proceso.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open reveal d1">
+        <button class="faq-q"><span>¿Cuándo arrancan mis 10 días?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Cuando entra el último acceso. Con el checklist del día 0, la mayoría lo resuelve en 2–3 días.</div></div>
+      </div>
+      <div class="faq-item reveal d2">
+        <button class="faq-q"><span>¿Y si mis datos están desordenados (no tengo costos por SKU)?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Se detecta en la llamada de descubrimiento, antes de que pagues. Si faltan piezas, te decimos qué armar primero: no cobramos por diagnosticar a ciegas.</div></div>
+      </div>
+      <div class="faq-item reveal d3">
+        <button class="faq-q"><span>¿El diagnóstico toca mis campañas?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No. Todo es de lectura. Nada se pausa, nada se modifica. Tu operación sigue intacta.</div></div>
+      </div>
+      <div class="faq-item reveal d4">
+        <button class="faq-q"><span>¿Puedo entrar directo a Ads Engine sin diagnóstico?</span><span class="plus" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No. Operar pauta sin unit economics es apostar tu dinero, y no apostamos con dinero ajeno.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- M7 · CTA FINAL -->
+<section class="final" id="final" data-screen-label="CTA final">
+  <div class="blob br breathe"></div>
+  <div class="container">
+    <span class="kicker reveal">Siguiente paso</span>
+    <h2 class="reveal d1">¿Viste algo aquí que no puedas responder de tu propia tienda?</h2>
+    <p class="body reveal d2">Esa es exactamente la señal. La llamada dura 30 minutos y te dice si el diagnóstico te sirve, o si todavía no.</p>
+    <div class="reveal d3">
+      <a href="Agendar Sesion.html" class="btn">Agendar llamada de descubrimiento <span class="arrow">→</span></a>
+      <span class="btn-micro">Únicamente 3 lugares disponibles · priorizamos foco y profundidad</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
+      <p class="footer-tag">CSeekers · Consultoría comercial de eCommerce · México</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#caso">Caso</a></li>
+      <li><a href="Agendar Sesion.html">Agendar</a></li>
+      <li><a href="#">Contacto / WhatsApp</a></li>
+      <li><a href="#">Aviso de privacidad</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">© 2026 CSeekers. Todos los derechos reservados.</div>
+</footer>
+
+<script src="home-acos.js"></script>
+<script src="cronograma.js"></script>
+</body>
+</html>

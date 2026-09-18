@@ -1,0 +1,51 @@
+/* CSeekers — Spacing, radius, shadow, motion
+   Estética: bordes casi rectos (radius pequeño), hairlines de 1px,
+   sombras solo en hover (proyectadas hacia abajo, muy difusas),
+   y un halo verde reservado para elementos sobre fondo oscuro. */
+
+:root {
+  /* Spacing scale (4px base) */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  22px;
+  --space-6:  32px;
+  --space-8:  44px;
+  --space-10: 60px;
+  --space-12: 80px;
+  --space-16: 120px;   /* padding vertical de sección (desktop) */
+
+  /* Layout */
+  --container:      1240px;
+  --container-wide: 1280px;
+  --gutter:         32px;
+  --gutter-mobile:  22px;
+
+  /* Radius — la marca es de esquinas duras */
+  --radius:      4px;    /* botones, badges, pills cuadradas, chips */
+  --radius-card: 6px;    /* tarjetas */
+  --radius-lg:   8px;    /* tarjetas grandes / contenedores */
+  --radius-xl:   16px;   /* paneles destacados (calendario, modales) */
+  --radius-pill: 999px;  /* chips/badges redondeados, dots */
+
+  /* Borders */
+  --bw: 1px;
+  --bw-strong: 1.5px;
+
+  /* Shadows (solo en interacción) */
+  --shadow-hover:  0 22px 44px -22px rgba(0,0,0,0.18);
+  --shadow-raised: 0 24px 60px -28px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.02);
+  --shadow-panel:  0 30px 70px -20px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.04);
+
+  /* Glow verde — para CTAs y elementos sobre negro */
+  --glow-accent:   0 18px 38px -12px rgba(57,255,20,0.7);
+  --glow-accent-sm: 0 0 8px rgba(57,255,20,0.6);
+
+  /* Motion */
+  --ease:        cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:    0.12s;
+  --dur:         0.18s;
+  --dur-slow:    0.35s;
+  --dur-reveal:  0.7s;
+}
