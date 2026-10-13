@@ -3,23 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Protocolo ACOS para Shopify · CSeekers</title>
-<meta name="description" content="En 10 días hábiles reconstruimos la verdad financiera de tu eCommerce en Shopify: margen real, fugas de dinero y un veredicto honesto para escalar." />
+<title>CSeekers · Google Ads, Meta Ads y SEO optimizados al margen</title>
+<meta name="description" content="Gestionamos Google Ads, Meta Ads y SEO con una estructura integral: primero optimizamos las variables del negocio, después el canal. Rentabilidad sobre clics." />
 <!-- Open Graph / redes sociales -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="CSeekers" />
 <meta property="og:url" content="https://cseekers.com/" />
-<meta property="og:title" content="Protocolo ACOS para Shopify · CSeekers" />
-<meta property="og:description" content="En 10 días hábiles reconstruimos la verdad financiera de tu eCommerce en Shopify: margen real, fugas de dinero y un veredicto honesto para escalar." />
-<meta property="og:image" content="https://cseekers.com/assets/og-index.webp" />
-<meta property="og:image:width" content="1920" />
-<meta property="og:image:height" content="1440" />
-<meta property="og:image:type" content="image/webp" />
+<meta property="og:title" content="CSeekers · Google Ads, Meta Ads y SEO optimizados al margen" />
+<meta property="og:description" content="Gestionamos Google Ads, Meta Ads y SEO con una estructura integral: primero optimizamos las variables del negocio, después el canal. Rentabilidad sobre clics." />
 <meta property="og:locale" content="es_MX" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Protocolo ACOS para Shopify · CSeekers" />
-<meta name="twitter:description" content="En 10 días hábiles reconstruimos la verdad financiera de tu eCommerce en Shopify: margen real, fugas de dinero y un veredicto honesto para escalar." />
-<meta name="twitter:image" content="https://cseekers.com/assets/og-index.webp" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="CSeekers · Google Ads, Meta Ads y SEO optimizados al margen" />
+<meta name="twitter:description" content="Gestionamos Google Ads, Meta Ads y SEO con una estructura integral: primero optimizamos las variables del negocio, después el canal. Rentabilidad sobre clics." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -942,6 +937,16 @@
   }
   .price-card .btn { width: 100%; justify-content: center; margin-top: 24px; }
 
+  /* ---------- TRI-GRID (3 planes) ---------- */
+  .tri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; margin-top: 10px; }
+  @media (max-width: 980px) { .tri-grid { grid-template-columns: 1fr; } }
+  .tri-card { position: static; display: flex; flex-direction: column; }
+  .tri-card.featured { box-shadow: 0 0 0 2px var(--green), 0 30px 60px -24px rgba(57,255,20,0.35); margin-top: -6px; padding-bottom: 42px; }
+  @media (max-width: 980px) { .tri-card.featured { margin-top: 0; padding-bottom: 36px; } }
+  .tri-list { list-style: none; display: grid; gap: 10px; margin: 20px 0 22px; flex: 1; }
+  .tri-list li { padding-left: 22px; position: relative; font-size: 14px; color: var(--gray); line-height: 1.45; }
+  .tri-list li::before { content: "+"; position: absolute; left: 0; top: 0; color: var(--green-deep); font-weight: 900; }
+
   /* ---------- TIMELINE ---------- */
   .timeline-wrap { margin-top: 80px; }
   .timeline-wrap h3 {
@@ -1516,6 +1521,9 @@
   .dim-list li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
   .dim-list li strong { color: #fff; }
   .math-block { border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 28px 26px; margin-top: 30px; }
+  .math-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 960px; margin: 0 auto 50px; }
+  .math-grid .math-block { margin-top: 0; height: 100%; }
+  @media (max-width: 780px) { .math-grid { grid-template-columns: 1fr; } }
   .math-block p { font-size: 15.5px; line-height: 1.6; margin: 0 0 12px; color: rgba(255,255,255,0.85); }
   .math-block .mnum { font-family: var(--font-display); font-weight: 900; color: #ff5a5a; transition: color 0.4s ease; }
   .math-block .mnum.ok { color: var(--green); }
@@ -1532,6 +1540,59 @@
   .case-close { margin-top: 40px; }
   .case-close p { font-size: 17px; color: var(--gray); margin: 0 0 20px; }
   .case-close p strong { color: var(--black); }
+
+  /* Cierre: CTA agendar llamada (sustituye al video CTA) */
+  .closing { background: var(--black); color: #fff; text-align: center; padding: 140px 0 150px; }
+  .closing .blob.tl { opacity: 0.55; }
+  .closing .eyebrow { color: rgba(255,255,255,0.65); }
+  .closing h2 { color: #fff; font-size: clamp(36px, 5.6vw, 76px); margin-bottom: 22px; text-wrap: balance; }
+  .closing h2 .accent { color: var(--green); }
+  .closing p { font-size: clamp(17px, 1.6vw, 20px); color: rgba(255,255,255,0.7); max-width: 640px; margin: 0 auto 40px; line-height: 1.5; text-wrap: pretty; }
+  .closing .cta-wrap { display: flex; justify-content: center; }
+  .closing .cta-stack { align-items: center; }
+  .closing .btn-micro { color: rgba(255,255,255,0.55); }
+  .closing-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
+  .closing-chips span { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.18); padding: 9px 16px; border-radius: 999px; }
+
+  /* Home: navegación con submenú de servicios */
+  .nav-links > li { position: relative; }
+  .nav-links .has-sub > a { display: inline-flex; align-items: center; gap: 6px; }
+  .nav-links .has-sub > a svg { transition: transform 0.2s ease; }
+  .nav-links .has-sub:hover > a svg, .nav-links .has-sub:focus-within > a svg { transform: rotate(180deg); }
+  .nav-links .has-sub::after { content: ""; position: absolute; left: -16px; right: -16px; top: 100%; height: 16px; }
+  .subnav { position: absolute; top: calc(100% + 14px); left: -18px; min-width: 190px; padding: 8px; list-style: none; background: #fff; border: 1px solid var(--gray-line); border-radius: var(--radius-card); box-shadow: var(--shadow-hover); opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s; z-index: 110; }
+  .has-sub:hover .subnav, .has-sub:focus-within .subnav { opacity: 1; visibility: visible; transform: none; }
+  .nav-links .subnav a { display: block; padding: 10px 14px; border-radius: 4px; font-size: 14px; font-weight: 500; opacity: 1; white-space: nowrap; }
+  .nav-links .subnav a:hover { background: var(--surface-2); color: var(--green-deep); }
+  .nav-links { gap: 30px; }
+  @media (max-width: 1040px) {
+    .nav-links, .nav-actions { display: none; }
+    .nav-burger { display: block; }
+  }
+  .sheet-links a.sub { font-size: 18px; font-weight: 600; padding: 8px 0 8px 18px; color: rgba(255,255,255,0.75); }
+
+  /* Home: servicios */
+  .services { background: var(--bg); }
+  .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 10px; }
+  @media (max-width: 980px) { .service-grid { grid-template-columns: 1fr; } }
+  .svc-wrap { scroll-margin-top: 110px; }
+  .svc-wrap, .svc-wrap .service-card { height: 100%; }
+  .service-card { display: flex; flex-direction: column; border: 1px solid var(--gray-line); border-radius: var(--radius-lg); padding: 36px 30px 28px; background: #fff; color: inherit; text-decoration: none; transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease; }
+  .service-card:hover { border-color: var(--black); transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+  .service-card .idx { display: block; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-2); margin-bottom: 22px; }
+  .service-card h3 { font-size: clamp(28px, 3vw, 36px); letter-spacing: -0.03em; margin-bottom: 12px; }
+  .service-card .svc-lead { font-size: 17px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; line-height: 1.35; margin-bottom: 12px; }
+  .service-card .svc-desc { font-size: 15px; color: var(--gray); line-height: 1.55; margin-bottom: 20px; }
+  .svc-list { list-style: none; display: grid; gap: 10px; margin: 0 0 26px; flex: 1; }
+  .svc-list li { padding-left: 22px; position: relative; font-size: 14px; color: var(--gray); line-height: 1.45; }
+  .svc-list li::before { content: "+"; position: absolute; left: 0; top: 0; color: var(--green-deep); font-weight: 900; }
+  .svc-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid var(--gray-line); }
+  .svc-price { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-2); }
+  .svc-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; border-bottom: 2px solid var(--green); padding-bottom: 2px; transition: gap 0.15s ease; }
+  .service-card:hover .svc-link { gap: 12px; }
+  .entry-banner { margin-top: 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 28px 32px; border: 1px solid var(--gray-line); border-left: 3px solid var(--green); border-radius: var(--radius-lg); background: var(--surface-2); }
+  .entry-banner p { font-size: 16px; color: var(--gray); line-height: 1.5; max-width: 620px; flex: 1 1 360px; }
+  .entry-banner p strong { color: var(--black); }
 </style>
 </head>
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0a0a0a"/><circle cx="100" cy="100" r="60" fill="#39FF14"/><text x="100" y="115" font-family="monospace" font-weight="bold" font-size="34" fill="#0a0a0a" text-anchor="middle">CS</text></svg></template>
@@ -1542,15 +1603,22 @@
   <div class="nav-inner">
     <a href="#top" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
     <ul class="nav-links">
-      <li><a href="#metodo">El método</a></li>
+      <li class="has-sub">
+        <a href="#servicios" aria-haspopup="true">Servicios <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <ul class="subnav">
+          <li><a href="Gestion de Google Ads.html">Google Ads</a></li>
+          <li><a href="Gestion de Meta Ads.html">Meta Ads</a></li>
+          <li><a href="Gestion de SEO.html">SEO</a></li>
+        </ul>
+      </li>
+      <li><a href="#metodo">Método</a></li>
+      <li><a href="Servicio de Diagnostico.html">Diagnóstico</a></li>
       <li><a href="#caso">Caso real</a></li>
-      <li><a href="#portafolio">Portafolio</a></li>
-      <li><a href="#inversion">La inversión</a></li>
+      <li><a href="Respaldo y sustento.html">Nosotros</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="nav-actions">
       <a href="Agendar Sesion.html" class="nav-cta">Agendar sesión →</a>
-      <a href="Cronograma Diagnostico.html" class="nav-cta ghost">Cronograma</a>
     </div>
     <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
@@ -1569,15 +1637,18 @@
   </div>
   <div class="sheet-divider"></div>
   <nav class="sheet-links" aria-label="Menú móvil">
-    <a href="#metodo">El método</a>
+    <a href="#servicios">Servicios</a>
+    <a href="Gestion de Google Ads.html" class="sub">Google Ads</a>
+    <a href="Gestion de Meta Ads.html" class="sub">Meta Ads</a>
+    <a href="Gestion de SEO.html" class="sub">SEO</a>
+    <a href="#metodo">Método</a>
+    <a href="Servicio de Diagnostico.html">Diagnóstico</a>
     <a href="#caso">Caso real</a>
-    <a href="#portafolio">Portafolio</a>
-    <a href="#inversion">La inversión</a>
+    <a href="Respaldo y sustento.html">Nosotros</a>
     <a href="#faq">FAQ</a>
   </nav>
   <div class="sheet-ctas">
     <a href="Agendar Sesion.html" class="nav-cta">Agendar sesión →</a>
-    <a href="Cronograma Diagnostico.html" class="nav-cta ghost">Cronograma</a>
   </div>
 </aside>
 
@@ -1588,20 +1659,20 @@
   <div class="blob br"></div>
   <div class="container hero-inner">
     <div class="hero-content">
-      <div class="hero-pretitle" id="heroKicker" data-text="DIAGNÓSTICO ACOS · 10 DÍAS HÁBILES · ÚNICAMENTE 3 LUGARES DISPONIBLES"><span class="txt"></span><span class="caret" aria-hidden="true"></span></div>
-      <h1 class="reveal d1">Tu tienda no necesita más pauta. Necesita saber dónde está <span class="uline">perdiendo dinero</span>.</h1>
-      <p class="hero-sub reveal d2">En 10 días hábiles reconstruimos la verdad financiera de tu eCommerce en Shopify: <strong>margen real por producto</strong>, fugas de dinero jerarquizadas en pesos, y un <strong>veredicto honesto</strong> de si estás listo para escalar.</p>
+      <div class="hero-pretitle" id="heroKicker" data-text="GOOGLE ADS · META ADS · SEO · OPTIMIZADO AL MARGEN"><span class="txt"></span><span class="caret" aria-hidden="true"></span></div>
+      <h1 class="reveal d1">Canales de adquisición que se miden en <span class="uline">margen</span>, no en clics.</h1>
+      <p class="hero-sub reveal d2">Gestionamos Google Ads, Meta Ads y SEO sobre una estructura de trabajo integral: <strong>primero identificamos las variables del negocio</strong> que deciden si un canal gana o pierde dinero, y después lo ejecutamos.</p>
       <div class="btn-row reveal d3">
         <div class="cta-stack">
           <a href="Agendar Sesion.html" class="btn lg cta">Agendar llamada de descubrimiento <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="m12 8 4 4-4 4"></path></svg></a>
           <span class="btn-micro">30 min · sin costo · te contactamos en &lt;24h</span>
         </div>
-        <a href="Cronograma Diagnostico.html" class="btn lg outline">Ver el proceso día por día</a>
+        <a href="#servicios" class="btn lg outline">Ver servicios</a>
       </div>
       <div class="hero-meta reveal d4">
         <div><span class="num" data-target="18" data-prefix="+">+0</span>marcas operadas</div>
         <div><span class="num" data-target="20" data-prefix="+$" data-suffix="M MRR">+$0M MRR</span>de experiencia acumulada</div>
-        <div><span class="num" data-target="10" data-prefix="ROAS &gt; ">ROAS &gt; 0</span>caso real verificado</div>
+        <div><span class="num" data-target="8" data-suffix=" años">0 años</span>operando pauta digital</div>
       </div>
     </div>
   </div>
@@ -1611,33 +1682,33 @@
 <section class="problem" id="problema">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">01 · El síntoma</div>
-      <h2>El ROAS se ve bien. La cuenta de banco no.</h2>
-      <p>Vendes más cada mes y ganas lo mismo, o menos. Nadie ha calculado cuánto te queda realmente por venta después de producto, envío, comisiones, devoluciones y pauta.</p>
+      <div class="eyebrow">01 · El problema</div>
+      <h2>El canal funciona. El negocio no lo siente.</h2>
+      <p>Google Ads, Meta Ads y SEO son vehículos. Si el negocio detrás tiene fugas (un margen mal calculado, tracking roto, una oferta que no convierte, un seguimiento comercial lento), el vehículo solo acelera la pérdida.</p>
     </div>
 
-    <div class="pull reveal">Lo más peligroso no es <em>"no vender"</em>. Lo peligroso es <strong>crecer mientras la rentabilidad baja.</strong></div>
+    <div class="pull reveal">Un canal sin optimizar el negocio detrás no es una estrategia. Es <em>un vehículo para quemar dinero</em> <strong>más rápido.</strong></div>
 
     <div class="pain-grid">
       <div class="pain-card reveal">
         <span class="idx">PAIN 01</span>
-        <h3>Cada peso de pauta es una apuesta: sin CAC máximo definido por tus números, escalar es un acto de fe.</h3>
+        <h3>Se optimiza hacia métricas del canal (clics, alcance, posiciones) en vez de hacia lo que de verdad deja dinero.</h3>
         <div class="underline"></div>
       </div>
       <div class="pain-card reveal d1">
         <span class="idx">PAIN 02</span>
-        <h3>Tu tracking miente: campañas optimizando hacia eventos rotos, decisiones sobre datos fantasma.</h3>
+        <h3>Nadie conoce el margen real por producto o el valor real de un lead, así que no existe un CAC máximo defendible.</h3>
         <div class="underline"></div>
       </div>
       <div class="pain-card reveal d2">
         <span class="idx">PAIN 03</span>
-        <h3>El descuento se comió el margen: cuando las ventas bajan, descuentas y devoras lo que la pauta ya adelgazó.</h3>
+        <h3>Cada canal se mide por separado y nadie ve el negocio completo: oferta, operación, seguimiento y cierre.</h3>
         <div class="underline"></div>
       </div>
     </div>
 
-    <div class="closer reveal">La estrella polar es la <span class="green">rentabilidad</span>, no tu ingreso total.</div>
-    <div class="closer-add reveal">Nada de esto se arregla con más tráfico. Se arregla sabiendo dónde está la fuga: en <span class="marker">pesos</span>, no en corazonadas.</div>
+    <div class="closer reveal">La estrella polar es la <span class="green">rentabilidad</span>, no el tráfico.</div>
+    <div class="closer-add reveal">Los canales se escalan cuando el negocio detrás está listo para <span class="marker">pagarlos</span>.</div>
   </div>
 </section>
 
@@ -1645,9 +1716,9 @@
 <section class="mech" id="metodo">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">02 · El método</div>
+      <div class="eyebrow">02 · La regla</div>
       <h2>Escalamos por margen de contribución. <span class="msoft">No por ROAS.</span></h2>
-      <p>El ROAS te dice cuánto vendes por peso invertido. No te dice cuánto ganas. El margen de contribución sí: lo que queda de cada venta después de todos los costos variables. Es el único número que decide si escalar te hace crecer, o te quiebra más rápido.</p>
+      <p>El ROAS te dice cuánto vendes por peso invertido. No te dice cuánto ganas. El margen de contribución sí: lo que queda de cada venta después de todos los costos variables. En servicios, el equivalente es el valor del lead que de verdad cierra. Es el único número que decide si escalar un canal te hace crecer, o te quiebra más rápido.</p>
     </div>
     <div class="mech-stage" id="mechStage">
       <ul class="mech-costs">
@@ -1688,9 +1759,9 @@
   <div class="blob tl"></div>
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">03 · El diagnóstico</div>
-      <h2>Tres frentes. Un diagnóstico. <span class="accent">Diez días.</span></h2>
-      <p>El Diagnóstico ACOS revisa tu negocio completo, no solo tus anuncios. Tres frentes auditados en paralelo:</p>
+      <div class="eyebrow">03 · Estructura de trabajo</div>
+      <h2>Primero el negocio. <span class="accent">Después el canal.</span></h2>
+      <p>Antes de gastar un peso en ejecución, identificamos las variables del negocio que hay que optimizar para que cada canal genere resultados. Una estructura integral en tres capas:</p>
     </div>
 
     <div class="pillars">
@@ -1698,31 +1769,92 @@
         <div class="pillar-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
         </div>
-        <span class="num">PILAR 01</span>
-        <h3>Unit Economics</h3>
-        <p>Análisis del espectro total de las finanzas de tu eCommerce. Margen real por SKU, CAC máximo, contribución por categoría y break-even por canal.</p>
+        <span class="num">CAPA 01</span>
+        <h3>Economía del negocio</h3>
+        <p>Margen real por producto o servicio, CAC máximo, valor del cliente y punto de equilibrio por canal. El número que decide cuánto puedes pagar por crecer.</p>
       </div>
       <div class="pillar reveal d1">
         <div class="pillar-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 8h18"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
-        <span class="num">PILAR 02</span>
-        <h3>Tienda Online</h3>
-        <p>Auditoría del ecosistema eCommerce: operaciones y UX. Flujo de compra, fulfillment, devoluciones, BNPL y conversión de cada paso del funnel. Todo en modo lectura: nada se toca, nada se pausa.</p>
+        <span class="num">CAPA 02</span>
+        <h3>Operación y conversión</h3>
+        <p>Tienda o sitio, oferta, flujo de compra o de contacto, CRM, seguimiento comercial y cierre. Las variables que convierten tráfico en ventas.</p>
       </div>
       <div class="pillar reveal d2">
         <div class="pillar-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
         </div>
-        <span class="num">PILAR 03</span>
-        <h3>Marketing</h3>
-        <p>Auditoría de tus cuentas Meta + Google: estructura, eventos, tracking y creativos. Descubres si tus campañas optimizan hacia ventas reales o hacia fantasmas.</p>
+        <span class="num">CAPA 03</span>
+        <h3>Ejecución por canal</h3>
+        <p>Google Ads, Meta Ads y SEO operados con tracking verificado y un solo criterio de rentabilidad, conectados con lo que pasa dentro del negocio.</p>
       </div>
     </div>
 
     <div class="equation reveal">
-      <span class="plus">+</span> Margen real por producto &nbsp;&nbsp;<span class="minus">−</span> Fugas jerarquizadas en pesos<br/>
-      <span class="out">= Veredicto: escalar o arreglar primero</span>
+      <span class="plus">+</span> Variables de negocio correctas &nbsp;&nbsp;<span class="minus">−</span> Presupuesto sin dirección<br/>
+      <span class="out">= Canales que se pagan solos</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services" id="servicios">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">04 · Servicios</div>
+      <h2>Tres canales. Un mismo criterio: rentabilidad.</h2>
+      <p>Cada servicio se ejecuta sobre la estructura de trabajo anterior. Elige el canal que tenga más sentido hoy, o empieza por entender tus números.</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="svc-wrap reveal" id="google-ads">
+        <a class="service-card" href="Gestion de Google Ads.html">
+          <span class="idx">SERVICIO 01 · DEMANDA ACTIVA</span>
+          <h3>Google Ads</h3>
+          <p class="svc-lead">Captamos a quienes ya buscan lo que vendes.</p>
+          <p class="svc-desc">Search, Shopping, Performance Max y remarketing, con tracking conectado a tus ventas y a tus leads cerrados.</p>
+          <ul class="svc-list">
+            <li>eCommerce: feed, catálogo y margen por producto</li>
+            <li>Servicios: optimización hacia el lead que cierra</li>
+            <li>Términos de búsqueda y negativas revisados cada semana</li>
+          </ul>
+          <span class="svc-foot"><span class="svc-price">$9,000 + IVA / mes</span><span class="svc-link">Ver servicio <span class="arrow">→</span></span></span>
+        </a>
+      </div>
+      <div class="svc-wrap reveal d1" id="meta-ads">
+        <a class="service-card" href="Gestion de Meta Ads.html">
+          <span class="idx">SERVICIO 02 · DEMANDA NUEVA</span>
+          <h3>Meta Ads</h3>
+          <p class="svc-lead">Llegamos a clientes que aún no te conocen.</p>
+          <p class="svc-desc">Creativos, audiencias y remarketing en Instagram y Facebook, optimizados por contribución y no por alcance.</p>
+          <ul class="svc-list">
+            <li>eCommerce: catálogo y Advantage+ con margen por producto</li>
+            <li>Servicios: formularios, mensajes y rescate de leads</li>
+            <li>Pruebas de creativos con cadencia y lectura de qué ángulo escala</li>
+          </ul>
+          <span class="svc-foot"><span class="svc-price">$9,000 + IVA / mes</span><span class="svc-link">Ver servicio <span class="arrow">→</span></span></span>
+        </a>
+      </div>
+      <div class="svc-wrap reveal d2" id="seo">
+        <a class="service-card" href="Gestion de SEO.html">
+          <span class="idx">SERVICIO 03 · DEMANDA QUE SE ACUMULA</span>
+          <h3>SEO</h3>
+          <p class="svc-lead">Bajamos tu dependencia de la pauta.</p>
+          <p class="svc-desc">Posicionamiento orgánico con SEO técnico, contenido de blog, Merchant Center, Google Business Profile y SEO para inteligencia artificial, medido en negocio y no en posiciones.</p>
+          <ul class="svc-list">
+            <li>SEO técnico y medición conectada a ventas y leads</li>
+            <li>Contenido de blog con intención de compra</li>
+            <li>Merchant Center, Google Business Profile y SEO para IA</li>
+          </ul>
+          <span class="svc-foot"><span class="svc-price">$5,000 + IVA / mes</span><span class="svc-link">Ver servicio <span class="arrow">→</span></span></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="entry-banner reveal">
+      <p><strong>¿Prefieres entender tus números antes de elegir un canal?</strong> El Diagnóstico ACOS reconstruye tu margen real, tus fugas y un veredicto de si estás listo para escalar.</p>
+      <a href="Servicio de Diagnostico.html" class="btn outline">Conocer el diagnóstico <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -1731,77 +1863,31 @@
 <section class="path" id="camino">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">04 · El camino</div>
-      <h2>Un paso a la vez. Cada paso se paga solo.</h2>
+      <div class="eyebrow">05 · El camino</div>
+      <h2>Un paso a la vez. Cada paso se mide.</h2>
     </div>
     <div class="path-line" aria-hidden="true"></div>
     <div class="path-grid">
       <div class="path-node reveal">
         <div class="dot">01</div>
-        <span class="ptag">10 días · $14,900 + IVA</span>
-        <h3>Diagnóstico ACOS</h3>
-        <p>La verdad financiera completa: margen real, fugas, veredicto go/no-go. Se acredita al 100% si avanzas.</p>
+        <span class="ptag">Llamada de 30 min</span>
+        <h3>Entender el negocio</h3>
+        <p>Revisamos cómo vendes, cuánto cuesta cada venta y qué variables del negocio frenan a tus canales. Sin costo, sin pitch.</p>
       </div>
       <div class="path-node reveal d1">
         <div class="dot">02</div>
-        <span class="ptag">Mensual · desde $18,000/mes</span>
-        <h3>Ads Engine</h3>
-        <p>Solo con veredicto "go": trafficker senior asignado + 8 visuales de anuncios/mes + reporte quincenal de contribución. Tu pauta operada por quien ya vio tus números por dentro.</p>
+        <span class="ptag">Primeras 2 semanas</span>
+        <h3>Instalar la medición</h3>
+        <p>Margen real, CAC máximo y tracking verificado. Antes de mover presupuesto, el canal sabe qué es una venta rentable.</p>
       </div>
       <div class="path-node reveal d2">
         <div class="dot">03</div>
-        <span class="ptag">Cuando tus números lo ordenen</span>
-        <h3>Escala</h3>
-        <p>Presupuestos crecen solo cuando la contribución lo sostiene. Sin fe. Sin apuestas.</p>
+        <span class="ptag">Mes con mes</span>
+        <h3>Operar y escalar</h3>
+        <p>Ejecutamos Google Ads, Meta Ads o SEO con revisión continua. El presupuesto crece solo cuando la contribución lo sostiene.</p>
       </div>
     </div>
-    <p class="path-micro reveal">Nadie entra al Paso 2 sin pasar el Paso 1. No es política comercial: operar pauta sin unit economics es <strong>quemar dinero con método.</strong></p>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="nosotros">
-  <div class="container">
-    <div class="about-grid">
-      <div class="reveal">
-        <div class="eyebrow">05 · Cómo trabajamos</div>
-        <h2>No somos <span class="strike">traffickers</span>.<br/>Somos aliados comerciales.</h2>
-        <div class="about-copy" style="margin-top: 32px;">
-          <p>Operamos como una <strong style="color:var(--black)">consultora senior de eCommerce</strong>, no como una agencia de pauta genérica. Integramos visión financiera, operativa y de marketing bajo un solo protocolo.</p>
-          <p>Tu diagnóstico lo hace un trafficker senior operando eCommerce, no un junior con plantilla. Se cobra justamente para poder decirte la verdad: incluida la que una agencia que vive de tu pauta jamás te diría.</p>
-        </div>
-      </div>
-      <div class="principles">
-        <div class="principle reveal d1">
-          <div class="pdot"></div>
-          <div>
-            <h4>Rentabilidad primero</h4>
-            <p>Cada decisión se mide contra contribución, no contra vanity metrics.</p>
-          </div>
-        </div>
-        <div class="principle reveal d2">
-          <div class="pdot"></div>
-          <div>
-            <h4>Datos sobre intuición</h4>
-            <p>Hipótesis claras, validadas semana a semana con números abiertos al cliente.</p>
-          </div>
-        </div>
-        <div class="principle reveal d3">
-          <div class="pdot"></div>
-          <div>
-            <h4>Ejecución rápida</h4>
-            <p>Cero burocracia. Cero reportes infinitos. Sesiones de trabajo, decisiones, ship.</p>
-          </div>
-        </div>
-        <div class="principle reveal d4">
-          <div class="pdot"></div>
-          <div>
-            <h4>Alianza estratégica</h4>
-            <p>No facturamos por entregables. Facturamos por construir un negocio rentable contigo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p class="path-micro reveal">Operar canales sin entender el negocio es <strong>quemar dinero con método.</strong></p>
   </div>
 </section>
 
@@ -1810,8 +1896,8 @@
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow">06 · Caso real</div>
-      <h2>El mismo protocolo aplicado a una marca de <span class="hl">retail y moda</span> en México.</h2>
-      <p>Marca de retail y moda con presencia previa en otros mercados, cero experiencia en consumo digital mexicano y sin unit economics definidos al llegar a México.</p>
+      <h2>El mismo criterio aplicado a una marca de <span class="hl">retail y moda</span> en México.</h2>
+      <p>Marca de retail y moda con presencia previa en otros mercados, cero experiencia en consumo digital mexicano y sin unit economics definidos al llegar a México. Los resultados corresponden al programa completo, con Google y Meta dentro del mix.</p>
     </div>
 
     <div class="case-meta reveal">
@@ -1884,11 +1970,11 @@
       </div>
     </div>
 
-    <div class="case-honesty reveal">26 meses de método. No magia. No promesa del diagnóstico: su punto de partida.</div>
+    <div class="case-honesty reveal">26 meses de método. No magia. No promesa de campaña: su punto de partida.</div>
 
     <div class="case-close reveal">
-      <p>Ese trabajo de 26 meses empieza siempre en el mismo lugar: <strong>el diagnóstico.</strong></p>
-      <a href="Agendar Sesion.html" class="btn lg">Empezar por mi diagnóstico <span class="arrow">→</span></a>
+      <p>Ese trabajo de 26 meses empieza siempre en el mismo lugar: <strong>entender el negocio.</strong></p>
+      <a href="Agendar Sesion.html" class="btn lg">Agendar llamada de descubrimiento <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -1932,10 +2018,10 @@
         <span class="tag">Si esto eres tú</span>
         <h3>Esto sí es para ti</h3>
         <ul>
-          <li>eCommerce operando en Shopify</li>
+          <li>eCommerce, o negocio que vende servicios y capta leads</li>
           <li>Facturación de $50K+ MXN/mes</li>
-          <li>Producto validado, con repetición de compra</li>
-          <li>Intención real de escalar y abrir canales</li>
+          <li>Producto o servicio validado, con clientes recurrentes</li>
+          <li>Buscas un socio que optimice el negocio, no solo que opere campañas</li>
           <li>Disposición a ver números incómodos</li>
         </ul>
       </div>
@@ -1943,11 +2029,11 @@
         <span class="tag">Por ahora no</span>
         <h3>Esto no es para ti</h3>
         <ul>
-          <li>Aún no lanzas tu tienda</li>
-          <li>Estás probando dropshipping</li>
+          <li>Aún no lanzas tu tienda, o no tienes una oferta comercial definida</li>
           <li>Quieres "más ventas mañana" sin tocar la operación</li>
           <li>No puedes compartir acceso de lectura a tus datos</li>
-          <li>Tu producto o tienda opera en mercados limitados o restringidos</li>
+          <li>Buscas ejecución barata sin revisar el negocio detrás</li>
+          <li>Tu producto o servicio opera en mercados limitados o restringidos</li>
         </ul>
       </div>
     </div>
@@ -1959,9 +2045,9 @@
   <div class="container">
     <div class="resp-grid">
       <div class="resp-copy reveal">
-        <div class="eyebrow">09 · Quién opera tu diagnóstico</div>
+        <div class="eyebrow">09 · Quién opera tu cuenta</div>
         <h2>CSeekers opera bajo la dirección directa de Pablo Rivera. No un equipo de juniors leyendo un dashboard.</h2>
-        <p>Trafficker de planta y consultor independiente desde 2018. Diseña y ejecuta sistemas de adquisición digital sobre Shopify, con Google Ads, Meta Ads, Microsoft Ads, TikTok Ads y DSPs.</p>
+        <p>Trafficker de planta y consultor independiente desde 2018. Diseña y ejecuta sistemas de adquisición digital para eCommerce y negocios B2B, con Google Ads, Meta Ads, Microsoft Ads, TikTok Ads y DSPs.</p>
         <p>Su criterio no se improvisó: se formó operando presupuesto real dentro de agencias y startups de alto rendimiento, donde el margen no perdonaba errores.</p>
         <a href="Respaldo y sustento.html" class="resp-link">Conocer el perfil completo <span class="arrow">→</span></a>
       </div>
@@ -2017,148 +2103,76 @@
   </div>
 </section>
 
-<!-- OFFER -->
-<section class="offer" id="inversion">
-  <div class="blob br"></div>
-  <div class="blob tl sm"></div>
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow">10 · La inversión</div>
-      <h2>Todo esto, en <span style="color:var(--green)">10 días hábiles</span>.</h2>
-      <p style="color: rgba(255,255,255,0.7);">No te vendemos pauta. Te vendemos la verdad financiera de tu negocio y el veredicto de si estás listo para escalar.</p>
-    </div>
-
-    <div class="offer-grid">
-      <div class="deliverables reveal">
-        <h4>// Lo que incluye · valor de mercado</h4>
-        <div class="stack" id="stack">
-          <div class="stack-row"><span>Unit Economics maestro (consultoría financiera)</span><span class="val">$25,000</span></div>
-          <div class="stack-row"><span>Auditoría Meta + Google Ads</span><span class="val">$12,000</span></div>
-          <div class="stack-row"><span>Auditoría técnica Shopify</span><span class="val">$8,000</span></div>
-          <div class="stack-row"><span>Mapa de fugas + plan quick-wins</span><span class="val">$15,000</span></div>
-          <div class="stack-row"><span>Veredicto go/no-go + sesión ejecutiva</span><span class="val">$10,000</span></div>
-          <div class="stack-row total"><span>Comprado por separado</span><span class="val">~$70,000</span></div>
-        </div>
-        <ul class="dim-list">
-          <li>Menos de lo que una tienda de $150K/mes quema en una semana de pauta con tracking roto.</li>
-          <li>Menos que medio mes del retainer de una agencia que no conoce tu margen real.</li>
-          <li><strong>Y se acredita al 100%</strong> si avanzas al plan mensual en 30 días: el diagnóstico te costó cero.</li>
-        </ul>
-        <div class="math-block">
-          <p>Una tienda de $150K/mes con 3 puntos de margen fugándose pierde <span class="mnum" id="mathNum" data-target="54000" data-prefix="$" data-suffix=" al año" data-ok="1">$0 al año</span> sin enterarse.</p>
-          <p>El diagnóstico cuesta $14,900. Una vez. <em>Haz tu propia cuenta.</em></p>
-          <span class="fine">Cuenta típica ilustrativa</span>
-        </div>
-      </div>
-
-      <div class="price-col">
-        <div class="price-card reveal d1">
-          <span class="badge">Diagnóstico ACOS</span>
-          <div class="amount" id="priceNew">$14,900<span class="iva">MXN + IVA</span></div>
-          <div class="duration">10 días hábiles · cobramos 50% al arrancar y 50% restante 24h antes del veredicto</div>
-          <div class="equiv">Se acredita al 100% si avanzas al plan mensual dentro de los próximos 15 días.</div>
-          <a href="Agendar Sesion.html" class="btn lg">Quiero mi diagnóstico <span class="arrow">→</span></a>
-          <div class="urgent"><span class="pulse"></span>3 lugares disponibles; priorizamos foco y profundidad.</div>
-        </div>
-
-        <div class="guarantee-card reveal d2">
-          <div class="guarantee-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
-          </div>
-          <h4>Garantía sin riesgo</h4>
-          <p>Si no obtenemos tu diagnóstico en 10 días, con accionables puntuales y puntos de fuga reales, te devolvemos tu dinero. Sin preguntas.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-wrap reveal">
-      <h3>// Cronograma · 10 días hábiles</h3>
-      <div class="timeline">
-        <div class="phase">
-          <div class="num-block"><span class="n">D0</span><span class="bar"></span></div>
-          <h4>Pago + accesos</h4>
-          <p>Checklist de solo lectura; el reloj arranca al entrar el último acceso.</p>
-          <div class="weeks">DÍA 0</div>
-        </div>
-        <div class="phase">
-          <div class="num-block"><span class="n">D1–2</span><span class="bar"></span></div>
-          <h4>Kickoff + datos</h4>
-          <p>Llamada de 45 min y validación de baseline.</p>
-          <div class="weeks">DÍAS 1–2</div>
-        </div>
-        <div class="phase">
-          <div class="num-block"><span class="n">D3–5</span><span class="bar"></span></div>
-          <h4>Unit Economics + auditorías</h4>
-          <p>Margen real por SKU + tienda + cuentas.</p>
-          <div class="weeks">DÍAS 3–5</div>
-        </div>
-        <div class="phase">
-          <div class="num-block"><span class="n">D6–9</span><span class="bar"></span></div>
-          <h4>Fugas + quick-wins + veredicto</h4>
-          <p>Jerarquizado en pesos recuperables, no por opinión.</p>
-          <div class="weeks">DÍAS 6–9</div>
-        </div>
-        <div class="phase">
-          <div class="num-block"><span class="n">D10</span><span class="bar"></span></div>
-          <h4>Sesión de lectura</h4>
-          <p>60 min, tú y quien decida contigo. El documento es tuyo para siempre.</p>
-          <div class="weeks">DÍA 10</div>
-        </div>
-      </div>
-      <div class="tl-micro">Tu tiempo total: menos de 2 horas.</div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq">
   <div class="container">
     <div class="section-head center reveal">
-      <div class="eyebrow">11 · Preguntas frecuentes</div>
+      <div class="eyebrow">10 · Preguntas frecuentes</div>
       <h2>Lo que casi siempre nos preguntan.</h2>
     </div>
 
     <div class="faq-grid reveal">
       <div class="cta-card">
-        <h3>¿Listo para saber la verdad<br/>de tus números?</h3>
+        <h3>¿Listo para que tus canales<br/>se midan en margen?</h3>
         <p>Llamada de descubrimiento de 30 minutos. Sin costo, sin pitch, te contactamos en menos de 24 horas para agendar.</p>
         <a href="Agendar Sesion.html" class="cta-btn">Agendar sesión <span class="arrow">→</span></a>
       </div>
 
       <div class="faq-list">
       <div class="faq-item open">
-        <button class="faq-q"><span>¿Por qué cobrar un diagnóstico? Otros lo dan gratis.</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">El diagnóstico gratis es un pitch de ventas disfrazado: concluye siempre que necesitas contratar a quien lo hizo. El nuestro se paga para poder decirte la verdad, incluido el "no estás listo". Y si avanzas, se acredita completo.</div></div>
+        <button class="faq-q"><span>¿Qué hace diferente a CSeekers de una agencia de pauta o de SEO?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Las agencias suelen optimizar el canal: clics, alcance, posiciones. Nosotros optimizamos el negocio detrás: margen, CAC máximo, conversión y seguimiento comercial. El canal es la consecuencia, no el punto de partida.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>¿Qué pasa si ya tengo agencia de pauta?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Perfecto: esto no compite con tu agencia, la audita. El diagnóstico te dice si el dinero que les pagas genera margen o solo facturación. Si hacen buen trabajo, sales con la evidencia. Si no… también.</div></div>
+        <button class="faq-q"><span>¿Tengo que contratar los tres servicios?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">No. Puedes empezar por el canal que más sentido tenga hoy. Lo que sí hacemos siempre, sin importar el canal, es arrancar entendiendo las variables de tu negocio.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>¿Necesito tener mis números organizados antes de empezar?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">No. El diagnóstico reconstruye tu Unit Economics desde cero. Solo necesitamos tus costos de producto y accesos de lectura. Si tuvieras todo claro, probablemente no nos necesitarías.</div></div>
+        <button class="faq-q"><span>¿Trabajan con eCommerce y con negocios de servicios?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sí. En eCommerce medimos margen por producto. En negocios que venden servicios medimos el valor del lead que de verdad cierra, conectando los canales con tu CRM y tu pipeline de ventas.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>¿Y si el veredicto es que NO estoy listo?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Te llevas el porqué en números, el mapa de fugas y los quick-wins para arreglarlo. El no-go también es un entregable, probablemente el más valioso.</div></div>
+        <button class="faq-q"><span>¿Cuánto cuesta?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Google Ads y Meta Ads cuestan $9,000 + IVA al mes por canal, y SEO cuesta $5,000 + IVA al mes. En la pauta, el presupuesto de medios se paga aparte, directo a la plataforma. Si prefieres entender tus números primero, el <a href="Servicio de Diagnostico.html" style="color:var(--black);text-decoration:underline;text-decoration-color:var(--green);text-underline-offset:3px;">Diagnóstico ACOS</a> es el punto de partida.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>¿Trabajan con marcas fuera de Shopify?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Este protocolo está diseñado y probado en Shopify. Para otras plataformas hacemos evaluaciones caso a caso. Honestamente: si no estás en Shopify, este diagnóstico no es para ti hoy.</div></div>
+        <button class="faq-q"><span>¿Qué pasa si ya tengo agencia?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Perfecto: no competimos, auditamos primero. Te decimos si el dinero que inviertes genera margen o solo facturación. Si el trabajo actual es bueno, sales con la evidencia. Si no, también, y decides si seguimos nosotros.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>¿Qué sigue después del diagnóstico?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Si hay "go" y quieres ejecutar con nosotros, existe Ads Engine desde $18,000/mes, con cupo limitado a 3 cuentas activas. Si prefieres ejecutar por tu cuenta, el diagnóstico es 100% tuyo y accionable. Cero obligación.</div></div>
+        <button class="faq-q"><span>¿Qué necesito para empezar?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Una llamada de 30 minutos, sin costo. Después, accesos de lectura a tus cuentas y tus costos de producto o servicio. Si falta algo, te decimos qué armar.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Hay permanencia mínima?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Los planes mensuales tienen un mínimo de 3 meses: es el tiempo necesario para que los canales aprendan con señal limpia y veas resultados de contribución, no de un mes suelto.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>¿Qué es el Diagnóstico ACOS?</span><span class="icon"><svg class="chv-down" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><svg class="chv-up" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Es el servicio donde reconstruimos la verdad financiera de tu negocio: margen real, fugas y un veredicto de si estás listo para escalar. Puedes contratarlo solo, como punto de partida. <a href="Servicio de Diagnostico.html" style="color:var(--black);text-decoration:underline;text-decoration-color:var(--green);text-underline-offset:3px;">Conoce el servicio</a>.</div></div>
       </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL · Roadmap animado -->
-<section class="final-roadmap" id="final" aria-label="Roadmap del Protocolo ACOS">
-  <iframe class="roadmap-frame" src="roadmap-embed.html" title="Roadmap del Protocolo ACOS" loading="lazy" scrolling="no"></iframe>
-  <a href="Agendar Sesion.html" class="btn lg roadmap-cta">Agendar mi llamada <span class="arrow">→</span></a>
+<!-- CIERRE · CTA agendar llamada -->
+<section class="closing" id="final">
+  <div class="blob tl"></div>
+  <div class="container">
+    <div class="eyebrow reveal">11 · Siguiente paso</div>
+    <h2 class="reveal d1">Hablemos de tu <span class="accent">rentabilidad</span>.</h2>
+    <p class="reveal d2">En 30 minutos revisamos cómo está funcionando hoy tu adquisición y qué variables conviene optimizar primero. Sin costo, sin pitch.</p>
+    <div class="cta-wrap reveal d3">
+      <div class="cta-stack">
+        <a href="Agendar Sesion.html" class="btn lg cta">Agendar llamada de descubrimiento <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="m12 8 4 4-4 4"></path></svg></a>
+        <span class="btn-micro">30 min · sin costo · te contactamos en &lt;24h</span>
+      </div>
+    </div>
+    <div class="closing-chips reveal d4">
+      <span>Google Ads</span><span>Meta Ads</span><span>SEO</span>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -2166,8 +2180,18 @@
   <div class="footer-inner">
     <div class="footer-left">
       <a href="#top" class="logo" aria-label="CSeekers"><img src="assets/cseekers-logo-black.png" alt="CSeekers" style="height:37.5px;width:auto;display:block"></a>
-      <div class="tag">Consistency Seekers · Consultora de eCommerce</div>
+      <div class="tag">Consistency Seekers · Google Ads, Meta Ads y SEO optimizados al margen</div>
     </div>
+    <ul class="footer-links">
+      <li><a href="Gestion de Google Ads.html">Google Ads</a></li>
+      <li><a href="Gestion de Meta Ads.html">Meta Ads</a></li>
+      <li><a href="Gestion de SEO.html">SEO</a></li>
+      <li><a href="Servicio de Diagnostico.html">Diagnóstico</a></li>
+      <li><a href="Respaldo y sustento.html">Nosotros</a></li>
+      <li><a href="Agendar Sesion.html">Agendar</a></li>
+      <li><a href="https://wa.me/525583939495" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a href="Aviso de Privacidad.html">Aviso de privacidad</a></li>
+    </ul>
   </div>
   <div class="footer-copy">© 2026 Consistency Seekers. Todos los derechos reservados.</div>
 </footer>
