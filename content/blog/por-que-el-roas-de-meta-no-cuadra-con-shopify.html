@@ -1,0 +1,159 @@
+<!--meta
+{
+  "title": "Por qué el ROAS de Meta no cuadra con tus ventas de Shopify · CSeekers",
+  "h1": "Por qué el ROAS de Meta no cuadra con tus ventas reales de Shopify",
+  "desc": "Ventanas de atribución, conversiones por visualización, doble conteo entre canales y la prueba del cuadre. Cómo leer dos reportes que nunca van a coincidir.",
+  "cluster": "Meta Ads",
+  "date": "2026-10-28",
+  "min": 9,
+  "lead": "Meta dice que generó $600,000. Shopify dice que vendiste $380,000 en total. Ninguno de los dos está mintiendo y los dos números son correctos según su propia definición. El problema aparece cuando decides presupuesto con el primero creyendo que mide lo mismo que el segundo.",
+  "ctaTitle": "¿Tus reportes de pauta no cuadran con tu tienda?",
+  "ctaText": "En 30 minutos hacemos el cuadre: qué se está contando dos veces, qué ventana usar y cuánta venta es realmente incremental. Sin costo.",
+  "related": [
+    "api-de-conversiones-de-meta",
+    "como-auditar-una-cuenta-de-meta-ads",
+    "los-7-numeros-que-tu-agencia-deberia-reportarte",
+    "../Gestion%20de%20Meta%20Ads.html|Servicio|Gestión de Meta Ads para eCommerce y leads"
+  ],
+  "faq": [
+    { "q": "¿Por qué Meta reporta más ventas de las que tengo en Shopify?", "a": "Por tres razones que se suman: Meta cuenta conversiones por visualización de anuncio sin clic, usa una ventana de atribución que puede abarcar varios días, y se adjudica compras que el cliente habría hecho igual. Shopify solo registra la transacción, sin opinar sobre quién la causó." },
+    { "q": "¿Qué ventana de atribución debo usar en Meta?", "a": "La de siete días por clic es el estándar razonable para la mayoría de los eCommerce. La que incluye visualizaciones infla el crédito de forma importante, sobre todo en retargeting. Lo que no se vale es cambiar de ventana entre reportes para que el número se vea mejor." },
+    { "q": "¿Qué son las conversiones por visualización?", "a": "Son compras de personas que vieron tu anuncio pero no hicieron clic, y que compraron dentro de la ventana definida. Meta las cuenta como conversión. En algunos casos el anuncio sí influyó, y en muchos otros la persona iba a comprar de todos modos y simplemente vio el anuncio por el camino." },
+    { "q": "¿Cómo sé cuánta venta es realmente incremental?", "a": "La única forma confiable es apagar o reducir el canal durante un periodo y medir qué pasa con la venta total del negocio, no con el reporte de la plataforma. Si la venta total cae en proporción al gasto retirado, era incremental; si casi no se mueve, estabas cosechando demanda existente." },
+    { "q": "¿Debo usar el modelo de atribución de Shopify o el de Meta?", "a": "Ninguno como verdad única. El de Meta sirve para comparar campañas dentro de Meta, y el de Shopify para saber qué facturaste. Para decidir presupuesto conviene una tercera lectura: venta total del negocio contra inversión total, que es lo que no se puede inflar." },
+    { "q": "¿Sumar lo que reporta Google y lo que reporta Meta es válido?", "a": "No. Las dos plataformas pueden adjudicarse la misma compra, así que la suma casi siempre supera la venta real. Si sumas los dos reportes y el total es mayor que lo que facturaste, acabas de demostrar el doble conteo con tus propios datos." }
+  ]
+}
+-->
+      <p>Antes de buscar el error, conviene entender que <strong>no hay error</strong>. Meta y Shopify responden preguntas distintas. Meta responde "¿a cuántas compras contribuyó mi publicidad?". Shopify responde "¿cuánto cobré?". Son preguntas diferentes y por eso dan números diferentes.</p>
+
+      <h2 id="tres-causas">Las tres causas de la diferencia</h2>
+
+      <h3>1. La ventana de atribución</h3>
+      <p>Meta cuenta una compra como suya si ocurrió dentro de cierto plazo después de que la persona interactuó con el anuncio. Si alguien hizo clic el lunes y compró el viernes, Meta se lo adjudica. Shopify registra la venta el viernes, sin más. Cuando comparas un mes cerrado, las compras de fin de mes que vinieron de clics del mes anterior quedan en cubos distintos.</p>
+
+      <h3>2. Las conversiones por visualización</h3>
+      <p>Aquí está la mayor parte de la brecha. Meta puede contar como conversión una compra de alguien que <strong>vio el anuncio sin hacer clic</strong>. A veces el anuncio efectivamente influyó. Muchas otras, la persona ya iba a comprar y el anuncio apareció en el camino, de modo que la plataforma se adjudica una venta que habría ocurrido igual.</p>
+
+      <h3>3. El doble conteo entre plataformas</h3>
+      <p>Esta es la que más distorsiona decisiones. Un cliente busca tu marca en Google, ve tu anuncio en Instagram y compra. <strong>Google y Meta se adjudican la misma venta</strong>, cada uno con su propia lógica, y ninguno sabe del otro.</p>
+
+      <figure class="post-figure">
+        <svg viewBox="0 0 680 290" role="img" aria-labelledby="t-attr d-attr">
+          <title id="t-attr">Por qué la suma de los reportes supera la venta real</title>
+          <desc id="d-attr">Un mismo cliente toca un anuncio de Meta, luego busca la marca en Google y compra. Meta se adjudica la venta completa y Google también se adjudica la venta completa, así que la suma de los dos reportes es el doble de la única compra que ocurrió.</desc>
+
+          <text class="viz-title" x="0" y="14">Una compra, dos reportes que se la adjudican</text>
+
+          <!-- Recorrido -->
+          <text class="viz-label" x="0" y="46" font-weight="700" fill="var(--viz-ink)">Lo que hizo el cliente</text>
+          <g transform="translate(0,56)">
+            <rect x="0" y="0" width="150" height="42" rx="6" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="75" y="19" text-anchor="middle">Ve anuncio</text>
+            <text class="viz-mono on-dark" x="75" y="34" text-anchor="middle">instagram · lunes</text>
+
+            <path d="M150 21 L190 21" stroke="var(--viz-label)" stroke-width="1.5"></path>
+            <path d="M184 17 L190 21 L184 25" fill="none" stroke="var(--viz-label)" stroke-width="1.5"></path>
+
+            <rect x="190" y="0" width="150" height="42" rx="6" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="265" y="19" text-anchor="middle">Busca la marca</text>
+            <text class="viz-mono on-dark" x="265" y="34" text-anchor="middle">google · jueves</text>
+
+            <path d="M340 21 L380 21" stroke="var(--viz-label)" stroke-width="1.5"></path>
+            <path d="M374 17 L380 21 L374 25" fill="none" stroke="var(--viz-label)" stroke-width="1.5"></path>
+
+            <rect x="380" y="0" width="150" height="42" rx="6" fill="var(--viz-ink)"></rect>
+            <text class="viz-value on-dark" x="455" y="19" text-anchor="middle">Compra $1,000</text>
+            <text class="viz-mono on-dark-soft" x="455" y="34" text-anchor="middle">una sola vez</text>
+          </g>
+
+          <!-- Lo que reporta cada uno -->
+          <text class="viz-label" x="0" y="140" font-weight="700" fill="var(--viz-ink)">Lo que reporta cada plataforma</text>
+          <g transform="translate(0,152)">
+            <rect x="0" y="0" width="300" height="38" rx="5" fill="var(--viz-danger)"></rect>
+            <text class="viz-value on-dark" x="150" y="24" text-anchor="middle">Meta: $1,000</text>
+
+            <rect x="320" y="0" width="300" height="38" rx="5" fill="var(--viz-danger)"></rect>
+            <text class="viz-value on-dark" x="470" y="24" text-anchor="middle">Google: $1,000</text>
+          </g>
+          <text class="viz-mono" x="0" y="212">suma de los reportes: $2,000</text>
+
+          <g transform="translate(0,222)">
+            <rect x="0" y="0" width="300" height="38" rx="5" fill="var(--viz-green)"></rect>
+            <text class="viz-value" x="150" y="24" text-anchor="middle">Venta real: $1,000</text>
+          </g>
+          <text class="viz-mono" x="0" y="282">cada bloque lleva su cifra escrita · el color solo separa reporte de realidad</text>
+        </svg>
+        <figcaption>Ninguna de las dos plataformas miente: cada una aplica su propia atribución a la única compra que existió. El error no está en los reportes, está en sumarlos como si midieran cosas distintas.</figcaption>
+      </figure>
+
+      <h2 id="cuadre">La prueba del cuadre</h2>
+
+      <p>Es un ejercicio de quince minutos y suele cambiar por completo la conversación de presupuesto.</p>
+
+      <ol>
+        <li><strong>Toma un mes cerrado.</strong> No la semana pasada: un mes completo, ya facturado.</li>
+        <li><strong>Anota la venta total del negocio</strong> según tu plataforma, de todos los canales.</li>
+        <li><strong>Anota lo que se atribuye Meta</strong> en ese periodo, con ventana de siete días por clic.</li>
+        <li><strong>Anota lo que se atribuye Google</strong>, incluyendo Performance Max.</li>
+        <li><strong>Suma los dos y compara</strong> contra la venta total.</li>
+      </ol>
+
+      <div class="callout alerta">
+        <span class="callout-label">Cómo leer el resultado</span>
+        <p>Si la suma de plataformas <strong>supera</strong> tu venta total, tienes doble conteo demostrado con tus propios datos. Si la suma es apenas igual a tu venta total, estás asumiendo que el 100% de tus ventas vino de pauta, lo cual tampoco suele ser cierto: casi siempre hay venta directa, orgánica, de recompra y de recomendación.</p>
+      </div>
+
+      <h2 id="ventanas">Qué ventana usar y por qué</h2>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Ventana</th><th>Qué incluye</th><th>Cuándo tiene sentido</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 día por clic</td><td>Solo compras muy inmediatas</td><td>Ticket bajo y decisión rápida</td></tr>
+            <tr><td>7 días por clic</td><td>Clic y compra dentro de la semana</td><td>Estándar razonable para eCommerce</td></tr>
+            <tr><td>7 días clic + 1 día visualización</td><td>Agrega quien vio sin hacer clic</td><td>Útil para ver influencia, infla el crédito</td></tr>
+            <tr><td>Ventanas largas con visualización</td><td>Mucho crédito indirecto</td><td>Casi siempre sobreestima</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>La regla que importa no es cuál eliges, sino <strong>que no cambies de ventana entre reportes</strong>. Comparar un mes medido a siete días con otro medido con visualizaciones incluidas no es una comparación: es elegir el número que mejor queda.</p>
+
+      <h2 id="que-mirar">Qué mirar en lugar del ROAS de plataforma</h2>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>En vez de</th><th>Mira</th><th>Por qué es mejor</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ROAS de Meta</td><td>Venta total del negocio contra inversión total</td><td>No se puede inflar con atribución</td></tr>
+            <tr><td>Compras atribuidas</td><td>Clientes nuevos del periodo</td><td>Separa adquisición de recompra</td></tr>
+            <tr><td>Crecimiento del reporte</td><td>Crecimiento de la facturación</td><td>Es el que paga la nómina</td></tr>
+            <tr><td>ROAS por campaña</td><td>Contribución en pesos del canal</td><td>Incluye tus costos variables</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Esta lectura es la base de los <a href="los-7-numeros-que-tu-agencia-deberia-reportarte.html">siete números que tu agencia debería reportarte</a>, y el cuadre de atribución es justamente uno de ellos.</p>
+
+      <h2 id="incrementalidad">La única prueba que no se discute</h2>
+
+      <p>Si quieres saber cuánta venta es realmente incremental, hay una sola forma honesta: <strong>apagar o reducir el canal y medir la venta total</strong>, no el reporte.</p>
+
+      <ul>
+        <li><strong>Elige un periodo comparable</strong>, sin promoción ni estacionalidad rara.</li>
+        <li><strong>Reduce la inversión del canal</strong> de forma significativa, de dos a cuatro semanas.</li>
+        <li><strong>Mide la venta total del negocio</strong>, no las compras atribuidas.</li>
+        <li><strong>Compara contra el periodo anterior</strong> y contra el mismo periodo del año pasado.</li>
+      </ul>
+
+      <div class="callout verde">
+        <span class="callout-label">Cómo interpretarlo</span>
+        <p>Si la venta total cae en proporción al gasto retirado, el canal era incremental y puedes escalarlo con confianza. Si la venta apenas se mueve, <strong>estabas pagando por demanda que ya existía</strong>. Es una prueba cara y es la única cuyo resultado ninguna plataforma puede discutir.</p>
+      </div>
+
+      <p>Antes de hacer esa prueba, asegúrate de que tu medición esté completa: si te falta la <a href="api-de-conversiones-de-meta.html">API de Conversiones</a>, parte de la brecha no es atribución optimista sino señal que nunca llegó, y son dos problemas distintos con soluciones opuestas.</p>
