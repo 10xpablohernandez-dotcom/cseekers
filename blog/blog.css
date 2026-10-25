@@ -371,6 +371,15 @@ body.blog-body {
 }
 .viz-axis { stroke: var(--viz-grid); stroke-width: 1; }
 
+/* Texto sobre relleno oscuro dentro de un SVG.
+   OJO: el atributo fill="#fff" del SVG NO funciona aqui, porque la regla
+   CSS de .viz-value gana sobre el atributo de presentacion. Para texto
+   sobre fondo oscuro hay que usar estas clases, no el atributo. */
+.viz-value.on-dark,
+.viz-label.on-dark,
+.viz-mono.on-dark { fill: #ffffff; }
+.viz-mono.on-dark-soft { fill: rgba(255, 255, 255, 0.62); }
+
 /* ---------- FAQ ---------- */
 .post-faq { margin-top: 20px; }
 .post-faq details {
