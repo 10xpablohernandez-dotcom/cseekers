@@ -1,0 +1,137 @@
+<!--meta
+{
+  "title": "Señales de que tu agencia optimiza para el reporte · CSeekers",
+  "h1": "Nueve señales de que tu agencia optimiza para el reporte y no para tu margen",
+  "desc": "Las métricas que se ven bien sin generar dinero, cómo se inflan sin mentir y las preguntas que desarman cada una en la junta mensual.",
+  "cluster": "Rentabilidad",
+  "date": "2026-10-27",
+  "min": 9,
+  "lead": "Nadie te está mintiendo. Ese es el problema. Un reporte puede ser técnicamente correcto en cada cifra y aun así describir un canal que no está dejando dinero, porque las métricas que mide son las que el proveedor controla y no las que tú necesitas. Estas son las nueve señales, y la pregunta que desarma cada una.",
+  "ctaTitle": "¿Tu reporte mensual se ve bien pero la caja no lo refleja?",
+  "ctaText": "Mándanos el último reporte que recibiste. En 30 minutos te decimos qué está midiendo de verdad, qué le falta y qué preguntaríamos nosotros en la junta. Sin costo.",
+  "related": [
+    "los-7-numeros-que-tu-agencia-deberia-reportarte",
+    "roas-vs-margen-de-contribucion",
+    "como-auditar-tu-cuenta-de-google-ads",
+    "../Servicio%20de%20Diagnostico.html|Servicio|Protocolo ACOS: el diagnóstico de 10 días"
+  ],
+  "faq": [
+    { "q": "¿Cómo sé si mi agencia está optimizando para métricas de vanidad?", "a": "La prueba más rápida: revisa si alguna cifra del reporte está en pesos y viene de tu negocio, no de la plataforma. Si todo son clics, impresiones, CTR, alcance y ROAS de plataforma, te están reportando el funcionamiento de la herramienta, no el resultado del canal." },
+    { "q": "¿Qué es el ROAS de vanidad?", "a": "Es un ROAS alto que se logra concentrando inversión en públicos que ya iban a comprar, como búsquedas de marca o retargeting de gente que dejó el carrito. El número sube, la venta incremental no. Se detecta separando marca de adquisición y mirando si la venta total del negocio creció." },
+    { "q": "¿Es normal que el reporte no incluya mi margen?", "a": "Es común, pero no debería ser aceptable. La agencia no puede calcular tu margen sola, necesita que le compartas costos, pero sí puede y debe pedírtelos. Que nunca los haya pedido significa que está optimizando hacia volumen sin saber qué producto te deja dinero." },
+    { "q": "¿Qué hago si sospecho que mi agencia infla los resultados?", "a": "Antes de acusar, verifica. Pide el reporte separado entre marca y no marca, compara las ventas atribuidas contra las ventas reales de tu plataforma, y pregunta cuál es tu ROAS de equilibrio. Las tres respuestas te dan evidencia concreta en lugar de una corazonada." },
+    { "q": "¿Cambiar de agencia resuelve el problema?", "a": "Solo si el problema es la agencia. Si la causa es que nadie conoce tu margen real ni tu CAC máximo, la siguiente agencia va a optimizar igual de a ciegas. Conviene arreglar primero la base de medición y de costos, y después decidir quién opera." },
+    { "q": "¿Qué periodicidad debe tener el reporte?", "a": "Mensual para decisiones de negocio y una revisión ligera semanal para la operación. Lo importante no es la frecuencia sino que cada reporte traiga una recomendación explícita de subir, sostener o apagar algo, con el número que la justifica." }
+  ]
+}
+-->
+      <p>Hay una regla incómoda en cualquier relación comercial: <strong>la gente optimiza aquello por lo que se le evalúa</strong>. Si evalúas a tu agencia por el ROAS que aparece en la plataforma, vas a recibir decisiones que suben ese número, y resulta que subirlo es bastante fácil sin vender un peso más.</p>
+
+      <h2 id="como-se-infla">Cómo se infla un reporte sin mentir</h2>
+
+      <p>Este es el mecanismo, y conviene entenderlo antes de ver las señales. Imagina dos formas de gastar el mismo presupuesto.</p>
+
+      <figure class="post-figure">
+        <svg viewBox="0 0 680 290" role="img" aria-labelledby="t-van d-van">
+          <title id="t-van">Dos formas de repartir el mismo presupuesto</title>
+          <desc id="d-van">Reparto que mejora el reporte: la mayor parte del presupuesto va a marca y retargeting, que convierten barato porque esa gente ya te conocía, así que el ROAS promedio sube pero la venta nueva es poca. Reparto que hace crecer el negocio: la mayor parte va a prospección, el ROAS promedio baja y la venta incremental sube.</desc>
+
+          <text class="viz-title" x="0" y="14">El mismo presupuesto, dos repartos</text>
+
+          <g transform="translate(0,30)">
+            <rect x="0" y="0" width="11" height="11" rx="2" fill="var(--viz-ink)"></rect>
+            <text class="viz-label" x="17" y="9">Marca y retargeting (cosecha)</text>
+            <rect x="250" y="0" width="11" height="11" rx="2" fill="var(--viz-green)"></rect>
+            <text class="viz-label" x="267" y="9">Prospección (demanda nueva)</text>
+          </g>
+
+          <!-- Reparto A -->
+          <text class="viz-label" x="0" y="76" font-weight="700" fill="var(--viz-ink)">Reparto que mejora el reporte</text>
+          <g transform="translate(0,86)">
+            <rect x="0" y="0" width="476" height="34" rx="4" fill="var(--viz-ink)"></rect>
+            <text class="viz-value on-dark" x="238" y="22" text-anchor="middle">70% a cosecha</text>
+            <rect x="480" y="0" width="200" height="34" rx="4" fill="var(--viz-green)"></rect>
+            <text class="viz-value" x="580" y="22" text-anchor="middle">30%</text>
+          </g>
+          <text class="viz-mono" x="0" y="142">roas promedio: alto · venta nueva: poca</text>
+
+          <!-- Reparto B -->
+          <text class="viz-label" x="0" y="182" font-weight="700" fill="var(--viz-ink)">Reparto que hace crecer el negocio</text>
+          <g transform="translate(0,192)">
+            <rect x="0" y="0" width="204" height="34" rx="4" fill="var(--viz-ink)"></rect>
+            <text class="viz-value on-dark" x="102" y="22" text-anchor="middle">30%</text>
+            <rect x="208" y="0" width="472" height="34" rx="4" fill="var(--viz-green)"></rect>
+            <text class="viz-value" x="444" y="22" text-anchor="middle">70% a prospección</text>
+          </g>
+          <text class="viz-mono" x="0" y="248">roas promedio: más bajo · venta nueva: mucha</text>
+
+          <text class="viz-mono" x="0" y="278">cada segmento lleva su porcentaje escrito: el color solo agrupa</text>
+        </svg>
+        <figcaption>Los dos repartos son defendibles y ninguno es fraude. El primero produce un reporte más bonito; el segundo hace crecer el negocio. Si la conversación mensual gira alrededor del ROAS promedio, el incentivo empuja siempre hacia el primero. Proporciones ilustrativas.</figcaption>
+      </figure>
+
+      <p>La gente que busca tu marca o que abandonó un carrito <strong>ya te conocía</strong>. Comprarles es barato, y es correcto hacerlo. Pero si el presupuesto se recarga ahí, el ROAS promedio sube mientras la venta incremental se estanca, y el reporte celebra un número que solo refleja a quién le estás hablando.</p>
+
+      <h2 id="senales">Las nueve señales</h2>
+
+      <h3>1. Ninguna cifra del reporte está en pesos de tu negocio</h3>
+      <p>Clics, impresiones, CTR, alcance, CPM, ROAS de plataforma. Todo medible, todo correcto, nada que te diga si ganaste dinero. <strong>Pregunta que lo desarma:</strong> "¿cuánta contribución en pesos dejó el canal este mes?".</p>
+
+      <h3>2. Marca y adquisición vienen juntas</h3>
+      <p>El término más rentable de cualquier cuenta es tu propio nombre, y no es mérito de la pauta. <strong>Pregunta:</strong> "¿me lo pueden separar en marca y no marca?".</p>
+
+      <h3>3. Nunca te han pedido tus costos</h3>
+      <p>Una agencia no puede calcular tu margen sin que se lo compartas, pero sí puede pedírtelo. Si en seis meses nadie preguntó cuánto te cuesta tu producto, están optimizando hacia volumen a ciegas. <strong>Pregunta:</strong> "¿cuál es mi ROAS de equilibrio y cómo lo calcularon?".</p>
+
+      <h3>4. El reporte no trae una recomendación</h3>
+      <p>Un informe sin una decisión propuesta es un archivo. <strong>Pregunta:</strong> "¿qué subimos, qué sostenemos y qué apagamos el mes que entra, y por qué?".</p>
+
+      <h3>5. Las comparaciones siempre son contra el mes anterior</h3>
+      <p>Comparar contra el mes pasado esconde la estacionalidad y permite elegir la base que mejor queda. <strong>Pregunta:</strong> "¿cómo vamos contra el mismo mes del año pasado?".</p>
+
+      <h3>6. Las conversiones incluyen cosas que no son ventas</h3>
+      <p>Si el reporte cuenta clics en WhatsApp, vistas de catálogo y formularios de cualquier tipo como "conversiones", el total es grande y no significa nada. <strong>Pregunta:</strong> "¿cuántas de estas conversiones terminaron en una venta cobrada?".</p>
+
+      <h3>7. Nunca mencionan lo que apagaron</h3>
+      <p>Una operación real incluye decisiones de corte. Un reporte donde todo siempre va bien y nunca se apaga nada es un reporte editado. <strong>Pregunta:</strong> "¿qué dejó de funcionar este trimestre?".</p>
+
+      <h3>8. Celebran el crecimiento del gasto como si fuera resultado</h3>
+      <p>"Escalamos un 40% la inversión" no es un logro, es una decisión. El logro sería que la contribución creciera más rápido que el gasto. <strong>Pregunta:</strong> "¿la contribución creció en la misma proporción?".</p>
+
+      <h3>9. La suma de los canales no cuadra con tu venta total</h3>
+      <p>Si Google dice que trajo $800,000 y Meta dice que trajo $600,000 pero tu tienda facturó $900,000, <strong>los dos están contando las mismas ventas</strong>. <strong>Pregunta:</strong> "¿cómo cuadramos esto contra la venta real de la tienda?".</p>
+
+      <h2 id="tabla">Las mismas señales, en una tabla para la junta</h2>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Lo que ves en el reporte</th><th>Lo que deberías ver</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ROAS 4.2x</td><td>ROAS 4.2x contra un equilibrio de 2.5x, con $31,800 de contribución</td></tr>
+            <tr><td>1,240 conversiones</td><td>1,240 eventos, de los cuales 310 fueron ventas cobradas</td></tr>
+            <tr><td>CTR 3.8%, arriba del promedio</td><td>Costo por venta de $420 contra un CAC máximo de $560</td></tr>
+            <tr><td>Alcance de 180,000 personas</td><td>De esas, 2,100 eran clientes nuevos</td></tr>
+            <tr><td>Crecimos 40% la inversión</td><td>Crecimos 40% la inversión y 52% la contribución</td></tr>
+            <tr><td>Mejoramos contra el mes pasado</td><td>Comparativa contra el mismo mes del año anterior</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="que-hacer">Qué hacer si reconociste varias</h2>
+
+      <p>Antes de cambiar de proveedor, verifica. La mayoría de estos problemas tienen una causa que no es mala fe: <strong>nadie definió nunca contra qué número se iba a evaluar el canal</strong>. Si tú no pediste contribución, te dieron ROAS porque es lo que la plataforma entrega solo.</p>
+
+      <ol>
+        <li><strong>Define tu ROAS o ACOS de equilibrio</strong> antes de la siguiente junta. Sale de tu margen de contribución, no de la agencia.</li>
+        <li><strong>Pide el reporte separado</strong> entre marca y adquisición, de los últimos tres meses.</li>
+        <li><strong>Cuadra la atribución</strong> contra la venta real de tu plataforma.</li>
+        <li><strong>Cambia la pregunta de la junta.</strong> En lugar de "¿cómo vamos?", pregunta "¿cuánta contribución dejó el canal y qué decisión propones?".</li>
+        <li><strong>Dales una oportunidad de responder.</strong> Una agencia competente con la pregunta correcta cambia de comportamiento en un mes. Una que no puede responder, no va a poder nunca.</li>
+      </ol>
+
+      <div class="callout verde">
+        <span class="callout-label">La prueba de una línea</span>
+        <p>Manda este mensaje: <strong>"¿cuál es mi CAC máximo y cómo lo calcularon?"</strong>. Si la respuesta llega con tu margen, tu ticket y tu tasa de recompra, estás en buenas manos. Si llega con un promedio de industria o con "depende", acabas de encontrar la raíz de todas las demás señales. El cálculo está explicado en <a href="cac-maximo-cuanto-puedes-pagar-por-un-cliente.html">CAC máximo: cuánto puedes pagar por un cliente</a>.</p>
+      </div>

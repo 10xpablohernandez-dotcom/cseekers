@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cómo auditar una cuenta de Meta Ads en 30 minutos · CSeekers</title>
+<meta name="description" content="Qué revisar en cada nivel de la cuenta: propiedad, pixel y API de Conversiones, solapamiento de audiencias, fatiga creativa y atribución contra tu tienda." />
+<link rel="canonical" href="https://www.cseekers.com/blog/como-auditar-una-cuenta-de-meta-ads.html" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="CSeekers" />
+<meta property="og:url" content="https://www.cseekers.com/blog/como-auditar-una-cuenta-de-meta-ads.html" />
+<meta property="og:title" content="Cómo auditar una cuenta de Meta Ads (Facebook Ads) en 30 minutos" />
+<meta property="og:image" content="https://www.cseekers.com/assets/og-index.webp" />
+<meta property="og:description" content="Qué revisar en cada nivel de la cuenta: propiedad, pixel y API de Conversiones, solapamiento de audiencias, fatiga creativa y atribución contra tu tienda." />
+<meta property="og:locale" content="es_MX" />
+<meta property="article:section" content="Meta Ads" />
+<meta property="article:published_time" content="2026-10-27" />
+<meta property="article:author" content="Pablo Rivera" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Cómo auditar una cuenta de Meta Ads (Facebook Ads) en 30 minutos" />
+<meta name="twitter:description" content="Qué revisar en cada nivel de la cuenta: propiedad, pixel y API de Conversiones, solapamiento de audiencias, fatiga creativa y atribución contra tu tienda." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="blog.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Cómo auditar una cuenta de Meta Ads (Facebook Ads) en 30 minutos",
+      "description": "Qué revisar en cada nivel de la cuenta: propiedad, pixel y API de Conversiones, solapamiento de audiencias, fatiga creativa y atribución contra tu tienda.",
+      "inLanguage": "es-MX",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "author": {
+        "@type": "Person",
+        "name": "Pablo Rivera",
+        "url": "https://www.cseekers.com/Respaldo%20y%20sustento.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CSeekers",
+        "url": "https://www.cseekers.com/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.cseekers.com/blog/como-auditar-una-cuenta-de-meta-ads.html"
+      },
+      "articleSection": "Meta Ads",
+      "image": "https://www.cseekers.com/assets/og-index.webp"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.cseekers.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.cseekers.com/blog/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cómo auditar una cuenta de Meta Ads (Facebook Ads) en 30 minutos"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué reviso primero al auditar una cuenta de Meta Ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La propiedad del Business Manager y del pixel. Si esos activos no están a tu nombre, cualquier mejora que hagas después se queda con el proveedor el día que termine la relación, incluido el historial de aprendizaje del pixel, que es lo más valioso de una cuenta madura."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo sé si mi API de Conversiones está bien configurada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En el Administrador de Eventos, revisa la calidad de coincidencia de eventos y el origen. Si los eventos llegan solo del navegador y no del servidor, estás perdiendo señal por bloqueadores y por iOS. Una configuración sana muestra eventos duplicados correctamente deduplicados entre pixel y servidor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué el ROAS de Meta no coincide con mis ventas reales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Por la atribución. Meta cuenta con ventanas de clic y de visualización, se adjudica compras que habrían ocurrido igual y suele contar la misma venta que Google también reporta. Sumar los dos reportes da más venta de la que existió. El número de verdad está en tu plataforma de eCommerce."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el solapamiento de audiencias y por qué importa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ocurre cuando varios conjuntos de anuncios apuntan a las mismas personas, así que tus propias campañas compiten entre sí en la subasta y suben tu propio costo. Se revisa con la herramienta de superposición de audiencias; arriba de 30% conviene consolidar conjuntos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cada cuánto hay que renovar las creatividades en Meta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No hay un calendario fijo: se renueva cuando la frecuencia sube y el CTR cae de forma sostenida en la misma audiencia. Eso suele pasar más rápido en audiencias chicas de retargeting que en prospección amplia, donde una pieza puede durar bastante más."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Debo excluir a mis compradores de las campañas de prospección?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en casi todos los casos. Si no los excluyes estás pagando precio de prospección por alcanzar a gente que ya te compró y que probablemente iba a volver sola. Es una de las fugas más comunes y de las más fáciles de corregir."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-body blog">
+<a href="#contenido" class="blog-skip">Saltar al contenido</a>
+
+<nav class="blog-nav">
+  <div class="blog-nav-inner">
+    <a href="../index.html" aria-label="CSeekers inicio"><img src="../assets/cseekers-logo-black.png" alt="CSeekers" /></a>
+    <div class="blog-nav-links">
+      <a href="../Gestion%20de%20Google%20Ads.html">Google Ads</a>
+      <a href="../Gestion%20de%20Meta%20Ads.html">Meta Ads</a>
+      <a href="../Gestion%20de%20SEO.html">SEO</a>
+      <a href="../Servicio%20de%20Diagnostico.html">Diagnostico</a>
+      <a href="../Agendar%20Sesion.html" class="blog-nav-cta">Agendar llamada</a>
+    </div>
+  </div>
+</nav>
+
+<main id="contenido" class="blog-wrap">
+  <nav class="blog-crumbs" aria-label="Ruta de navegacion">
+    <a href="../index.html">Inicio</a><span>/</span><a href="index.html">Blog</a><span>/</span>Meta Ads
+  </nav>
+
+  <div class="post-head">
+    <span class="post-eyebrow">Meta Ads</span>
+    <h1>Cómo auditar una cuenta de Meta Ads (Facebook Ads) en 30 minutos</h1>
+    <p class="post-lead">Una cuenta de Meta se audita distinto a una de Google. Aquí no hay términos de búsqueda que revisar: las fugas están en la propiedad de los activos, en la señal que mandas al pixel, en audiencias que compiten entre sí y en creatividades quemadas que nadie jubiló. Este recorrido va nivel por nivel.</p>
+    <div class="post-meta">
+      <span>Por <strong>Pablo Rivera</strong></span>
+      <span>27 de octubre de 2026</span>
+      <span>Lectura <strong>9 min</strong></span>
+    </div>
+  </div>
+
+  <div class="post-grid">
+    <div class="post-body">
+
+<p>En Google Ads auditas lo que la gente escribió. En Meta auditas <strong>lo que tu cuenta le está diciendo al algoritmo</strong>: qué eventos recibe, a quién le habla y con qué piezas. Las fugas son menos visibles y más caras, porque no aparecen como un término obvio en una lista.</p>
+
+      <h2 id="propiedad">Nivel 0: propiedad de los activos</h2>
+
+      <p>Antes de mirar una sola métrica, abre la <strong>Configuración del negocio</strong> en Business Manager y revisa tres cosas.</p>
+
+      <figure class="post-figure">
+        <svg viewBox="0 0 680 250" role="img" aria-labelledby="t-niv d-niv">
+          <title id="t-niv">Los cuatro niveles de una auditoría de Meta Ads</title>
+          <desc id="d-niv">Nivel cero: propiedad del Business Manager, pixel y cuenta publicitaria. Nivel uno: señal, que incluye pixel, API de Conversiones y eventos priorizados. Nivel dos: estructura, con prospección, retargeting y exclusiones. Nivel tres: creatividad, frecuencia y fatiga. Nivel cuatro: atribución contra la tienda.</desc>
+
+          <text class="viz-title" x="0" y="14">Qué se revisa en cada nivel</text>
+
+          <g transform="translate(0,34)">
+            <rect x="0" y="0" width="128" height="72" rx="6" fill="var(--viz-ink)"></rect>
+            <text class="viz-value on-dark" x="64" y="28" text-anchor="middle">Nivel 0</text>
+            <text class="viz-mono on-dark" x="64" y="46" text-anchor="middle">propiedad</text>
+            <text class="viz-mono on-dark-soft" x="64" y="62" text-anchor="middle">BM · pixel · cuenta</text>
+          </g>
+
+          <g transform="translate(138,34)">
+            <rect x="0" y="0" width="128" height="72" rx="6" fill="var(--viz-green)"></rect>
+            <text class="viz-value" x="64" y="28" text-anchor="middle">Nivel 1</text>
+            <text class="viz-mono" x="64" y="46" text-anchor="middle">señal</text>
+            <text class="viz-mono" x="64" y="62" text-anchor="middle">CAPI · eventos</text>
+          </g>
+
+          <g transform="translate(276,34)">
+            <rect x="0" y="0" width="128" height="72" rx="6" fill="var(--viz-green)"></rect>
+            <text class="viz-value" x="64" y="28" text-anchor="middle">Nivel 2</text>
+            <text class="viz-mono" x="64" y="46" text-anchor="middle">estructura</text>
+            <text class="viz-mono" x="64" y="62" text-anchor="middle">exclusiones</text>
+          </g>
+
+          <g transform="translate(414,34)">
+            <rect x="0" y="0" width="128" height="72" rx="6" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="64" y="28" text-anchor="middle">Nivel 3</text>
+            <text class="viz-mono on-dark" x="64" y="46" text-anchor="middle">creatividad</text>
+            <text class="viz-mono on-dark-soft" x="64" y="62" text-anchor="middle">frecuencia</text>
+          </g>
+
+          <g transform="translate(552,34)">
+            <rect x="0" y="0" width="128" height="72" rx="6" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="64" y="28" text-anchor="middle">Nivel 4</text>
+            <text class="viz-mono on-dark" x="64" y="46" text-anchor="middle">atribución</text>
+            <text class="viz-mono on-dark-soft" x="64" y="62" text-anchor="middle">vs tienda</text>
+          </g>
+
+          <!-- flechas -->
+          <path d="M128 70 L138 70 M266 70 L276 70 M404 70 L414 70 M542 70 L552 70" stroke="var(--viz-label)" stroke-width="1.5"></path>
+
+          <line class="viz-axis" x1="0" y1="130" x2="680" y2="130"></line>
+          <text class="viz-label" x="0" y="154">Los niveles 0 y 1 son infraestructura: si fallan, los demás no se pueden</text>
+          <text class="viz-label" x="0" y="172">leer. Los niveles 2 y 3 son operación diaria. El nivel 4 es el que</text>
+          <text class="viz-label" x="0" y="190">conecta la cuenta con el negocio, y casi nunca se hace.</text>
+          <text class="viz-mono" x="0" y="222">cada nivel está numerado y nombrado: el color solo agrupa infraestructura, operación y lectura</text>
+        </svg>
+        <figcaption>El orden importa porque los hallazgos de un nivel invalidan las conclusiones del siguiente. Auditar creatividades cuando la señal del pixel está incompleta es comparar resultados que nunca se midieron bien.</figcaption>
+      </figure>
+
+      <ul>
+        <li><strong>¿El Business Manager es tuyo?</strong> Debe estar a nombre de tu empresa, con la agencia agregada como socio. Si el BM es de la agencia, el pixel y su historial son de ellos.</li>
+        <li><strong>¿El pixel está en tu BM?</strong> Es el activo más valioso de la cuenta: su historial de aprendizaje es lo que hace que las campañas rindan mejor con el tiempo.</li>
+        <li><strong>¿El dominio está verificado</strong> a tu nombre? Sin eso no controlas la configuración de eventos priorizados.</li>
+      </ul>
+
+      <h2 id="senal">Nivel 1: la señal que estás mandando</h2>
+
+      <p>Entra al <strong>Administrador de eventos</strong>. Aquí es donde se pierde la mitad del rendimiento de las cuentas mal configuradas.</p>
+
+      <h3>API de Conversiones</h3>
+      <p>Revisa el origen de los eventos. Si solo dice navegador y no aparece servidor, <strong>no tienes API de Conversiones</strong>. Eso significa que todos los eventos que bloquean los navegadores, las extensiones y la configuración de privacidad de iOS simplemente no llegan. Meta optimiza con la mitad de la información y tu reporte muestra menos ventas de las que hubo.</p>
+
+      <h3>Deduplicación</h3>
+      <p>Si tienes pixel y servidor, verifica que los eventos se estén deduplicando. Si no, cada compra se cuenta dos veces y tu ROAS reportado es el doble del real. Es un error silencioso y muy común.</p>
+
+      <h3>Calidad de coincidencia</h3>
+      <p>Meta califica qué tan bien puede identificar a la gente con los datos que mandas. Si el indicador está bajo, suele faltar enviar correo, teléfono o nombre con el evento de compra.</p>
+
+      <div class="callout alerta">
+        <span class="callout-label">La revisión que más duele</span>
+        <p>Mira qué evento está configurado como <strong>evento de optimización</strong> en tus campañas de conversión. Si dice "Agregar al carrito" o "Ver contenido" en una campaña que debería traer ventas, el algoritmo está comprando gente que agrega al carrito, no gente que compra. Son públicos distintos, y uno es mucho más barato que el otro por una razón.</p>
+      </div>
+
+      <h2 id="estructura">Nivel 2: estructura y exclusiones</h2>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Qué revisar</th><th>Dónde</th><th>Señal de problema</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Exclusión de compradores</td><td>Conjuntos de prospección</td><td>No excluyen compradores de 30 a 180 días</td></tr>
+            <tr><td>Solapamiento de audiencias</td><td>Públicos, superposición</td><td>Arriba de 30% entre conjuntos activos</td></tr>
+            <tr><td>Conjuntos sin salir de aprendizaje</td><td>Columna de entrega</td><td>Varios en "aprendizaje limitado"</td></tr>
+            <tr><td>Presupuesto fragmentado</td><td>Nivel de conjunto</td><td>Muchos conjuntos con poco presupuesto cada uno</td></tr>
+            <tr><td>Retargeting sin tope de frecuencia</td><td>Conjuntos de retargeting</td><td>Frecuencia arriba de 4 o 5</td></tr>
+            <tr><td>Campañas duplicadas activas</td><td>Vista de campañas</td><td>Dos versiones de lo mismo corriendo</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>El punto del <strong>aprendizaje limitado</strong> merece explicación. Meta necesita alrededor de 50 conversiones por conjunto en siete días para estabilizar. Si repartes el presupuesto entre ocho conjuntos, ninguno junta suficientes eventos y todos operan en el modo más caro e impredecible. Menos conjuntos con más presupuesto casi siempre rinde más que muchos conjuntos hambrientos.</p>
+
+      <h2 id="creatividad">Nivel 3: fatiga creativa</h2>
+
+      <p>Agrega las columnas de <strong>Frecuencia</strong> y <strong>CTR</strong> y mira los últimos 30 días por anuncio.</p>
+
+      <ul>
+        <li><strong>Frecuencia subiendo y CTR bajando</strong> en la misma audiencia: la pieza está quemada. No es que haya dejado de ser buena, es que ya la vieron.</li>
+        <li><strong>Anuncios activos con meses sin cambio</strong> en retargeting: ahí la fatiga llega mucho más rápido que en prospección, porque la audiencia es chica.</li>
+        <li><strong>Un solo formato</strong> en toda la cuenta: si todo es imagen estática o todo es el mismo video, no hay aprendizaje sobre qué ángulo funciona.</li>
+        <li><strong>Cero piezas nuevas en el último mes</strong>: la cuenta está en mantenimiento, no en operación.</li>
+      </ul>
+
+      <h2 id="atribucion">Nivel 4: la prueba contra tu tienda</h2>
+
+      <p>Este es el paso que casi nadie da y el único que conecta la cuenta con el negocio. Toma el total de ventas que Meta se atribuye el mes pasado y compáralo con las ventas reales de tu plataforma en ese periodo.</p>
+
+      <div class="callout verde">
+        <span class="callout-label">Cómo leer la diferencia</span>
+        <p>No van a coincidir, y eso es esperable. La prueba útil es sumar lo que Meta se atribuye <strong>más</strong> lo que Google se atribuye y compararlo con tu venta total. Si la suma supera tu venta real, los dos canales se están adjudicando las mismas ventas y tus dos reportes están inflados. Decidir presupuesto con esos números es repartir dinero según quién atribuye mejor, no según quién vende más.</p>
+      </div>
+
+      <h2 id="resumen">Resumen de la media hora</h2>
+
+      <ol>
+        <li><strong>5 min:</strong> propiedad de BM, pixel y dominio.</li>
+        <li><strong>8 min:</strong> API de Conversiones, deduplicación y evento de optimización.</li>
+        <li><strong>7 min:</strong> exclusiones de compradores, solapamiento y aprendizaje limitado.</li>
+        <li><strong>5 min:</strong> frecuencia y CTR por anuncio, piezas nuevas del mes.</li>
+        <li><strong>5 min:</strong> ventas atribuidas contra ventas reales de tu tienda.</li>
+      </ol>
+
+      <p>Si encuentras problemas en los niveles 0 y 1, atiéndelos antes que nada: todo lo demás que midas mientras tanto está contaminado. Y si quieres hacer el mismo ejercicio del lado de Google, el recorrido está en <a href="como-auditar-tu-cuenta-de-google-ads.html">cómo auditar tu cuenta de Google Ads</a>.</p>
+
+      <h2 id="faq">Preguntas frecuentes</h2>
+
+      <div class="post-faq">
+        <details>
+          <summary>¿Qué reviso primero al auditar una cuenta de Meta Ads?</summary>
+          <div class="faq-a"><p>La propiedad del Business Manager y del pixel. Si esos activos no están a tu nombre, cualquier mejora que hagas después se queda con el proveedor el día que termine la relación, incluido el historial de aprendizaje del pixel, que es lo más valioso de una cuenta madura.</p></div>
+        </details>
+        <details>
+          <summary>¿Cómo sé si mi API de Conversiones está bien configurada?</summary>
+          <div class="faq-a"><p>En el Administrador de Eventos, revisa la calidad de coincidencia de eventos y el origen. Si los eventos llegan solo del navegador y no del servidor, estás perdiendo señal por bloqueadores y por iOS. Una configuración sana muestra eventos duplicados correctamente deduplicados entre pixel y servidor.</p></div>
+        </details>
+        <details>
+          <summary>¿Por qué el ROAS de Meta no coincide con mis ventas reales?</summary>
+          <div class="faq-a"><p>Por la atribución. Meta cuenta con ventanas de clic y de visualización, se adjudica compras que habrían ocurrido igual y suele contar la misma venta que Google también reporta. Sumar los dos reportes da más venta de la que existió. El número de verdad está en tu plataforma de eCommerce.</p></div>
+        </details>
+        <details>
+          <summary>¿Qué es el solapamiento de audiencias y por qué importa?</summary>
+          <div class="faq-a"><p>Ocurre cuando varios conjuntos de anuncios apuntan a las mismas personas, así que tus propias campañas compiten entre sí en la subasta y suben tu propio costo. Se revisa con la herramienta de superposición de audiencias; arriba de 30% conviene consolidar conjuntos.</p></div>
+        </details>
+        <details>
+          <summary>¿Cada cuánto hay que renovar las creatividades en Meta?</summary>
+          <div class="faq-a"><p>No hay un calendario fijo: se renueva cuando la frecuencia sube y el CTR cae de forma sostenida en la misma audiencia. Eso suele pasar más rápido en audiencias chicas de retargeting que en prospección amplia, donde una pieza puede durar bastante más.</p></div>
+        </details>
+        <details>
+          <summary>¿Debo excluir a mis compradores de las campañas de prospección?</summary>
+          <div class="faq-a"><p>Sí, en casi todos los casos. Si no los excluyes estás pagando precio de prospección por alcanzar a gente que ya te compró y que probablemente iba a volver sola. Es una de las fugas más comunes y de las más fáciles de corregir.</p></div>
+        </details>
+      </div>
+
+      <div class="post-cta">
+        <h2>¿Tu cuenta de Meta tiene alguna de estas fugas?</h2>
+        <p>Danos acceso de lectura y en 30 minutos te decimos qué encontramos, qué tan caro sale y en qué orden lo arreglaríamos. Sin costo y sin compromiso.</p>
+        <a class="btn-cta" href="../Agendar%20Sesion.html">Agendar llamada de descubrimiento</a>
+        <span class="cta-micro">30 min · sin costo · te contactamos en menos de 24 h</span>
+      </div>
+
+      <div class="post-related">
+        <h2>Seguir leyendo</h2>
+        <ul>
+          <li><a href="cuanto-cobra-una-agencia-de-facebook-ads-en-mexico.html"><span class="rel-cluster">Meta Ads</span>Cuánto cobra una agencia de Facebook Ads (Meta Ads) en México</a></li>
+          <li><a href="como-auditar-tu-cuenta-de-google-ads.html"><span class="rel-cluster">Google Ads</span>Cómo auditar tu cuenta de Google Ads en 30 minutos</a></li>
+          <li><a href="senales-de-que-tu-agencia-optimiza-para-el-reporte.html"><span class="rel-cluster">Rentabilidad</span>Nueve señales de que tu agencia optimiza para el reporte y no para tu margen</a></li>
+          <li><a href="../Gestion%20de%20Meta%20Ads.html"><span class="rel-cluster">Servicio</span>Gestión de Meta Ads para eCommerce y leads</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <aside class="post-aside">
+      <h2>En este artículo</h2>
+      <ul class="post-toc">
+        <li><a href="#propiedad">Nivel 0: propiedad de los activos</a></li>
+        <li><a href="#senal">Nivel 1: la señal que estás mandando</a></li>
+        <li><a href="#estructura">Nivel 2: estructura y exclusiones</a></li>
+        <li><a href="#creatividad">Nivel 3: fatiga creativa</a></li>
+        <li><a href="#atribucion">Nivel 4: la prueba contra tu tienda</a></li>
+        <li><a href="#resumen">Resumen de la media hora</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+<footer class="blog-footer">
+  <div class="blog-footer-inner">
+    <img src="../assets/cseekers-logo-black.png" alt="CSeekers" />
+    <div class="tag">Consistency Seekers · Google Ads · Meta Ads · SEO</div>
+    <div class="blog-footer-links">
+      <a href="../index.html">Inicio</a>
+      <a href="index.html">Blog</a>
+      <a href="../Respaldo%20y%20sustento.html">Respaldo</a>
+      <a href="../Aviso%20de%20Privacidad.html">Aviso de privacidad</a>
+    </div>
+  </div>
+  <div class="blog-footer-copy">© 2026 Consistency Seekers. Todos los derechos reservados.</div>
+</footer>
+</body>
+</html>
