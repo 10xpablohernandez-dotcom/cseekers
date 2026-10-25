@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEO para Shopify: checklist técnico de lo que casi siempre falla · CSeekers</title>
+<meta name="description" content="Contenido duplicado por colecciones y variantes, rutas forzadas de Shopify, paginación, velocidad y datos estructurados. El checklist en orden de impacto." />
+<link rel="canonical" href="https://www.cseekers.com/blog/seo-para-shopify-checklist-tecnico.html" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="CSeekers" />
+<meta property="og:url" content="https://www.cseekers.com/blog/seo-para-shopify-checklist-tecnico.html" />
+<meta property="og:title" content="SEO para Shopify: las cosas técnicas que casi siempre están mal" />
+<meta property="og:image" content="https://www.cseekers.com/assets/og-index.webp" />
+<meta property="og:description" content="Contenido duplicado por colecciones y variantes, rutas forzadas de Shopify, paginación, velocidad y datos estructurados. El checklist en orden de impacto." />
+<meta property="og:locale" content="es_MX" />
+<meta property="article:section" content="SEO" />
+<meta property="article:published_time" content="2026-10-29" />
+<meta property="article:author" content="Pablo Rivera" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="SEO para Shopify: las cosas técnicas que casi siempre están mal" />
+<meta name="twitter:description" content="Contenido duplicado por colecciones y variantes, rutas forzadas de Shopify, paginación, velocidad y datos estructurados. El checklist en orden de impacto." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="blog.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "SEO para Shopify: las cosas técnicas que casi siempre están mal",
+      "description": "Contenido duplicado por colecciones y variantes, rutas forzadas de Shopify, paginación, velocidad y datos estructurados. El checklist en orden de impacto.",
+      "inLanguage": "es-MX",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "author": {
+        "@type": "Person",
+        "name": "Pablo Rivera",
+        "url": "https://www.cseekers.com/Respaldo%20y%20sustento.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CSeekers",
+        "url": "https://www.cseekers.com/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.cseekers.com/blog/seo-para-shopify-checklist-tecnico.html"
+      },
+      "articleSection": "SEO",
+      "image": "https://www.cseekers.com/assets/og-index.webp"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.cseekers.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.cseekers.com/blog/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SEO para Shopify: las cosas técnicas que casi siempre están mal"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Shopify es bueno para SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es razonablemente bueno de base: genera sitemap automático, usa HTTPS, es responsivo y pone canónicas en los productos. Sus limitaciones son estructurales, principalmente las rutas que fuerza la plataforma y la duplicación que generan colecciones, filtros y variantes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué Shopify crea contenido duplicado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque el mismo producto es alcanzable por varias direcciones: su ruta canónica, la ruta dentro de cada colección a la que pertenece y, en algunos temas, variantes con su propio parámetro. Shopify pone canónicas que ayudan, pero el enlazado interno sigue apuntando a las versiones duplicadas y eso reparte señales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Debo cambiar las URLs que fuerza Shopify?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No se pueden quitar los prefijos de la plataforma, y tampoco conviene pelearse con eso. Lo que sí se controla es el final de la dirección, que debe ser corto y descriptivo, y el enlazado interno, que debe apuntar siempre a la versión canónica del producto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Las colecciones deben indexarse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las colecciones principales sí, porque suelen responder búsquedas de categoría con buen volumen y son páginas valiosas. Las colecciones generadas por filtros o por combinaciones de etiquetas normalmente no, porque crean cientos de variantes casi idénticas que diluyen el rastreo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo mejoro la velocidad de una tienda Shopify?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las tres palancas con más efecto son reducir aplicaciones instaladas que inyectan scripts, comprimir y dimensionar bien las imágenes, y limpiar el código que arrastran los temas muy personalizados. El alojamiento de Shopify rara vez es el cuello de botella."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué datos estructurados necesita una tienda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Como mínimo, datos de producto con precio, disponibilidad y moneda en las fichas, migas de pan en todo el sitio y, si recoges reseñas, los datos de valoración. Muchos temas los traen incompletos, así que conviene verificarlos con la herramienta de resultados enriquecidos de Google."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-body blog">
+<a href="#contenido" class="blog-skip">Saltar al contenido</a>
+
+<nav class="blog-nav">
+  <div class="blog-nav-inner">
+    <a href="../index.html" aria-label="CSeekers inicio"><img src="../assets/cseekers-logo-black.png" alt="CSeekers" /></a>
+    <div class="blog-nav-links">
+      <a href="../Gestion%20de%20Google%20Ads.html">Google Ads</a>
+      <a href="../Gestion%20de%20Meta%20Ads.html">Meta Ads</a>
+      <a href="../Gestion%20de%20SEO.html">SEO</a>
+      <a href="../Servicio%20de%20Diagnostico.html">Diagnostico</a>
+      <a href="../Agendar%20Sesion.html" class="blog-nav-cta">Agendar llamada</a>
+    </div>
+  </div>
+</nav>
+
+<main id="contenido" class="blog-wrap">
+  <nav class="blog-crumbs" aria-label="Ruta de navegacion">
+    <a href="../index.html">Inicio</a><span>/</span><a href="index.html">Blog</a><span>/</span>SEO
+  </nav>
+
+  <div class="post-head">
+    <span class="post-eyebrow">SEO</span>
+    <h1>SEO para Shopify: las cosas técnicas que casi siempre están mal</h1>
+    <p class="post-lead">Shopify resuelve bien muchas cosas de SEO por defecto y crea otras que no existirían en un sitio hecho a la medida. Casi todas vienen del mismo lugar: la plataforma genera varias direcciones para el mismo producto. Esta es la lista de lo que hay que revisar, en orden de cuánto suele costar.</p>
+    <div class="post-meta">
+      <span>Por <strong>Pablo Rivera</strong></span>
+      <span>29 de octubre de 2026</span>
+      <span>Lectura <strong>10 min</strong></span>
+    </div>
+  </div>
+
+  <div class="post-grid">
+    <div class="post-body">
+
+<p>Antes del checklist, el diagnóstico que explica la mitad de los problemas: <strong>en Shopify un mismo producto vive en varias direcciones al mismo tiempo</strong>. No es un error de configuración, es cómo funciona la plataforma. Pero si no lo manejas, repartes tus señales entre copias en lugar de concentrarlas en una página fuerte.</p>
+
+      <figure class="post-figure">
+        <svg viewBox="0 0 680 290" role="img" aria-labelledby="t-dup d-dup">
+          <title id="t-dup">Un mismo producto alcanzable desde varias rutas</title>
+          <desc id="d-dup">El mismo producto es alcanzable desde su ruta de producto, desde la ruta dentro de cada colección a la que pertenece y desde variantes con parámetro. La canónica apunta todas a la versión principal, pero el enlazado interno sigue repartiendo señales si apunta a las copias.</desc>
+
+          <text class="viz-title" x="0" y="14">El mismo producto, varias puertas de entrada</text>
+
+          <g transform="translate(0,36)">
+            <rect x="0" y="0" width="290" height="30" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-mono on-dark" x="12" y="20">/collections/novedades/products/x</text>
+            <rect x="0" y="38" width="290" height="30" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-mono on-dark" x="12" y="58">/collections/ofertas/products/x</text>
+            <rect x="0" y="76" width="290" height="30" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-mono on-dark" x="12" y="96">/products/x?variant=123</text>
+            <rect x="0" y="114" width="290" height="30" rx="5" fill="var(--viz-green)"></rect>
+            <text class="viz-mono on-accent" x="12" y="134">/products/x</text>
+          </g>
+
+          <!-- flechas a canonica -->
+          <path d="M296 51 L350 170 M296 89 L350 170 M296 127 L350 170 M296 165 L350 170" stroke="var(--viz-label)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+          <path d="M344 166 L350 170 L344 174" fill="none" stroke="var(--viz-label)" stroke-width="1.2"></path>
+
+          <g transform="translate(356,150)">
+            <rect x="0" y="0" width="300" height="40" rx="5" fill="var(--viz-ink)"></rect>
+            <text class="viz-value on-dark" x="150" y="25" text-anchor="middle">canónica → /products/x</text>
+          </g>
+
+          <text class="viz-mono" x="356" y="214">la canónica le dice a google cuál es la buena</text>
+          <text class="viz-mono" x="356" y="230">pero tus enlaces internos deciden a dónde va la fuerza</text>
+
+          <line class="viz-axis" x1="0" y1="252" x2="680" y2="252"></line>
+          <text class="viz-mono" x="0" y="274">cada ruta lleva su dirección escrita: el color solo marca cuál es la canónica</text>
+        </svg>
+        <figcaption>Shopify pone la canónica correcta por defecto, y eso ayuda. Lo que no resuelve solo es el enlazado interno: si tus colecciones enlazan a la versión larga con prefijo de colección, estás mandando la autoridad a una copia en lugar de a la página que quieres posicionar.</figcaption>
+      </figure>
+
+      <h2 id="checklist">El checklist, en orden de impacto</h2>
+
+      <h3>1. Indexación: qué ve Google de tu tienda</h3>
+      <ul>
+        <li><strong>Revisa la cobertura en Search Console.</strong> Si tienes 800 productos y hay 4,000 páginas indexadas, estás publicando variantes y filtros que no deberían estar ahí.</li>
+        <li><strong>Colecciones generadas por filtros</strong>: normalmente fuera del índice. Crean cientos de páginas casi idénticas.</li>
+        <li><strong>Páginas de etiquetas</strong>: casi siempre fuera, salvo que respondan una búsqueda real con volumen.</li>
+        <li><strong>Resultados de búsqueda interna</strong>: siempre fuera.</li>
+        <li><strong>Productos agotados permanentes</strong>: decide entre redirigir al sustituto o mantener la página con alternativas, pero decide.</li>
+      </ul>
+
+      <h3>2. Enlazado interno hacia la versión canónica</h3>
+      <p>Es el punto que más se ignora y el más barato de corregir. Revisa en tu tema cómo se construyen los enlaces de producto dentro de las colecciones: si incluyen el prefijo de colección, estás repartiendo señales. Muchos temas permiten cambiarlo en un solo lugar.</p>
+
+      <h3>3. Títulos y descripciones que no sean plantilla</h3>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Elemento</th><th>Error común</th><th>Qué hacer</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Título de producto</td><td>Solo el nombre interno del SKU</td><td>Marca, tipo y atributo que la gente busca</td></tr>
+            <tr><td>Título de colección</td><td>"Colección" repetido en todas</td><td>El término de categoría real</td></tr>
+            <tr><td>Descripción</td><td>La del proveedor, idéntica a la de todos</td><td>Texto propio, aunque sea breve</td></tr>
+            <tr><td>Final de la dirección</td><td>Cadenas largas con códigos</td><td>Corto, descriptivo, sin repetir</td></tr>
+            <tr><td>Texto alternativo de imagen</td><td>Vacío o el nombre del archivo</td><td>Describe lo que se ve</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>4. Velocidad</h3>
+      <p>En Shopify el alojamiento rara vez es el problema. Las tres causas habituales son, en este orden:</p>
+      <ol>
+        <li><strong>Aplicaciones instaladas</strong> que inyectan scripts en todas las páginas, incluidas las que ya no usas. Desinstalar no siempre limpia el código: hay que verificarlo.</li>
+        <li><strong>Imágenes sin comprimir</strong> o servidas mucho más grandes de lo que se muestran.</li>
+        <li><strong>Temas muy personalizados</strong> que arrastran código de versiones anteriores.</li>
+      </ol>
+
+      <h3>5. Datos estructurados</h3>
+      <p>Muchos temas los traen incompletos. Verifica con la herramienta de resultados enriquecidos de Google que cada ficha declare correctamente precio, moneda y disponibilidad, que existan migas de pan y que, si recoges reseñas, los datos de valoración estén presentes. Son los que habilitan que tu resultado se vea distinto en la página de búsqueda.</p>
+
+      <h3>6. Paginación de colecciones grandes</h3>
+      <p>Si una colección tiene veinte páginas, los productos del final quedan a muchos clics de la portada y Google los rastrea poco. Opciones: subir el número de productos por página, crear subcolecciones más específicas, o enlazar los productos importantes desde otras partes del sitio.</p>
+
+      <h2 id="contenido">Lo que Shopify no resuelve y hay que escribir</h2>
+
+      <p>La plataforma te da la estructura; el contenido que responde búsquedas lo pones tú. Para una tienda, las piezas que más rinden suelen ser:</p>
+
+      <ul>
+        <li><strong>Páginas de categoría con texto propio</strong>, no una rejilla de productos sin una sola frase.</li>
+        <li><strong>Guías de compra</strong> para categorías donde la gente duda: tallas, materiales, compatibilidad.</li>
+        <li><strong>Comparativas entre tus propios productos</strong>, que además suben el ticket al ayudar a elegir el de arriba.</li>
+        <li><strong>Preguntas frecuentes por producto</strong>, respondiendo lo que de verdad preguntan por WhatsApp.</li>
+        <li><strong>Contenido de marca</strong> que construya demanda por tu nombre, que es el tráfico más barato y más rentable que existe.</li>
+      </ul>
+
+      <h2 id="apps">Las aplicaciones, que son el problema que crece solo</h2>
+
+      <p>Una tienda con dos años de operación suele acumular aplicaciones que nadie recuerda haber instalado. Cada una puede inyectar código en todas las páginas, y el efecto se acumula sin que haya un momento en que alguien note la degradación.</p>
+
+      <ul>
+        <li><strong>Revisa la lista completa</strong> de aplicaciones instaladas y pregunta por cada una qué hace y quién la usa hoy. Si nadie sabe, es candidata a salir.</li>
+        <li><strong>Desinstalar no siempre limpia.</strong> Varias aplicaciones dejan fragmentos de código en el tema al desinstalarse. Hay que revisar el tema después de quitar cada una.</li>
+        <li><strong>Las de reseñas y chat</strong> son las que más suelen pesar, y a la vez de las más útiles. No se trata de quitarlas sino de saber cuánto cuestan.</li>
+        <li><strong>Mide antes y después.</strong> Quita una, mide, quita otra. Si quitas seis de golpe no vas a saber cuál importaba.</li>
+      </ul>
+
+      <h2 id="internacional">Si vendes en varios países o monedas</h2>
+
+      <p>En cuanto hay más de un mercado, aparece una capa de problemas que no existía antes y que es cara de arreglar tarde.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Qué revisar</th><th>Por qué importa</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Etiquetas de idioma y país</td><td>Evitan que las versiones compitan entre sí</td></tr>
+            <tr><td>Canónica por mercado</td><td>Cada versión debe apuntarse a sí misma</td></tr>
+            <tr><td>Moneda del feed</td><td>Debe coincidir con la del mercado declarado</td></tr>
+            <tr><td>Redirección automática por país</td><td>Si es forzada, impide a Google ver las otras versiones</td></tr>
+            <tr><td>Contenido traducido de verdad</td><td>La traducción automática sin revisión rinde mal</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>El punto de la redirección automática es el que más daño hace y el menos evidente: si el sitio fuerza a cada visitante a su versión local sin opción de cambiar, el rastreador de Google, que llega desde una ubicación concreta, puede no ver nunca las otras versiones y dejarlas fuera del índice.</p>
+
+      <h2 id="prioridad">Por dónde empezar si tienes poco tiempo</h2>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Orden</th><th>Acción</th><th>Esfuerzo</th><th>Dónde se nota</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Sacar del índice filtros y búsquedas internas</td><td>Bajo</td><td>Rastreo concentrado</td></tr>
+            <tr><td>2</td><td>Enlazado interno a la canónica</td><td>Bajo</td><td>Señales concentradas</td></tr>
+            <tr><td>3</td><td>Títulos de colecciones principales</td><td>Medio</td><td>Términos de categoría</td></tr>
+            <tr><td>4</td><td>Comprimir imágenes</td><td>Bajo</td><td>Velocidad y experiencia</td></tr>
+            <tr><td>5</td><td>Datos estructurados completos</td><td>Medio</td><td>Cómo te ves en Google</td></tr>
+            <tr><td>6</td><td>Texto propio en categorías</td><td>Alto</td><td>Búsquedas de categoría</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout verde">
+        <span class="callout-label">La conexión con tu pauta</span>
+        <p>Los títulos de producto y el feed que alimentan tu SEO son <strong>los mismos que alimentan Shopping y Performance Max</strong>. Arreglarlos mejora los dos canales a la vez, que es de los pocos trabajos con doble retorno. Los errores de feed del lado comercial están en <a href="errores-de-merchant-center.html">errores de Merchant Center</a>.</p>
+      </div>
+
+      <div class="callout alerta">
+        <span class="callout-label">Antes de tocar nada</span>
+        <p>Si vas a cambiar direcciones de producto o de colección, <strong>planea las redirecciones antes</strong>, no después. Una migración sin redirecciones es la forma más rápida de perder de golpe el posicionamiento que costó meses construir, y recuperarlo toma más tiempo que haberlo hecho bien la primera vez.</p>
+      </div>
+
+      <h2 id="faq">Preguntas frecuentes</h2>
+
+      <div class="post-faq">
+        <details>
+          <summary>¿Shopify es bueno para SEO?</summary>
+          <div class="faq-a"><p>Es razonablemente bueno de base: genera sitemap automático, usa HTTPS, es responsivo y pone canónicas en los productos. Sus limitaciones son estructurales, principalmente las rutas que fuerza la plataforma y la duplicación que generan colecciones, filtros y variantes.</p></div>
+        </details>
+        <details>
+          <summary>¿Por qué Shopify crea contenido duplicado?</summary>
+          <div class="faq-a"><p>Porque el mismo producto es alcanzable por varias direcciones: su ruta canónica, la ruta dentro de cada colección a la que pertenece y, en algunos temas, variantes con su propio parámetro. Shopify pone canónicas que ayudan, pero el enlazado interno sigue apuntando a las versiones duplicadas y eso reparte señales.</p></div>
+        </details>
+        <details>
+          <summary>¿Debo cambiar las URLs que fuerza Shopify?</summary>
+          <div class="faq-a"><p>No se pueden quitar los prefijos de la plataforma, y tampoco conviene pelearse con eso. Lo que sí se controla es el final de la dirección, que debe ser corto y descriptivo, y el enlazado interno, que debe apuntar siempre a la versión canónica del producto.</p></div>
+        </details>
+        <details>
+          <summary>¿Las colecciones deben indexarse?</summary>
+          <div class="faq-a"><p>Las colecciones principales sí, porque suelen responder búsquedas de categoría con buen volumen y son páginas valiosas. Las colecciones generadas por filtros o por combinaciones de etiquetas normalmente no, porque crean cientos de variantes casi idénticas que diluyen el rastreo.</p></div>
+        </details>
+        <details>
+          <summary>¿Cómo mejoro la velocidad de una tienda Shopify?</summary>
+          <div class="faq-a"><p>Las tres palancas con más efecto son reducir aplicaciones instaladas que inyectan scripts, comprimir y dimensionar bien las imágenes, y limpiar el código que arrastran los temas muy personalizados. El alojamiento de Shopify rara vez es el cuello de botella.</p></div>
+        </details>
+        <details>
+          <summary>¿Qué datos estructurados necesita una tienda?</summary>
+          <div class="faq-a"><p>Como mínimo, datos de producto con precio, disponibilidad y moneda en las fichas, migas de pan en todo el sitio y, si recoges reseñas, los datos de valoración. Muchos temas los traen incompletos, así que conviene verificarlos con la herramienta de resultados enriquecidos de Google.</p></div>
+        </details>
+      </div>
+
+      <div class="post-cta">
+        <h2>¿Tu tienda en Shopify no posiciona como debería?</h2>
+        <p>En 30 minutos revisamos indexación, duplicados y feed, y te decimos qué está frenando tu catálogo. Sin costo y sin necesidad de contratarnos.</p>
+        <a class="btn-cta" href="../Agendar%20Sesion.html">Agendar llamada de descubrimiento</a>
+        <span class="cta-micro">30 min · sin costo · te contactamos en menos de 24 h</span>
+      </div>
+
+      <div class="post-related">
+        <h2>Seguir leyendo</h2>
+        <ul>
+          <li><a href="errores-de-merchant-center.html"><span class="rel-cluster">SEO</span>Merchant Center: los errores que tiran tus productos y matan tu Shopping</a></li>
+          <li><a href="que-es-el-posicionamiento-seo.html"><span class="rel-cluster">SEO</span>Qué es el posicionamiento SEO y cómo se mide de verdad</a></li>
+          <li><a href="performance-max-en-shopify.html"><span class="rel-cluster">Google Ads</span>Performance Max en Shopify: cuándo escala y cuándo se come tu margen</a></li>
+          <li><a href="../Gestion%20de%20SEO.html"><span class="rel-cluster">Servicio</span>Gestión de SEO para eCommerce y leads</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <aside class="post-aside">
+      <h2>En este artículo</h2>
+      <ul class="post-toc">
+        <li><a href="#checklist">El checklist, en orden de impacto</a></li>
+        <li><a href="#contenido">Lo que Shopify no resuelve y hay que escribir</a></li>
+        <li><a href="#apps">Las aplicaciones, que son el problema que crece solo</a></li>
+        <li><a href="#internacional">Si vendes en varios países o monedas</a></li>
+        <li><a href="#prioridad">Por dónde empezar si tienes poco tiempo</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+<footer class="blog-footer">
+  <div class="blog-footer-inner">
+    <img src="../assets/cseekers-logo-black.png" alt="CSeekers" />
+    <div class="tag">Consistency Seekers · Google Ads · Meta Ads · SEO</div>
+    <div class="blog-footer-links">
+      <a href="../index.html">Inicio</a>
+      <a href="index.html">Blog</a>
+      <a href="../Respaldo%20y%20sustento.html">Respaldo</a>
+      <a href="../Aviso%20de%20Privacidad.html">Aviso de privacidad</a>
+    </div>
+  </div>
+  <div class="blog-footer-copy">© 2026 Consistency Seekers. Todos los derechos reservados.</div>
+</footer>
+</body>
+</html>
