@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Errores de Merchant Center que tiran tus productos · CSeekers</title>
+<meta name="description" content="Desaprobaciones por precio, disponibilidad, GTIN y políticas; la diferencia entre un producto rechazado y uno limitado, y cómo revisar el feed en quince minutos." />
+<link rel="canonical" href="https://www.cseekers.com/blog/errores-de-merchant-center.html" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="CSeekers" />
+<meta property="og:url" content="https://www.cseekers.com/blog/errores-de-merchant-center.html" />
+<meta property="og:title" content="Merchant Center: los errores que tiran tus productos y matan tu Shopping" />
+<meta property="og:image" content="https://www.cseekers.com/assets/og-index.webp" />
+<meta property="og:description" content="Desaprobaciones por precio, disponibilidad, GTIN y políticas; la diferencia entre un producto rechazado y uno limitado, y cómo revisar el feed en quince minutos." />
+<meta property="og:locale" content="es_MX" />
+<meta property="article:section" content="SEO" />
+<meta property="article:published_time" content="2026-10-29" />
+<meta property="article:author" content="Pablo Rivera" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Merchant Center: los errores que tiran tus productos y matan tu Shopping" />
+<meta name="twitter:description" content="Desaprobaciones por precio, disponibilidad, GTIN y políticas; la diferencia entre un producto rechazado y uno limitado, y cómo revisar el feed en quince minutos." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="blog.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Merchant Center: los errores que tiran tus productos y matan tu Shopping",
+      "description": "Desaprobaciones por precio, disponibilidad, GTIN y políticas; la diferencia entre un producto rechazado y uno limitado, y cómo revisar el feed en quince minutos.",
+      "inLanguage": "es-MX",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "author": {
+        "@type": "Person",
+        "name": "Pablo Rivera",
+        "url": "https://www.cseekers.com/Respaldo%20y%20sustento.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CSeekers",
+        "url": "https://www.cseekers.com/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.cseekers.com/blog/errores-de-merchant-center.html"
+      },
+      "articleSection": "SEO",
+      "image": "https://www.cseekers.com/assets/og-index.webp"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.cseekers.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.cseekers.com/blog/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Merchant Center: los errores que tiran tus productos y matan tu Shopping"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es Google Merchant Center?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es la plataforma donde cargas el catálogo de tu tienda para que Google pueda mostrar tus productos en Shopping, en las fichas gratuitas de productos y en campañas como Performance Max. Si un producto no está aprobado ahí, no existe para ninguno de esos espacios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué se desaprueban mis productos en Merchant Center?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las causas más frecuentes son discrepancia entre el precio del feed y el de la tienda, disponibilidad desactualizada, falta de identificadores como GTIN o marca, datos de envío o impuestos incompletos, imágenes que incumplen los requisitos y textos que chocan con las políticas de la plataforma."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre un producto desaprobado y uno limitado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un producto desaprobado no se muestra en ningún lado. Uno limitado sí se muestra, pero con menos alcance o sin acceso a ciertos formatos, normalmente por faltarle datos opcionales pero importantes. El limitado es más peligroso porque no aparece como error urgente y aun así te cuesta ventas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Con qué frecuencia debo revisar Merchant Center?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al menos una vez por semana, y siempre después de cambios de precio, promociones o entradas de inventario. Las desaprobaciones aparecen solas cuando cambia algo en la tienda y el feed tarda en sincronizar, así que las promociones son el momento de mayor riesgo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si mi precio del feed no coincide con el de la tienda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google desaprueba el producto por discrepancia de precio, porque protege al usuario de llegar a una página con un precio distinto al anunciado. Suele ocurrir cuando se lanza una promoción y el feed todavía no se ha actualizado, o cuando hay precios con y sin impuestos mezclados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito GTIN para todos mis productos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para productos de marcas comerciales con código de barras, sí, y sin él quedan limitados. Para productos hechos por ti o de marca propia no aplica, pero entonces hay que declarar correctamente que no tienen identificador para que Google no lo interprete como un dato faltante."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="blog-body blog">
+<a href="#contenido" class="blog-skip">Saltar al contenido</a>
+
+<nav class="blog-nav">
+  <div class="blog-nav-inner">
+    <a href="../index.html" aria-label="CSeekers inicio"><img src="../assets/cseekers-logo-black.png" alt="CSeekers" /></a>
+    <div class="blog-nav-links">
+      <a href="../Gestion%20de%20Google%20Ads.html">Google Ads</a>
+      <a href="../Gestion%20de%20Meta%20Ads.html">Meta Ads</a>
+      <a href="../Gestion%20de%20SEO.html">SEO</a>
+      <a href="../Servicio%20de%20Diagnostico.html">Diagnostico</a>
+      <a href="../Agendar%20Sesion.html" class="blog-nav-cta">Agendar llamada</a>
+    </div>
+  </div>
+</nav>
+
+<main id="contenido" class="blog-wrap">
+  <nav class="blog-crumbs" aria-label="Ruta de navegacion">
+    <a href="../index.html">Inicio</a><span>/</span><a href="index.html">Blog</a><span>/</span>SEO
+  </nav>
+
+  <div class="post-head">
+    <span class="post-eyebrow">SEO</span>
+    <h1>Merchant Center: los errores que tiran tus productos y matan tu Shopping</h1>
+    <p class="post-lead">Merchant Center es la pieza menos glamorosa del comercio digital y la que más ventas silenciosas cuesta. Un producto desaprobado no avisa: simplemente deja de aparecer, en Shopping y en los resultados gratuitos, mientras tu reporte de campañas sigue viéndose normal porque el resto del catálogo compensa.</p>
+    <div class="post-meta">
+      <span>Por <strong>Pablo Rivera</strong></span>
+      <span>29 de octubre de 2026</span>
+      <span>Lectura <strong>9 min</strong></span>
+    </div>
+  </div>
+
+  <div class="post-grid">
+    <div class="post-body">
+
+<p>Hay una asimetría cruel en Merchant Center: <strong>cuando algo funciona nadie lo nota, y cuando algo se cae tampoco</strong>. Un producto desaprobado no genera una alerta en tu bandeja de entrada ni una caída visible en el reporte de campañas, porque el resto del catálogo sigue vendiendo. Simplemente deja de aparecer.</p>
+
+      <h2 id="estados">Los tres estados que debes conocer</h2>
+
+      <figure class="post-figure">
+        <svg viewBox="0 0 680 260" role="img" aria-labelledby="t-mc d-mc">
+          <title id="t-mc">Estados de un producto en Merchant Center y su efecto</title>
+          <desc id="d-mc">Un producto aprobado se muestra en Shopping, en fichas gratuitas y en Performance Max. Un producto limitado se muestra con alcance reducido, normalmente por datos opcionales faltantes. Un producto desaprobado no se muestra en ningún espacio.</desc>
+
+          <text class="viz-title" x="0" y="14">Qué significa cada estado</text>
+
+          <g transform="translate(0,34)">
+            <rect x="0" y="0" width="212" height="150" rx="8" fill="none" stroke="var(--viz-green)" stroke-width="2"></rect>
+            <rect x="0" y="0" width="212" height="34" rx="8" fill="var(--viz-green)"></rect>
+            <text class="viz-value" x="14" y="23">Aprobado</text>
+            <text class="viz-label" x="14" y="60">Shopping</text>
+            <text class="viz-label" x="14" y="82">Fichas gratuitas</text>
+            <text class="viz-label" x="14" y="104">Performance Max</text>
+            <text class="viz-mono" x="14" y="132">visible en todo</text>
+          </g>
+
+          <g transform="translate(234,34)">
+            <rect x="0" y="0" width="212" height="150" rx="8" fill="none" stroke="var(--viz-muted)" stroke-width="2"></rect>
+            <rect x="0" y="0" width="212" height="34" rx="8" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="14" y="23">Limitado</text>
+            <text class="viz-label" x="14" y="60">Alcance reducido</text>
+            <text class="viz-label" x="14" y="82">Faltan datos útiles</text>
+            <text class="viz-label" x="14" y="104">No sale como error</text>
+            <text class="viz-mono" x="14" y="132">el más peligroso</text>
+          </g>
+
+          <g transform="translate(468,34)">
+            <rect x="0" y="0" width="212" height="150" rx="8" fill="none" stroke="var(--viz-danger)" stroke-width="2"></rect>
+            <rect x="0" y="0" width="212" height="34" rx="8" fill="var(--viz-danger)"></rect>
+            <text class="viz-value on-dark" x="14" y="23">Desaprobado</text>
+            <text class="viz-label" x="14" y="60">No aparece</text>
+            <text class="viz-label" x="14" y="82">En ningún espacio</text>
+            <text class="viz-label" x="14" y="104">Sin aviso proactivo</text>
+            <text class="viz-mono" x="14" y="132">venta perdida</text>
+          </g>
+
+          <text class="viz-mono" x="0" y="216">cada estado lleva su nombre y su efecto escritos: el color solo refuerza</text>
+          <text class="viz-mono" x="0" y="234">el estado "limitado" cuesta ventas sin aparecer como problema urgente</text>
+        </svg>
+        <figcaption>El estado intermedio es el que más dinero cuesta a largo plazo, precisamente porque no grita. Un catálogo con la mitad de los productos limitados funciona, vende y rinde por debajo de lo que podría, sin que nada en el panel sugiera que hay un problema.</figcaption>
+      </figure>
+
+      <h2 id="causas">Las causas más frecuentes, por orden</h2>
+
+      <h3>1. Discrepancia de precio</h3>
+      <p>El precio del feed no coincide con el de la página. Google lo trata como un problema grave porque protege a quien hace clic de llegar a un precio distinto del anunciado.</p>
+      <p><strong>Cuándo ocurre:</strong> al lanzar una promoción antes de que el feed sincronice, cuando hay precios con y sin impuestos mezclados, o cuando el precio se muestra dinámicamente y el rastreador ve otro distinto. <strong>Las promociones son el momento de mayor riesgo del año.</strong></p>
+
+      <h3>2. Disponibilidad desactualizada</h3>
+      <p>El feed dice que hay existencias y la tienda dice que no, o al revés. En el primer caso pagas clics hacia productos agotados; en el segundo escondes productos que sí puedes vender.</p>
+
+      <h3>3. Identificadores faltantes</h3>
+      <p>Para productos de marcas comerciales, faltan GTIN, marca o número de pieza. El producto no se desaprueba siempre, pero queda <strong>limitado</strong>, que es la versión silenciosa del problema. Para marca propia, hay que declarar explícitamente que no existe identificador en lugar de dejar el campo vacío.</p>
+
+      <h3>4. Envío e impuestos incompletos</h3>
+      <p>Si no declaras costo de envío o lo declaras mal, Google puede retener productos o mostrar un total que no corresponde, lo que a su vez genera discrepancias.</p>
+
+      <h3>5. Imágenes que incumplen requisitos</h3>
+      <p>Marcas de agua, texto promocional superpuesto, marcos, collages o resolución insuficiente. Es de los errores más fáciles de arreglar y de los más repetidos.</p>
+
+      <h3>6. Choques con políticas</h3>
+      <p>Categorías restringidas, afirmaciones de salud, textos que prometen resultados. Suelen aparecer de golpe cuando alguien actualiza una descripción de producto.</p>
+
+      <h2 id="revisar">Cómo revisarlo en quince minutos</h2>
+
+      <ol>
+        <li><strong>Entra a Diagnóstico</strong> en Merchant Center y mira el conteo de productos activos contra el total que subes. Si subes 800 y hay 610 activos, tienes 190 productos invisibles.</li>
+        <li><strong>Ordena los problemas por número de productos afectados.</strong> Un error que afecta a 120 productos vale más que tres errores que afectan a uno cada uno.</li>
+        <li><strong>Separa desaprobados de limitados.</strong> Atiende primero los desaprobados, pero no ignores los limitados.</li>
+        <li><strong>Cruza con tus más vendidos.</strong> Un producto desaprobado que era tu número tres duele mucho más que veinte de cola larga.</li>
+        <li><strong>Revisa la frecuencia de actualización del feed</strong>: si sincroniza una vez al día y cambias precios con frecuencia, vas a vivir en discrepancia permanente.</li>
+      </ol>
+
+      <div class="callout verde">
+        <span class="callout-label">La revisión que más rinde</span>
+        <p>Antes y después de cada promoción, revisa Merchant Center. <strong>Las campañas de descuento son cuando más productos se caen</strong>, justo en los días en los que más te cuesta cada venta perdida. Ponerlo como paso fijo del proceso de promoción vale más que cualquier optimización de pujas.</p>
+      </div>
+
+      <h2 id="optimizar">Más allá de estar aprobado</h2>
+
+      <p>Que un producto esté aprobado no significa que esté compitiendo bien. Estos son los campos que más mueven el rendimiento una vez resuelto lo básico:</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Campo</th><th>Error común</th><th>Qué poner</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Título</td><td>El nombre interno del SKU</td><td>Marca, tipo, atributo clave, en ese orden</td></tr>
+            <tr><td>Descripción</td><td>La del proveedor, idéntica a todos</td><td>Texto propio con los términos que se buscan</td></tr>
+            <tr><td>Categoría de producto</td><td>Sin asignar o demasiado genérica</td><td>La más específica que aplique</td></tr>
+            <tr><td>Tipo de producto</td><td>Vacío</td><td>Tu propia taxonomía, para segmentar campañas</td></tr>
+            <tr><td>Etiquetas personalizadas</td><td>Sin usar</td><td>Margen, temporada, rotación</td></tr>
+            <tr><td>Imagen principal</td><td>Con fondo ruidoso</td><td>Producto completo, fondo limpio</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Las <strong>etiquetas personalizadas</strong> son las que más se desaprovechan. Son el mecanismo que permite separar campañas por margen en lugar de por categoría, que es la diferencia entre escalar lo que deja dinero y escalar lo que más se vende. Cómo se usa esa separación está en <a href="performance-max-en-shopify.html">Performance Max en Shopify</a>.</p>
+
+      <div class="callout alerta">
+        <span class="callout-label">Lo que casi nadie sabe</span>
+        <p>Merchant Center no es solo para campañas pagadas. Las <strong>fichas gratuitas de productos</strong> hacen que tu catálogo aparezca en la pestaña de Shopping sin costo por clic. Si tus productos están desaprobados, estás perdiendo también ese espacio, que es tráfico orgánico que ni siquiera sabías que tenías. Por eso el feed es tanto un asunto de SEO como de pauta.</p>
+      </div>
+
+      <h2 id="faq">Preguntas frecuentes</h2>
+
+      <div class="post-faq">
+        <details>
+          <summary>¿Qué es Google Merchant Center?</summary>
+          <div class="faq-a"><p>Es la plataforma donde cargas el catálogo de tu tienda para que Google pueda mostrar tus productos en Shopping, en las fichas gratuitas de productos y en campañas como Performance Max. Si un producto no está aprobado ahí, no existe para ninguno de esos espacios.</p></div>
+        </details>
+        <details>
+          <summary>¿Por qué se desaprueban mis productos en Merchant Center?</summary>
+          <div class="faq-a"><p>Las causas más frecuentes son discrepancia entre el precio del feed y el de la tienda, disponibilidad desactualizada, falta de identificadores como GTIN o marca, datos de envío o impuestos incompletos, imágenes que incumplen los requisitos y textos que chocan con las políticas de la plataforma.</p></div>
+        </details>
+        <details>
+          <summary>¿Cuál es la diferencia entre un producto desaprobado y uno limitado?</summary>
+          <div class="faq-a"><p>Un producto desaprobado no se muestra en ningún lado. Uno limitado sí se muestra, pero con menos alcance o sin acceso a ciertos formatos, normalmente por faltarle datos opcionales pero importantes. El limitado es más peligroso porque no aparece como error urgente y aun así te cuesta ventas.</p></div>
+        </details>
+        <details>
+          <summary>¿Con qué frecuencia debo revisar Merchant Center?</summary>
+          <div class="faq-a"><p>Al menos una vez por semana, y siempre después de cambios de precio, promociones o entradas de inventario. Las desaprobaciones aparecen solas cuando cambia algo en la tienda y el feed tarda en sincronizar, así que las promociones son el momento de mayor riesgo.</p></div>
+        </details>
+        <details>
+          <summary>¿Qué pasa si mi precio del feed no coincide con el de la tienda?</summary>
+          <div class="faq-a"><p>Google desaprueba el producto por discrepancia de precio, porque protege al usuario de llegar a una página con un precio distinto al anunciado. Suele ocurrir cuando se lanza una promoción y el feed todavía no se ha actualizado, o cuando hay precios con y sin impuestos mezclados.</p></div>
+        </details>
+        <details>
+          <summary>¿Necesito GTIN para todos mis productos?</summary>
+          <div class="faq-a"><p>Para productos de marcas comerciales con código de barras, sí, y sin él quedan limitados. Para productos hechos por ti o de marca propia no aplica, pero entonces hay que declarar correctamente que no tienen identificador para que Google no lo interprete como un dato faltante.</p></div>
+        </details>
+      </div>
+
+      <div class="post-cta">
+        <h2>¿Cuántos de tus productos están desaprobados ahora mismo?</h2>
+        <p>La mayoría de las tiendas no lo sabe. En 30 minutos revisamos tu feed, te decimos qué está caído y por qué, y en qué orden conviene arreglarlo. Sin costo.</p>
+        <a class="btn-cta" href="../Agendar%20Sesion.html">Agendar llamada de descubrimiento</a>
+        <span class="cta-micro">30 min · sin costo · te contactamos en menos de 24 h</span>
+      </div>
+
+      <div class="post-related">
+        <h2>Seguir leyendo</h2>
+        <ul>
+          <li><a href="seo-para-shopify-checklist-tecnico.html"><span class="rel-cluster">SEO</span>SEO para Shopify: las cosas técnicas que casi siempre están mal</a></li>
+          <li><a href="performance-max-en-shopify.html"><span class="rel-cluster">Google Ads</span>Performance Max en Shopify: cuándo escala y cuándo se come tu margen</a></li>
+          <li><a href="que-es-el-posicionamiento-seo.html"><span class="rel-cluster">SEO</span>Qué es el posicionamiento SEO y cómo se mide de verdad</a></li>
+          <li><a href="../Gestion%20de%20SEO.html"><span class="rel-cluster">Servicio</span>Gestión de SEO para eCommerce y leads</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <aside class="post-aside">
+      <h2>En este artículo</h2>
+      <ul class="post-toc">
+        <li><a href="#estados">Los tres estados que debes conocer</a></li>
+        <li><a href="#causas">Las causas más frecuentes, por orden</a></li>
+        <li><a href="#revisar">Cómo revisarlo en quince minutos</a></li>
+        <li><a href="#optimizar">Más allá de estar aprobado</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+<footer class="blog-footer">
+  <div class="blog-footer-inner">
+    <img src="../assets/cseekers-logo-black.png" alt="CSeekers" />
+    <div class="tag">Consistency Seekers · Google Ads · Meta Ads · SEO</div>
+    <div class="blog-footer-links">
+      <a href="../index.html">Inicio</a>
+      <a href="index.html">Blog</a>
+      <a href="../Respaldo%20y%20sustento.html">Respaldo</a>
+      <a href="../Aviso%20de%20Privacidad.html">Aviso de privacidad</a>
+    </div>
+  </div>
+  <div class="blog-footer-copy">© 2026 Consistency Seekers. Todos los derechos reservados.</div>
+</footer>
+</body>
+</html>
