@@ -64,6 +64,7 @@ function colorDelTexto(attrs, clase) {
   const fill = hex((attrs.match(/\sfill="([^"]+)"/) || [])[1]);
   if (fill) return fill;
   if (/on-accent/.test(clase)) return '#0d5200';
+  if (/on-light/.test(clase)) return '#4a4a4a';
   if (/on-dark-soft/.test(clase)) return '#a6a6a6';
   if (/on-dark/.test(clase)) return BLANCO;
   for (const k of Object.keys(FILL_CLASE)) if (clase.includes(k)) return FILL_CLASE[k];
