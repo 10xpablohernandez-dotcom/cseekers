@@ -13,7 +13,14 @@ const OUTPUT_DIR = path.resolve(process.env.OUTPUT_DIR || 'dist');
 
 const IGNORE = new Set([
   'node_modules', '.git', '.vercel', 'dist', 'scripts',
-  '.github', 'package.json', 'package-lock.json', 'vercel.json', '.gitignore'
+  '.github', 'package.json', 'package-lock.json', 'vercel.json', '.gitignore',
+  // 'content' guarda los articulos FUENTE del blog: fragmentos de HTML sin
+  // <head> ni <body>, que build-posts.js convierte en las paginas de /blog.
+  // Si no se ignoran, este script falla al no encontrar <head> y ademas se
+  // publicarian como contenido duplicado de cada articulo.
+  'content',
+  // Configuracion local del editor, no es parte del sitio.
+  '.claude'
 ]);
 
 const HEAD_SNIPPET = `<!-- Google Tag Manager -->
