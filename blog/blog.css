@@ -386,6 +386,11 @@ body.blog-body {
 .viz-mono.on-accent,
 .viz-label.on-accent { fill: #0d5200; }
 
+/* Texto sobre los rellenos grises claros (--viz-grid). El gris de
+   .viz-mono se queda en 2.95:1 ahí, apenas por debajo del mínimo. */
+.viz-mono.on-light,
+.viz-label.on-light { fill: #4a4a4a; }
+
 /* ---------- FAQ ---------- */
 .post-faq { margin-top: 20px; }
 .post-faq details {

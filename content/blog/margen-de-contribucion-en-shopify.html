@@ -1,0 +1,156 @@
+<!--meta
+{
+  "title": "Cómo calcular tu margen de contribución en Shopify · CSeekers",
+  "h1": "Cómo calcular tu margen de contribución por producto en Shopify",
+  "desc": "De dónde sale cada dato dentro de Shopify, la plantilla columna por columna, los costos que casi siempre se olvidan y qué hacer con el resultado.",
+  "cluster": "Rentabilidad",
+  "date": "2026-10-30",
+  "min": 10,
+  "lead": "Shopify sabe cuánto vendiste y, si lo cargaste, cuánto te costó el producto. Lo que no sabe es cuánto te costó enviarlo, empacarlo, cobrarlo y traer al cliente. Juntar esas piezas producto por producto es el trabajo que convierte un reporte de ventas en una herramienta de decisión, y se hace en una hoja de cálculo.",
+  "ctaTitle": "¿Quieres el margen real de tu catálogo?",
+  "ctaText": "En 30 minutos revisamos tu estructura de costos y armamos juntos el cálculo de tus diez productos principales. Te queda la plantilla aunque no trabajes con nosotros.",
+  "related": [
+    "roas-vs-margen-de-contribucion",
+    "cac-maximo-cuanto-puedes-pagar-por-un-cliente",
+    "que-es-el-acos-y-por-que-importa-mas-que-el-roas",
+    "../Servicio%20de%20Diagnostico.html|Servicio|Protocolo ACOS: el diagnóstico de 10 días"
+  ],
+  "faq": [
+    { "q": "¿Dónde veo el margen de contribución en Shopify?", "a": "No existe de forma nativa. Shopify muestra margen bruto si cargaste el costo por artículo, pero el margen de contribución necesita además comisiones, envío, empaque, devoluciones e inversión publicitaria, que viven en otros lugares. Se arma cruzando las fuentes en una hoja de cálculo." },
+    { "q": "¿Qué es el costo por artículo en Shopify?", "a": "Es el campo donde registras cuánto te cuesta cada unidad. Está en la ficha de producto, dentro de la sección de precios. Si lo llenas, Shopify puede mostrarte margen bruto en sus informes, que es el punto de partida pero no el número final." },
+    { "q": "¿Qué costos se me están olvidando casi seguro?", "a": "Los cuatro habituales son el envío que absorbes cuando ofreces envío gratis, el empaque y materiales, la provisión de devoluciones expresada como porcentaje de la venta, y las comisiones de la pasarela de pago, que se cobran sobre el total incluyendo impuestos y envío." },
+    { "q": "¿Debo incluir el fee de mi agencia en el margen de contribución?", "a": "No, porque es un costo fijo mensual y no varía con cada venta. Se resta después, a nivel de canal, cuando calculas la contribución total que dejó ese canal en el mes. Mezclarlo por unidad distorsiona el margen por producto." },
+    { "q": "¿Cada cuánto debo recalcular el margen?", "a": "Cada vez que cambien precios, costos de proveedor, tarifas de envío o la mezcla del catálogo. En la práctica, una revisión trimestral y un recálculo completo una o dos veces al año suele ser suficiente para la mayoría de las tiendas." },
+    { "q": "¿Qué hago con los productos de margen negativo?", "a": "Primero verifica el dato, porque a veces el error está en el cálculo. Si es real, hay cuatro caminos: subir el precio, bajar el costo, dejar de anunciarlos pero mantenerlos en catálogo, o descontinuarlos. Lo que no conviene es escalar inversión publicitaria hacia ellos." }
+  ]
+}
+-->
+      <p>El margen de contribución es lo que queda de una venta después de restarle <strong>todos los costos variables que esa venta provoca</strong>. La definición es simple; el trabajo está en que los datos viven en cinco lugares distintos y ninguno habla con el otro.</p>
+
+      <h2 id="donde-esta">De dónde sale cada dato</h2>
+
+      <figure class="post-figure">
+        <svg viewBox="0 0 680 260" role="img" aria-labelledby="t-fuentes d-fuentes">
+          <title id="t-fuentes">De donde sale cada dato del margen de contribucion</title>
+          <desc id="d-fuentes">Shopify aporta precio de venta, costo por articulo y unidades vendidas. La pasarela de pago aporta la comision. La paqueteria aporta el costo de envio real. Tu operacion aporta empaque y devoluciones. La plataforma de anuncios aporta la inversion publicitaria. Todo se junta en una hoja de calculo.</desc>
+
+          <text class="viz-title" x="0" y="14">Cinco fuentes, una hoja de cálculo</text>
+
+          <g transform="translate(0,34)">
+            <rect x="0" y="0" width="124" height="54" rx="5" fill="var(--viz-green)"></rect>
+            <text class="viz-value" x="62" y="22" text-anchor="middle">Shopify</text>
+            <text class="viz-mono on-accent" x="62" y="38" text-anchor="middle">precio · costo</text>
+          </g>
+          <g transform="translate(139,34)">
+            <rect x="0" y="0" width="124" height="54" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="62" y="22" text-anchor="middle">Pasarela</text>
+            <text class="viz-mono on-dark" x="62" y="38" text-anchor="middle">comisión %</text>
+          </g>
+          <g transform="translate(278,34)">
+            <rect x="0" y="0" width="124" height="54" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="62" y="22" text-anchor="middle">Paquetería</text>
+            <text class="viz-mono on-dark" x="62" y="38" text-anchor="middle">envío real</text>
+          </g>
+          <g transform="translate(417,34)">
+            <rect x="0" y="0" width="124" height="54" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="62" y="22" text-anchor="middle">Operación</text>
+            <text class="viz-mono on-dark" x="62" y="38" text-anchor="middle">empaque · dev.</text>
+          </g>
+          <g transform="translate(556,34)">
+            <rect x="0" y="0" width="124" height="54" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-value on-dark" x="62" y="22" text-anchor="middle">Anuncios</text>
+            <text class="viz-mono on-dark" x="62" y="38" text-anchor="middle">inversión</text>
+          </g>
+
+          <path d="M62 88 L300 128 M201 88 L320 128 M340 88 L340 128 M479 88 L360 128 M618 88 L380 128" stroke="var(--viz-label)" stroke-width="1.2" stroke-dasharray="3 3"></path>
+
+          <g transform="translate(220,128)">
+            <rect x="0" y="0" width="240" height="46" rx="6" fill="var(--viz-ink)"></rect>
+            <text class="viz-value on-dark" x="120" y="28" text-anchor="middle">Tu hoja de cálculo</text>
+          </g>
+
+          <text class="viz-mono" x="0" y="206">ninguna de las cinco fuentes conoce a las otras cuatro</text>
+          <text class="viz-mono" x="0" y="222">por eso el margen real casi nunca existe hasta que alguien lo arma a mano</text>
+          <line class="viz-axis" x1="0" y1="238" x2="680" y2="238"></line>
+        </svg>
+        <figcaption>Esta dispersión es la razón de fondo por la que tantos negocios operan sin conocer su margen real. No es negligencia: es que ninguna herramienta lo entrega hecho, y armarlo exige cruzar fuentes que nadie conectó.</figcaption>
+      </figure>
+
+      <h2 id="plantilla">La plantilla, columna por columna</h2>
+
+      <p>Una fila por producto o por variante, si las variantes tienen costos distintos. Estas son las columnas y de dónde sale cada una:</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Columna</th><th>De dónde sale</th><th>Nota</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>A · Producto</td><td>Shopify</td><td>Nombre y SKU</td></tr>
+            <tr><td>B · Precio de venta</td><td>Shopify</td><td>El real promedio, con descuentos aplicados</td></tr>
+            <tr><td>C · Costo por artículo</td><td>Shopify</td><td>Campo de costo en la ficha de producto</td></tr>
+            <tr><td>D · Comisión de pasarela</td><td>Tu proveedor de cobro</td><td>Porcentaje sobre el total cobrado</td></tr>
+            <tr><td>E · Envío absorbido</td><td>Paquetería</td><td>Lo que pagas tú, no lo que cobras</td></tr>
+            <tr><td>F · Empaque</td><td>Tu operación</td><td>Caja, relleno, etiqueta, manual</td></tr>
+            <tr><td>G · Provisión de devoluciones</td><td>Tu historial</td><td>Porcentaje del precio de venta</td></tr>
+            <tr><td>H · Contribución antes de pauta</td><td>Fórmula</td><td>B − C − D − E − F − G</td></tr>
+            <tr><td>I · Margen % antes de pauta</td><td>Fórmula</td><td>H ÷ B</td></tr>
+            <tr><td>J · ACOS máximo</td><td>Fórmula</td><td>I menos tu piso de ganancia</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Un ejemplo completo</h3>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Concepto</th><th>Playera</th><th>Chamarra</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Precio de venta</td><td class="num">$390</td><td class="num">$1,890</td></tr>
+            <tr><td>Costo de producto</td><td class="num">$168</td><td class="num">$680</td></tr>
+            <tr><td>Comisión de pasarela</td><td class="num">$14</td><td class="num">$66</td></tr>
+            <tr><td>Envío absorbido</td><td class="num">$90</td><td class="num">$110</td></tr>
+            <tr><td>Empaque</td><td class="num">$18</td><td class="num">$28</td></tr>
+            <tr><td>Provisión de devoluciones</td><td class="num">$20</td><td class="num">$94</td></tr>
+            <tr><td><strong>Contribución antes de pauta</strong></td><td class="num">$80</td><td class="num">$912</td></tr>
+            <tr><td><strong>Margen antes de pauta</strong></td><td class="num no">20.5%</td><td class="num si">48.3%</td></tr>
+            <tr><td>ACOS máximo con piso de 10 puntos</td><td class="num">10.5%</td><td class="num">38.3%</td></tr>
+            <tr><td>ROAS de equilibrio</td><td class="num">4.9x</td><td class="num">2.1x</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Mira la última fila. La playera necesita un ROAS de casi 5x para no perder, y la chamarra se defiende con 2.1x. Si las dos están en la misma campaña con el mismo objetivo, <strong>estás subsidiando una con la otra</strong> y el promedio esconde que una de ellas pierde en cada venta.</p>
+
+      <h2 id="olvidados">Los costos que casi siempre se olvidan</h2>
+
+      <ul>
+        <li><strong>El envío que absorbes.</strong> Si ofreces envío gratis, el costo no desapareció: lo pagas tú. Es el olvido más caro y el más común.</li>
+        <li><strong>La comisión sobre el total.</strong> La pasarela cobra sobre el monto completo cobrado, incluyendo impuestos y envío, no solo sobre el precio del producto.</li>
+        <li><strong>Las devoluciones.</strong> No solo se pierde el margen: muchas veces se paga el envío de ida, el de vuelta y el reacondicionamiento.</li>
+        <li><strong>El empaque.</strong> Parece menor por unidad y deja de serlo al multiplicarlo por el volumen del mes.</li>
+        <li><strong>Los descuentos reales.</strong> Usa el precio promedio efectivo de venta, no el de lista. Si vendes con 20% de descuento la mitad del tiempo, ese es tu precio real.</li>
+      </ul>
+
+      <div class="callout alerta">
+        <span class="callout-label">El error del fee</span>
+        <p>No metas el fee de tu agencia ni la renta en este cálculo. Son <strong>costos fijos</strong>: existen vendas o no vendas, así que no pertenecen al margen por unidad. Se restan después, a nivel de canal y de mes, cuando calculas la contribución total. Mezclarlos aquí distorsiona la comparación entre productos.</p>
+      </div>
+
+      <h2 id="que-hacer">Qué hacer con el resultado</h2>
+
+      <p>El cálculo no sirve de nada archivado. Estas son las cuatro decisiones que habilita:</p>
+
+      <ol>
+        <li><strong>Carga el margen al feed.</strong> Usa las etiquetas personalizadas de Merchant Center para separar campañas por rentabilidad en lugar de por categoría. El cómo está en <a href="errores-de-merchant-center.html">errores de Merchant Center</a>.</li>
+        <li><strong>Define un ACOS máximo por familia</strong>, no uno solo para toda la cuenta. Un objetivo promedio deja en pérdida permanente a los productos de margen bajo.</li>
+        <li><strong>Decide qué dejas de anunciar.</strong> Un producto puede seguir en catálogo sin recibir inversión publicitaria.</li>
+        <li><strong>Ataca las palancas antes que el presupuesto.</strong> Precio, costo de proveedor, ticket promedio y conversión mueven el techo; recortar inversión solo mueve el volumen.</li>
+      </ol>
+
+      <div class="callout verde">
+        <span class="callout-label">Por dónde empezar</span>
+        <p>No intentes hacerlo con 2,000 SKU la primera vez. Empieza con <strong>los diez productos que más facturan</strong>, que normalmente explican la mayor parte de tu venta. En una tarde tienes el número que cambia todas las conversaciones de presupuesto del año, y es exactamente lo que reconstruye el <a href="../Servicio%20de%20Diagnostico.html">Protocolo ACOS</a> cuando se hace a fondo.</p>
+      </div>

@@ -1,0 +1,154 @@
+<!--meta
+{
+  "title": "Google Ads para leads B2B en México: la estructura mínima · CSeekers",
+  "h1": "Google Ads para generación de leads B2B en México",
+  "desc": "Por qué optimizar hacia el formulario lleno arruina una cuenta B2B, cómo importar ventas cerradas desde el CRM y la estructura mínima que sí trae clientes.",
+  "cluster": "Google Ads",
+  "date": "2026-10-30",
+  "min": 9,
+  "lead": "En eCommerce la conversión es la venta y el ciclo se cierra en minutos. En B2B la conversión es un formulario, la venta llega semanas después y puede que nunca. Esa diferencia obliga a montar la cuenta de otra manera, y la mayoría de las cuentas B2B que revisamos están montadas como si vendieran camisetas.",
+  "ctaTitle": "¿Tus leads de Google Ads no se convierten en contratos?",
+  "ctaText": "En 30 minutos revisamos qué está optimizando tu cuenta, si tu CRM está conectado y cuál es tu costo real por cliente. Sin costo.",
+  "related": [
+    "cac-maximo-cuanto-puedes-pagar-por-un-cliente",
+    "formularios-instantaneos-vs-landing-page",
+    "como-auditar-tu-cuenta-de-google-ads",
+    "../Gestion%20de%20Google%20Ads.html|Servicio|Gestión de Google Ads para eCommerce y leads"
+  ],
+  "faq": [
+    { "q": "¿Sirve Google Ads para B2B en México?", "a": "Sí, y suele funcionar mejor que las redes sociales para B2B porque captura intención activa: alguien que busca un servicio profesional está evaluando, no pasando el rato. El reto no es traer tráfico, es que la cuenta optimice hacia el lead que cierra y no hacia el formulario lleno." },
+    { "q": "¿Qué conversión debo configurar en una cuenta B2B?", "a": "Idealmente el lead calificado o la venta cerrada, importados desde tu CRM, y no el formulario enviado. Si solo mides formularios, el algoritmo busca gente que llena formularios, que es un público más amplio y más barato que el que firma contratos." },
+    { "q": "¿Cómo importo conversiones desde mi CRM a Google Ads?", "a": "Google Ads permite importar conversiones sin conexión usando el identificador de clic que se guarda cuando alguien llega desde un anuncio. Ese identificador viaja al CRM con el formulario y, cuando el lead avanza o cierra, se devuelve a Google junto con la fecha y el valor." },
+    { "q": "¿Cuánto presupuesto necesita una campaña B2B?", "a": "Depende del costo por clic de tu sector, que en servicios profesionales suele ser alto. La cuenta mínima es a la inversa: parte del valor de un cliente, aplica tu tasa de cierre para obtener el valor de un lead, y de ahí sale cuántos leads necesitas al mes y cuánto cuesta conseguirlos." },
+    { "q": "¿Debo usar Performance Max en B2B?", "a": "Con cautela. Su opacidad y su tendencia a buscar la conversión más barata chocan con un negocio donde las conversiones baratas suelen ser las peores. Si se usa, conviene que optimice hacia el lead calificado importado del CRM, no hacia el formulario." },
+    { "q": "¿Qué hago con los leads que no califican?", "a": "Analizarlos, no solo descartarlos. Son la mejor fuente de palabras clave negativas y de pistas sobre qué está atrayendo al público equivocado. Un lead no calificado que nadie revisa es dinero perdido dos veces: en el clic y en el aprendizaje." }
+  ]
+}
+-->
+      <p>El problema de fondo del B2B en Google Ads cabe en una frase: <strong>la conversión que puedes medir rápido no es la que te importa</strong>. El formulario llega hoy, el contrato se firma en seis semanas, y el algoritmo necesita una señal mientras tanto. Si esa señal es el formulario, vas a recibir muchos formularios.</p>
+
+      <h2 id="embudo">El embudo que hay que medir completo</h2>
+
+      <figure class="post-figure">
+        <svg viewBox="0 0 680 270" role="img" aria-labelledby="t-b2b d-b2b">
+          <title id="t-b2b">Dónde mide una cuenta B2B típica y dónde debería medir</title>
+          <desc id="d-b2b">La mayoria de las cuentas mide hasta el formulario enviado, que es el segundo paso del embudo. El embudo completo sigue con lead contactado, lead calificado, oportunidad y contrato firmado. Optimizar hacia el formulario significa optimizar hacia el paso mas barato y menos predictivo.</desc>
+
+          <text class="viz-title" x="0" y="14">El embudo B2B y dónde se corta la medición</text>
+
+          <!-- linea de corte -->
+          <line x1="246" y1="40" x2="246" y2="186" stroke="var(--viz-danger)" stroke-width="2" stroke-dasharray="5 4"></line>
+          <text class="viz-mono" x="252" y="36">aquí se corta la medición de casi todas las cuentas</text>
+
+          <g transform="translate(0,46)">
+            <rect x="0" y="0" width="116" height="34" rx="5" fill="var(--viz-green)"></rect>
+            <text class="viz-mono on-accent" x="58" y="21" text-anchor="middle">Clic</text>
+
+            <rect x="124" y="0" width="116" height="34" rx="5" fill="var(--viz-green)"></rect>
+            <text class="viz-mono on-accent" x="182" y="21" text-anchor="middle">Formulario</text>
+
+            <rect x="256" y="0" width="116" height="34" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-mono on-dark" x="314" y="21" text-anchor="middle">Contactado</text>
+
+            <rect x="380" y="0" width="116" height="34" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-mono on-dark" x="438" y="21" text-anchor="middle">Calificado</text>
+
+            <rect x="504" y="0" width="80" height="34" rx="5" fill="var(--viz-muted)"></rect>
+            <text class="viz-mono on-dark" x="544" y="21" text-anchor="middle">Oportunidad</text>
+
+            <rect x="592" y="0" width="88" height="34" rx="5" fill="var(--viz-ink)"></rect>
+            <text class="viz-mono on-dark" x="636" y="21" text-anchor="middle">Contrato</text>
+          </g>
+
+          <text class="viz-label" x="0" y="112">Lo que Google ve hoy</text>
+          <text class="viz-mono" x="0" y="132">optimiza hacia el paso más barato</text>
+          <text class="viz-mono" x="0" y="148">y menos predictivo del embudo</text>
+
+          <text class="viz-label" x="380" y="112">Lo que debería ver</text>
+          <text class="viz-mono" x="380" y="132">lead calificado y contrato,</text>
+          <text class="viz-mono" x="380" y="148">importados desde tu CRM</text>
+
+          <line class="viz-axis" x1="0" y1="196" x2="680" y2="196"></line>
+          <text class="viz-mono" x="0" y="220">cada paso lleva su nombre escrito: el color separa lo medido de lo no medido</text>
+          <text class="viz-mono" x="0" y="240">el formulario es la conversión más fácil de conseguir y la que menos correlaciona con ingreso</text>
+        </svg>
+        <figcaption>La línea punteada marca dónde se queda ciega la cuenta. Todo lo que está a su derecha es donde se decide si el canal es rentable, y es justo lo que el algoritmo no puede usar para aprender si nadie se lo devuelve.</figcaption>
+      </figure>
+
+      <h2 id="crm">Conectar el CRM: el cambio que lo arregla</h2>
+
+      <p>Google Ads permite importar conversiones que ocurren fuera del sitio. El mecanismo es sencillo de entender aunque requiera trabajo de implementación:</p>
+
+      <ol>
+        <li><strong>Alguien hace clic en tu anuncio</strong> y Google adjunta un identificador de clic a la dirección de destino.</li>
+        <li><strong>Tu formulario guarda ese identificador</strong> junto con los datos del contacto, en un campo oculto.</li>
+        <li><strong>El identificador viaja a tu CRM</strong> con el resto de la información del lead.</li>
+        <li><strong>Cuando el lead avanza</strong> a calificado o a cliente, devuelves ese identificador a Google con la fecha y el valor.</li>
+        <li><strong>Google aprende</strong> qué clics se convirtieron en clientes de verdad y busca más gente parecida a esos.</li>
+      </ol>
+
+      <div class="callout verde">
+        <span class="callout-label">Qué cambia en la práctica</span>
+        <p>Antes de la importación, le pides a Google "tráeme formularios" y te trae formularios, muchos y baratos. Después, le pides "tráeme contratos" y empieza a buscar gente parecida a quienes firmaron. <strong>El costo por lead sube y el costo por cliente baja</strong>, que es exactamente el intercambio que quieres y el que un reporte de costo por lead hace ver como un retroceso.</p>
+      </div>
+
+      <h2 id="estructura">La estructura mínima</h2>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Campaña</th><th>Qué captura</th><th>Qué cuidar</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Marca</td><td>Quien ya te conoce</td><td>Separada siempre, para no inflar el promedio</td></tr>
+            <tr><td>Servicio, alta intención</td><td>"Agencia de X", "empresa de X"</td><td>Concordancias controladas y negativas semanales</td></tr>
+            <tr><td>Problema</td><td>Quien describe su dolor</td><td>Landing que conecte problema y solución</td></tr>
+            <tr><td>Competencia</td><td>Quien busca a tus rivales</td><td>Decisión consciente: es cara y delicada</td></tr>
+            <tr><td>Remarketing</td><td>Quien visitó y no convirtió</td><td>Excluir a quien ya es cliente</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Las negativas, que en B2B son media cuenta</h3>
+
+      <p>El tráfico B2B viene mezclado con gente que no va a comprar nunca, y reconocerla es fácil si alguien revisa. Las familias de negativas que casi siempre hacen falta:</p>
+
+      <ul>
+        <li><strong>Empleo:</strong> vacantes, sueldo, trabajo, curriculum, prácticas.</li>
+        <li><strong>Aprendizaje:</strong> curso, tutorial, qué es, cómo hacer, gratis, plantilla.</li>
+        <li><strong>Académico:</strong> tesis, ejemplos, monografía, pdf.</li>
+        <li><strong>Proveedores:</strong> quien quiere venderte a ti, no comprarte.</li>
+        <li><strong>Herramientas:</strong> quien busca software en vez de servicio.</li>
+      </ul>
+
+      <h2 id="presupuesto">Cómo dimensionar el presupuesto</h2>
+
+      <p>La cuenta va al revés que en eCommerce: se parte del contrato y se retrocede hasta el clic.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Paso</th><th>Ejemplo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Contribución de un contrato</td><td class="num">$18,240</td></tr>
+            <tr><td>Tasa de cierre de lead calificado</td><td class="num">18%</td></tr>
+            <tr><td>Valor de un lead calificado</td><td class="num">$3,283</td></tr>
+            <tr><td>Tasa de calificación sobre formularios</td><td class="num">35%</td></tr>
+            <tr><td>Valor de un formulario</td><td class="num">$1,149</td></tr>
+            <tr><td>Ganancia mínima reservada</td><td class="num">$400</td></tr>
+            <tr><td><strong>Costo máximo por formulario</strong></td><td class="num si">$749</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Con ese techo y tu costo por clic promedio ya puedes estimar cuánto necesitas invertir para conseguir los clientes que te propusiste. El método completo, incluido el error de usar la tasa de cierre global en lugar de la de pauta, está en <a href="cac-maximo-cuanto-puedes-pagar-por-un-cliente.html">CAC máximo</a>.</p>
+
+      <h2 id="velocidad">La variable gratis que casi nadie atiende</h2>
+
+      <p>En B2B, el tiempo entre que entra el lead y que alguien lo contacta cambia la tasa de contacto de forma notoria. Es la única palanca de esta lista que <strong>no cuesta un peso de presupuesto</strong> y que casi siempre está rota.</p>
+
+      <div class="callout alerta">
+        <span class="callout-label">Antes de subir presupuesto</span>
+        <p>Si tus leads tardan horas o días en ser contactados, <strong>no inviertas más</strong>: estás comprando contactos que se enfrían antes de que alguien los llame. Arregla primero el proceso de respuesta, mide de nuevo y después escala. Subir presupuesto sobre un embudo que no responde es multiplicar el desperdicio.</p>
+      </div>
