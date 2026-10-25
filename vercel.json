@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "node scripts/inject-gtm.js",
+  "buildCommand": "node scripts/build-sitemap.js && node scripts/inject-gtm.js",
   "outputDirectory": "dist"
 }

@@ -1,0 +1,26 @@
+# CSeekers — https://www.cseekers.com
+# Las paginas sin valor de busqueda (gracias, embeds) se excluyen con
+# <meta name="robots" content="noindex">, no aqui: si las bloqueamos por
+# robots.txt Google no puede leer el noindex y las deja en el indice.
+
+User-agent: *
+Allow: /
+
+# Rastreadores de IA: permitidos a proposito. Queremos aparecer citados
+# en respuestas de IA, no solo en el buscador.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.cseekers.com/sitemap.xml
