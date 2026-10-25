@@ -380,6 +380,12 @@ body.blog-body {
 .viz-mono.on-dark { fill: #ffffff; }
 .viz-mono.on-dark-soft { fill: rgba(255, 255, 255, 0.62); }
 
+/* Texto sobre el verde de marca. El gris apagado de .viz-mono se queda
+   en 1.8:1 contra el verde, que es ilegible: sobre verde va tinta oscura.
+   Lo verifica scripts/check-svg-contrast.js. */
+.viz-mono.on-accent,
+.viz-label.on-accent { fill: #0d5200; }
+
 /* ---------- FAQ ---------- */
 .post-faq { margin-top: 20px; }
 .post-faq details {

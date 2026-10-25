@@ -1,0 +1,161 @@
+<!--meta
+{
+  "title": "Performance Max en Shopify: cuándo escala y cuándo no · CSeekers",
+  "h1": "Performance Max en Shopify: cuándo escala y cuándo se come tu margen",
+  "desc": "Qué controlas y qué no en PMax, cómo evitar que canibalice tu marca y tus campañas de búsqueda, y la configuración mínima antes de encenderlo en una tienda Shopify.",
+  "cluster": "Google Ads",
+  "date": "2026-10-28",
+  "min": 10,
+  "lead": "Performance Max es la campaña que Google más empuja y la que más fácil produce un reporte excelente con un negocio igual. No porque engañe, sino porque optimiza hacia la conversión más barata disponible, y en una tienda esa casi siempre es alguien que ya te iba a comprar. Esto es lo que hay que configurar antes de encenderla.",
+  "ctaTitle": "¿Tu Performance Max está escalando o cosechando?",
+  "ctaText": "En 30 minutos revisamos si tu PMax está trayendo clientes nuevos o cobrándose los que ya tenías, y qué exclusiones le faltan. Sin costo.",
+  "related": [
+    "como-auditar-tu-cuenta-de-google-ads",
+    "roas-vs-margen-de-contribucion",
+    "senales-de-que-tu-agencia-optimiza-para-el-reporte",
+    "../Gestion%20de%20Google%20Ads.html|Servicio|Gestión de Google Ads para eCommerce y leads"
+  ],
+  "faq": [
+    { "q": "¿Qué es Performance Max?", "a": "Es un tipo de campaña de Google Ads que distribuye tu presupuesto automáticamente entre Búsqueda, Shopping, YouTube, Display, Discover, Gmail y Maps. Tú entregas feed, creatividades y objetivo, y el algoritmo decide dónde y a quién mostrar. A cambio de ese alcance, pierdes buena parte del control granular." },
+    { "q": "¿Performance Max canibaliza mis campañas de búsqueda?", "a": "Puede hacerlo. Cuando PMax y una campaña de Búsqueda pueden cubrir la misma consulta, Google prioriza según relevancia y nivel de calidad, y PMax tiende a absorber tráfico de marca si no la excluyes. El síntoma típico es que tu campaña de marca pierde volumen mientras PMax reporta un ROAS altísimo." },
+    { "q": "¿Cómo excluyo las búsquedas de marca en Performance Max?", "a": "Con una lista de exclusión de palabras clave de marca a nivel de cuenta o campaña. Si tu cuenta no tiene acceso a esa opción, se gestiona pidiéndola al soporte de Google. Sin esa exclusión no puedes saber si PMax está adquiriendo clientes nuevos o cobrándose los que ya te buscaban." },
+    { "q": "¿Qué presupuesto mínimo necesita Performance Max?", "a": "No hay una cifra oficial, pero necesita suficientes conversiones para salir de la fase de aprendizaje, que dura aproximadamente las primeras semanas. Con un costo por venta alto y un presupuesto corto, la campaña vive en aprendizaje permanente y entrega resultados inestables que no se pueden leer." },
+    { "q": "¿Conviene separar Performance Max por margen de producto?", "a": "Sí, y es una de las palancas más rentables. Si todo el catálogo va en una sola campaña, el algoritmo escala lo que más convierte, que suele ser lo más barato y de menor margen. Separar el feed en grupos por margen permite poner objetivos distintos a productos que dejan dinero distinto." },
+    { "q": "¿Puedo ver en qué términos de búsqueda gastó Performance Max?", "a": "Solo parcialmente. PMax ofrece un informe de categorías de búsqueda, mucho menos detallado que el informe de términos de una campaña de Búsqueda. Esa opacidad es precisamente la razón por la que las exclusiones y la estructura del feed importan más aquí que en cualquier otro tipo de campaña." }
+  ]
+}
+-->
+      <p>Performance Max no es buena ni mala: es <strong>una campaña que cambia control por alcance</strong>. El problema no está en el algoritmo, está en encenderla sin las dos o tres configuraciones que impiden que se lleve el crédito de ventas que ya eran tuyas.</p>
+
+      <h2 id="que-controlas">Qué controlas y qué entregas</h2>
+
+      <figure class="post-figure">
+        <svg viewBox="0 0 680 280" role="img" aria-labelledby="t-pmax d-pmax">
+          <title id="t-pmax">Qué controla el anunciante y qué decide el algoritmo en Performance Max</title>
+          <desc id="d-pmax">El anunciante controla el feed y el margen por producto, las creatividades, el objetivo y el presupuesto, las exclusiones de marca y las señales de audiencia. El algoritmo decide el canal donde se muestra, la puja de cada subasta, la combinación de creatividades, a quién alcanza y el reparto entre prospección y retargeting.</desc>
+
+          <text class="viz-title" x="0" y="14">Performance Max: el reparto de decisiones</text>
+
+          <!-- Columna anunciante -->
+          <g transform="translate(0,34)">
+            <rect x="0" y="0" width="320" height="216" rx="8" fill="none" stroke="var(--viz-green)" stroke-width="2"></rect>
+            <rect x="0" y="0" width="320" height="34" rx="8" fill="var(--viz-green)"></rect>
+            <text class="viz-value" x="16" y="23">Lo que tú controlas</text>
+            <text class="viz-label" x="16" y="62">Feed y margen por producto</text>
+            <text class="viz-label" x="16" y="86">Creatividades y textos</text>
+            <text class="viz-label" x="16" y="110">Objetivo y presupuesto</text>
+            <text class="viz-label" x="16" y="134">Exclusiones de marca</text>
+            <text class="viz-label" x="16" y="158">Señales de audiencia</text>
+            <text class="viz-label" x="16" y="182">Calidad de la medición</text>
+            <text class="viz-mono" x="16" y="206">aquí se gana o se pierde</text>
+          </g>
+
+          <!-- Columna algoritmo -->
+          <g transform="translate(360,34)">
+            <rect x="0" y="0" width="320" height="216" rx="8" fill="none" stroke="var(--viz-muted)" stroke-width="2"></rect>
+            <rect x="0" y="0" width="320" height="34" rx="8" fill="var(--viz-ink)"></rect>
+            <text class="viz-value on-dark" x="16" y="23">Lo que decide el algoritmo</text>
+            <text class="viz-label" x="16" y="62">En qué canal aparece</text>
+            <text class="viz-label" x="16" y="86">La puja de cada subasta</text>
+            <text class="viz-label" x="16" y="110">Qué creatividad combina</text>
+            <text class="viz-label" x="16" y="134">A quién le muestra</text>
+            <text class="viz-label" x="16" y="158">Prospección o retargeting</text>
+            <text class="viz-label" x="16" y="182">Qué producto empuja</text>
+            <text class="viz-mono" x="16" y="206">no es negociable</text>
+          </g>
+        </svg>
+        <figcaption>Cada columna está encabezada con su rol, de modo que la división se lee sin depender del color del borde. La lista de la izquierda es corta, y justo por eso cada punto pesa: son las únicas palancas que te quedan.</figcaption>
+      </figure>
+
+      <p>Fíjate en el último punto de la derecha: <strong>el algoritmo decide qué producto empuja</strong>. Si tu feed no lleva información de margen, va a empujar lo que más convierte, que en casi todas las tiendas es lo más barato. Vendes más unidades y ganas menos dinero, y el reporte lo celebra.</p>
+
+      <h2 id="canibalizacion">La canibalización de marca, que es el problema número uno</h2>
+
+      <p>PMax puede aparecer en búsquedas de tu propio nombre. Esas conversiones son baratísimas porque esa gente ya te quería, así que el ROAS de la campaña se dispara. Al mismo tiempo, tu campaña de marca pierde volumen, porque PMax se la está comiendo.</p>
+
+      <div class="callout alerta">
+        <span class="callout-label">El síntoma</span>
+        <p>Tu campaña de marca cae en impresiones y conversiones justo cuando enciendes PMax, mientras PMax reporta un ROAS muy por encima del resto de la cuenta. <strong>No descubriste una campaña mágica: moviste la misma venta de un cubo a otro</strong> y ahora la pagas con menos visibilidad de lo que pasó.</p>
+      </div>
+
+      <h3>Cómo se corrige</h3>
+      <ul>
+        <li><strong>Lista de exclusión de palabras clave de marca</strong> aplicada a la campaña PMax. Es la medida principal y no es opcional.</li>
+        <li><strong>Campaña de marca en Búsqueda, activa y bien presupuestada</strong>, para quedarte con ese tráfico en un cubo que sí puedes leer.</li>
+        <li><strong>Lectura separada</strong>: compara la suma de marca más PMax antes y después de encenderla. Si el total no creció, no hubo adquisición nueva.</li>
+      </ul>
+
+      <h2 id="shopify">Lo específico de Shopify</h2>
+
+      <p>En una tienda Shopify, la calidad del feed es la mitad de la campaña. Estos son los puntos que más cambian el resultado.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Elemento</th><th>Qué revisar</th><th>Por qué importa</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Títulos de producto</td><td>Que incluyan marca, tipo, atributo clave</td><td>Es la señal más fuerte para emparejar con búsquedas</td></tr>
+            <tr><td>Etiqueta de margen</td><td>Un campo personalizado con el margen por SKU</td><td>Permite separar campañas por rentabilidad</td></tr>
+            <tr><td>Disponibilidad</td><td>Sincronización real de inventario</td><td>Pagar clics de productos agotados es fuga pura</td></tr>
+            <tr><td>GTIN y marca</td><td>Completos donde apliquen</td><td>Sin ellos muchos productos quedan limitados</td></tr>
+            <tr><td>Imágenes</td><td>Fondo limpio, producto completo</td><td>Afecta directamente el CTR en Shopping</td></tr>
+            <tr><td>Precio y envío</td><td>Que coincidan con la tienda</td><td>Las discrepancias desaprueban productos</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Segmentar por margen, no por categoría</h3>
+
+      <p>La estructura por defecto agrupa el catálogo por categoría comercial, que es como piensa el negocio pero no como conviene pujar. Una estructura por margen permite dar objetivos distintos a productos que dejan dinero distinto.</p>
+
+      <div class="callout verde">
+        <span class="callout-label">Estructura que sí funciona</span>
+        <p>Tres grupos de contenido: <strong>margen alto</strong> con objetivo de ROAS más permisivo para que escale, <strong>margen medio</strong> con el objetivo de equilibrio, y <strong>margen bajo</strong> con objetivo exigente o directamente fuera del feed. El cálculo del umbral de cada grupo sale de tu <a href="que-es-el-acos-y-por-que-importa-mas-que-el-roas.html">ACOS máximo por familia de producto</a>.</p>
+      </div>
+
+      <h2 id="cuando-si">Cuándo PMax sí es la decisión correcta</h2>
+
+      <ol>
+        <li><strong>Tienes volumen de conversiones suficiente</strong> para que salga de aprendizaje en semanas, no en meses.</li>
+        <li><strong>Tu medición está limpia</strong>: una o dos conversiones principales, sin duplicados, con valor de conversión real.</li>
+        <li><strong>Tu feed está completo</strong> y con margen cargado.</li>
+        <li><strong>Ya tienes campaña de marca separada</strong> y exclusiones aplicadas.</li>
+        <li><strong>Buscas alcance incremental</strong>, no exprimir la demanda que ya capturas.</li>
+      </ol>
+
+      <h2 id="cuando-no">Cuándo no encenderla todavía</h2>
+
+      <ul>
+        <li><strong>Cuenta nueva sin historial de conversiones.</strong> El algoritmo no tiene de qué aprender y vas a pagar ese aprendizaje caro.</li>
+        <li><strong>Presupuesto corto.</strong> Repartido entre seis canales, no alcanza para que ninguno estabilice.</li>
+        <li><strong>Catálogo con márgenes muy dispares y sin etiquetar.</strong> Va a escalar lo barato.</li>
+        <li><strong>Medición sucia.</strong> Es el peor escenario: automatización agresiva persiguiendo una señal equivocada.</li>
+        <li><strong>Si no puedes aplicar exclusiones de marca.</strong> Sin eso no vas a poder evaluar nunca si funcionó.</li>
+      </ul>
+
+      <h2 id="evaluar">Cómo evaluarla de verdad</h2>
+
+      <p>El ROAS de PMax aislado no sirve para decidir, porque incluye demanda que ya existía. La lectura correcta es a nivel cuenta y a nivel negocio.</p>
+
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Pregunta</th><th>Dónde se responde</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>¿Creció la venta total del negocio?</td><td>Tu plataforma, no Google Ads</td></tr>
+            <tr><td>¿Crecieron los clientes nuevos?</td><td>Tu plataforma o CRM</td></tr>
+            <tr><td>¿Bajó el volumen de la campaña de marca?</td><td>Google Ads, comparando antes y después</td></tr>
+            <tr><td>¿El CAC se mantuvo bajo el techo?</td><td><a href="cac-maximo-cuanto-puedes-pagar-por-un-cliente.html">CAC máximo</a> contra el real</td></tr>
+            <tr><td>¿La contribución subió?</td><td>Venta menos variables menos medios</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Si la venta total y los clientes nuevos no se movieron pero el ROAS de la cuenta mejoró, <strong>PMax te está cosechando, no creciendo</strong>. Es un resultado válido si lo elegiste a propósito, y es un autoengaño caro si creías estar escalando.</p>
+
+      <div class="callout">
+        <span class="callout-label">La prueba más honesta</span>
+        <p>Apágala dos semanas y mira qué pasa con la venta total del negocio, no con el reporte de Google. Si la venta cae en la misma proporción que el gasto, estaba trayendo demanda. Si la venta casi no se mueve, estaba cobrándose lo que ya tenías. Es una prueba cara y es la única que no se puede discutir.</p>
+      </div>
